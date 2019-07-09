@@ -13,12 +13,12 @@ markdown              : kramdown
 remote_theme          : mmistakes/minimal-mistakes
 
 # 언어별 데이터 설정
-data:
-  ui-text:
-    en-US:
-      recent_posts    : "Recent Posts"
-    ko-KR:  
-      recent_posts    : "최근 글"
+#data:
+#  ui-text:
+#    en-US:
+#      recent_posts    : "Recent Posts"
+#    ko-KR:  
+#      recent_posts    : "최근 글"
   
 # 출력  
 permalink             : /:categories/:title/
