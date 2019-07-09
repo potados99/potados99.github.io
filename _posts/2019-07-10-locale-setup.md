@@ -1,6 +1,7 @@
 ---
-title: "Jekyll 테마 적용기"
+title: Jekyll 테마 적용기
 date: 2019-07-10 03:33:00 +0900
+excerpt: 블로그 시작하기 어렵다..
 categories:
   - blog
 tags:
