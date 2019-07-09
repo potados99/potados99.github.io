@@ -1,1 +1,3 @@
-
+ko: &DEFAULT_KO
+  date_format                 : "Skip links"
+ko-KR
