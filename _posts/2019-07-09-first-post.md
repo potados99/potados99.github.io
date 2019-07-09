@@ -2,9 +2,9 @@
 title: "처음 써보는 글"
 date: 2019-07-09 17:53:28 +0900
 categories: 
-  - blog
+  - 개발
 tags: 
-  - start 
+  - 시작 
   - jekyll
 ---
 
