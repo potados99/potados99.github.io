@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "ko-KR"
 title                    : "삽질 로그"
 title_separator          : "-"
-name                     : "감자도스"
+name                     : "배워서 남주기"
 description              : "기록용 블로그"
 url                      : "https://potados99.github.io"
 baseurl                  : ""
@@ -105,11 +105,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "potados"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
+  bio              : "초보 개발자"
+  location         : "Incheon"
+  email            : potados99@gmail.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
