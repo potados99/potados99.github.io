@@ -78,7 +78,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      date: true
       comments: false
       share: false
       related: true
