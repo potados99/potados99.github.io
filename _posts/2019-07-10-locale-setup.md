@@ -37,7 +37,7 @@ Config에서 locale까지 ko-KR로 잡아주었으나 아직 사이트에 영어
 
 ~~~
     ...
-    "{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}"
+    {% raw %}"{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}"{% endraw %}
     ...
 ~~~
 
@@ -61,7 +61,7 @@ back_to_top                : "맨 위로 이동"
 크게 나누면 두 군데에 나타나는데, 첫번째는 23번째 줄이다.
 
 ~~~
-{% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
+{% raw %}{% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}{% endraw %}
 ~~~
 
 `page.date` 속성을 가져와 `date`라는 필터를 씌우는데, 날짜 포맷 스트링을 전달하는 것이다. 이 포맷 스트링을 locale에 맞게 구분하기 위해 `ui-text.yml`과 비슷하게 `format.yml`을 만들었다.
@@ -83,8 +83,8 @@ ko-KR:
 이를 레이아웃에 적용하였다.
 
 ~~~
-{% assign dateformat = site.data.format[site.locale].date_format | default: "%B %d, %Y" %}
-{% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: dateformat }}">{% endif %}
+{% raw %}{% assign dateformat = site.data.format[site.locale].date_format | default: "%B %d, %Y" %}
+{% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: dateformat }}">{% endif %}{% endraw %}
 ~~~
 
 포맷 스트링을 가져와 `dateformat`이라는 변수에 넣어 사용한다.
