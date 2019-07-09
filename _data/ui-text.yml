@@ -612,7 +612,8 @@ ko: &DEFAULT_KO
   comment_error_msg          : "댓글 등록에 문제가 있습니다. 필요 필드를 작성했는지 확인하고 다시 시도하세요."
   loading_label              : "로딩중..."
 ko-KR:
-  <<: *DEFAULT_KO
+  recent_posts : "dedeedede"
+  #<<: *DEFAULT_KO
 
 # Russian / Русский
 # -----------------
