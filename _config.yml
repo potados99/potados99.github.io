@@ -55,6 +55,7 @@ author:
     - label             : "Email"
       icon              : "fas fa-fw fa-envelope-square"
 
+# 페이지 하단
 footer:
   links:
     - label             : "GitHub"
@@ -67,6 +68,7 @@ footer:
       icon              : "fas fa-fw fa-envelope-square"
       url               : "mailto:potados99@gmail.com"
 
+# 레이아웃 설정
 defaults:
   # _posts
   - scope:
@@ -76,6 +78,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
+      title: true
       comments: false
       share: false
       related: true
