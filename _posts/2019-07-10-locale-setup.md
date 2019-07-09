@@ -3,11 +3,12 @@ title: Jekyll 테마 적용기
 date: 2019-07-10 03:33:00 +0900
 excerpt: 블로그 시작하기 어렵다..
 categories:
-  - 개발
+  - dev
 tags:
-  - 한글
+  - korean
+  - locale
   - minimal-mistakes
-  - 테마
+  - theme
 ---
 
 블로그를 시작하면서 [minimal-mistakes](https://github.com/mmistakes/minimal-mistakes) 테마를 적용하였다.
