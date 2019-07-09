@@ -35,11 +35,13 @@ config 파일을 복사한 다음에 수정해서 커밋하고 페이지에 들�
 Config에서 locale까지 ko-KR로 잡아주었으나 아직 사이트에 영어가 남아있는 부분이 있었다. 검색 버튼을 누르면 키워드를 입력하라고 placeholder 텍스트가 나오는데, 이게 영어로 되어 있었다.
 테마를 잘 뜯어보니  `_includes/search/search_form.html `에서 해당 문자열을 참조하는 부분이 있었다.
 
+{% raw %}
 ~~~
     ...
-    {% raw %}"{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}"{% endraw %}
+    "{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}"
     ...
 ~~~
+{% endraw %}
 
 `site.data.ui-text[site.locale].search_placeholder_text`가 중요하다.
 `_data` 디렉토리의 `ui-text.yml` 파일 아래 `ko-KR`에 속한 `search_placeholder_text`를 가져온다는 뜻이다. 그런데 기본값인 "Enter your search term..."가 출력되었다. 한글 번역이 안되었다는 뜻이다.
@@ -60,9 +62,11 @@ back_to_top                : "맨 위로 이동"
 
 크게 나누면 두 군데에 나타나는데, 첫번째는 23번째 줄이다.
 
+{% raw %}
 ~~~
-{% raw %}{% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}{% endraw %}
+{% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
 ~~~
+{% endraw %}
 
 `page.date` 속성을 가져와 `date`라는 필터를 씌우는데, 날짜 포맷 스트링을 전달하는 것이다. 이 포맷 스트링을 locale에 맞게 구분하기 위해 `ui-text.yml`과 비슷하게 `format.yml`을 만들었다.
 
@@ -82,10 +86,12 @@ ko-KR:
 
 이를 레이아웃에 적용하였다.
 
+{% raw %}
 ~~~
-{% raw %}{% assign dateformat = site.data.format[site.locale].date_format | default: "%B %d, %Y" %}
-{% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: dateformat }}">{% endif %}{% endraw %}
+{% assign dateformat = site.data.format[site.locale].date_format | default: "%B %d, %Y" %}
+{% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: dateformat }}">{% endif %}
 ~~~
+{% endraw %}
 
 포맷 스트링을 가져와 `dateformat`이라는 변수에 넣어 사용한다.
 
