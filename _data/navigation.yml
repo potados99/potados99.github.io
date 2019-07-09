@@ -1,9 +1,15 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
+  - title: "about"
     url: /about/
+    
+  - title: "카테고리"
+    url: /categories/
+        
+  - title: "태그"
+    url: /tags/
+    
+#  - title: "Posts"
+#    url: /posts/
+    
+
+
