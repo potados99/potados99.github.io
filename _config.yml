@@ -1,30 +1,30 @@
 # 사이트 설정 파일
 
 # 기본 설정
-title: "땅파서 감자캐는 블로그"
-email: "potados99@gmail.com"
-description: "개발 & 기타 등등"
-github_username: "potados99"
-minimal_mistakes_skin: "default"
-search: true
+title                 : "땅파서 감자캐는 블로그"
+description           : "개발 & 기타 등등"
+email                 : "potados99@gmail.com"
+locale                : "ko-KR"
+minimal_mistakes_skin : "default"
+search                : true
 
 # 빌드 설정
-markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+markdown              : kramdown
+remote_theme          : mmistakes/minimal-mistakes
 
 # 언어별 데이터 설정
 data:
   ui-text:
     en-US:
-      recent_posts  : "Recent Posts"
-    ko-KR:
-      recent_posts  : "최근 글"
-
-# 출력
-permalink           : /:categories/:title/
-paginate            : 5 # amount of posts to show
-paginate_path       : /page:num/
-timezone            : # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+      recent_posts    : "Recent Posts"
+    ko-KR:  
+      recent_posts    : "최근 글"
+  
+# 출력  
+permalink             : /:categories/:title/
+paginate              : 5 # amount of posts to show
+paginate_path         : /page:num/
+timezone              : # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
   - _pages
@@ -40,29 +40,29 @@ plugins:
 
 # 글쓴이
 author:
-  name              : "potados"
-  avatar            : "/assets/images/avatar.jpeg"
-  bio               : "야매 날림 미완성 개발자"
-  location          : "대한민국 인천"
-  email             : "potados99@gmail.com"
-  links:
-    - label         : "Email"
-      icon          : "fas fa-fw fa-envelope-square"
-    - label         : "GitHub"
-      icon          : "fab fa-fw fa-github"
-      url           : "https://github.com/potados99"
-    - label         : "Instagram"
-      icon          : "fab fa-fw fa-instagram"
-      url           : "https://instagram.com/"
+  name                  : "potados"
+  avatar                : "/assets/images/avatar.jpeg"
+  bio                   : "야매 날림 미완성 개발자"
+  location              : "대한민국 인천"
+  email                 : "potados99@gmail.com"
+  links:    
+    - label             : "Email"
+      icon              : "fas fa-fw fa-envelope-square"
+    - label             : "GitHub"
+      icon              : "fab fa-fw fa-github"
+      url               : "https://github.com/potados99"
+    - label             : "Instagram"
+      icon              : "fab fa-fw fa-instagram"
+      url               : "https://instagram.com/"
 
 footer:
   links:
-    - label         : "GitHub"
-      icon          : "fab fa-fw fa-github"
-      url           : "https://github.com/"
-    - label         : "Instagram"
-      icon          : "fab fa-fw fa-instagram"
-      url           : "https://instagram.com/"
+    - label             : "GitHub"
+      icon              : "fab fa-fw fa-github"
+      url               : "https://github.com/"
+    - label             : "Instagram"
+      icon              : "fab fa-fw fa-instagram"
+      url               : "https://instagram.com/"
 
 defaults:
   # _posts
