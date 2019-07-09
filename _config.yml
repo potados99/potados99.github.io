@@ -42,27 +42,30 @@ plugins:
 author:
   name                  : "potados"
   avatar                : "/assets/images/avatar.jpeg"
-  bio                   : "야매 날림 미완성 개발자"
+  bio                   : "야매 날림 미완성 개발자. 컴퓨터공학 열심히 배우는중. 사진 좋아함."
   location              : "대한민국 인천"
   email                 : "potados99@gmail.com"
   links:    
-    - label             : "Email"
-      icon              : "fas fa-fw fa-envelope-square"
     - label             : "GitHub"
       icon              : "fab fa-fw fa-github"
       url               : "https://github.com/potados99"
     - label             : "Instagram"
       icon              : "fab fa-fw fa-instagram"
-      url               : "https://instagram.com/"
+      url               : "https://instagram.com/ix_potados/"
+    - label             : "Email"
+      icon              : "fas fa-fw fa-envelope-square"
 
 footer:
   links:
     - label             : "GitHub"
       icon              : "fab fa-fw fa-github"
-      url               : "https://github.com/"
+      url               : "https://github.com/potados99"
     - label             : "Instagram"
       icon              : "fab fa-fw fa-instagram"
-      url               : "https://instagram.com/"
+      url               : "https://instagram.com/ix_potados/"
+    - label             : "Email"
+      icon              : "fas fa-fw fa-envelope-square"
+      url               : "mailto:potados99@gmail.com"
 
 defaults:
   # _posts
