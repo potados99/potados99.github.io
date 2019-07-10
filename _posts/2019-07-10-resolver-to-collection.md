@@ -3,7 +3,7 @@ title: "[Kotlin Android] Content Resolver의 query 결과를 Collection으로 �
 date: 2019-07-10 22:00:17 +0900
 excerpt: 쿼리한 결과 처리하는 것도 일이다. 어떻게 하면 일을 조금 덜 수 있을까 고민하다가 생각난 것.
 header: 
-    image: /assets/images/kotlin-android-logo.jpg
+    overlay_image: /assets/images/kotlin-android-logo.jpg
 categories:
     - dev
 tags:
