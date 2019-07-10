@@ -1,7 +1,7 @@
 # 사이트 설정 파일
 
 # 기본 설정
-title                 : "땅파는 블로그"
+title                 : "감자도스"
 description           : "개발 & 기타 등등"
 email                 : "potados99@gmail.com"
 locale                : "ko-KR"
@@ -76,7 +76,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: false
       share: false
@@ -87,7 +87,7 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
+      author_profile: false
 
 category_archive:
   type: liquid
