@@ -1,6 +1,6 @@
 # potados99.github.io
 
-## 땅파는 블로그
+## 감자도스
 
 블로그는 [여기](https://potados99.github.io)입니다.
 
