@@ -46,6 +46,7 @@ author:
   location              : "대한민국 인천"
   email                 : "potados99@gmail.com"
   button                : false
+  home                  : "https://potados99.github.io/about/"
   links:    
     - label             : "GitHub"
       icon              : "fab fa-fw fa-github"
