@@ -45,6 +45,7 @@ author:
   bio                   : "인생 21년차, 컴공 3년차."
   location              : "대한민국 인천"
   email                 : "potados99@gmail.com"
+  button                : false
   links:    
     - label             : "GitHub"
       icon              : "fab fa-fw fa-github"
