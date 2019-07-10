@@ -40,7 +40,7 @@ plugins:
 
 # 글쓴이
 author:
-  name                  : "potados"
+  name                  : "송병준"
   avatar                : "/assets/images/avatar.jpeg"
   bio                   : "인생 21년차, 컴공 3년차."
   location              : "대한민국 인천"
