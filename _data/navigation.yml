@@ -8,8 +8,8 @@ main:
   - title: "태그"
     url: /tags/
     
-#  - title: "Posts"
-#    url: /posts/
+  - title: "아카이브"
+    url: /posts/
     
 
 
