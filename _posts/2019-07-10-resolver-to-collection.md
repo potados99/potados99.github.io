@@ -123,7 +123,7 @@ fun cursorToJson(cursor: Cursor): JsonArray {
         }
 ~~~
 
-    * Json은 JavaScript Object Notation의 준말이기도 하지만, 구글이 제공하는 클래스 이름이기도 하다. J만 대문자인게 포인트.
+ > Json은 JavaScript Object Notation의 준말이기도 하지만, 구글이 제공하는 클래스 이름이기도 하다. J만 대문자인게 포인트.
 
 
 ##### 데이터 직렬화
