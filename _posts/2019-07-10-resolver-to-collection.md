@@ -1,6 +1,7 @@
 ---
 title: "[Kotlin Android] Content Resolver의 query 결과를 Collection으로 바로 받아오기"
 date: 2019-07-10 22:00:17 +0900
+last_modified: 2019-07-12 04:39:00 +0900
 excerpt: 쿼리한 결과 처리하는 것도 일이다. 어떻게 하면 일을 조금 덜 수 있을까 고민하다가 생각난 것.
 header:
     overlay_image: /assets/images/kotlin-android.png
@@ -11,7 +12,7 @@ tags:
     - android
 ---
 
-### 안드로이드에서 데이터에 접근하기
+## 안드로이드에서 데이터에 접근하기
 
 안드로이드에서의 데이터 공유는 4대 컴포넌트 중 하나인 Content Provider, 즉 컨텐츠 제공자를 통해서만 이루어진다.
 
@@ -20,7 +21,7 @@ tags:
 
 이 resolver는 사용자와 Content Provider 사이에 존재하며, 둘을 이어주는 역할을 한다.
 
-### Content resolver로 데이터 가져오기
+## Content resolver로 데이터 가져오기
 
 Content reolver를 통해 내부 db에 쿼리를 보내 결과를 전달받을 수 있다.
 예를 들어서 사용자 기기의 연락처를 조회하거나, 메시지 대화방 목록을 읽어올 수 있다.
@@ -43,20 +44,20 @@ ContentResolver의 query 메소드는 결과를 [Cursor](https://developer.andro
 val resultsInList: List<DataType> = myQuery(resolver, uri, ...)
 ~~~
 
-### 데이터 객체화
+## 데이터 객체화
 
 만능 쿼리 함수를 만들어야 한다.
 여기서 가장 중요한 것은 데이터 타입에 관계없이 쿼리의 결과를 저장하는 것이다.
 
 Cursor를 얻어온 뒤 이를 데이터 클래스에 집어넣기 위한 몇 가지 방법이 있다.
 
-#### 1. 팩토리 클래스 만들기
+### 1. 팩토리 클래스 만들기
 
 Cursor를 먹고 데이터 클래스 인스턴스를 뱉는 factory 클래스를 만들 수 있다.
 
 아주 이상적이고 쉽고 빠르지만, 범용성이 0이다. 범용적인 것을 추구하기 때문에 이 방법은 건너뛴다.
 
-#### 2. Reflection (반영)
+### 2. Reflection (반영)
 
 Kotlin이나 Java는 [reflection](https://kotlinlang.org/docs/reference/reflection.html)을 지원한다.
 
@@ -64,7 +65,7 @@ Kotlin이나 Java는 [reflection](https://kotlinlang.org/docs/reference/reflecti
 
 이런 식의 응용이 가능하다. ([stack overflow](https://stackoverflow.com/a/35539628) 일부 발췌)
 
-~~~
+~~~kotlin
 // some data class
 data class MyData(val name: String, val age: Int)
 val sample = MyData("Fred", 33)
@@ -85,14 +86,14 @@ String을 이용해서 객체의 구성 요소에 접근하는 시나리오인�
 첫째로, cursor의 column 이름(사실은 DB의 column 이름)이 데이터 클래스의 속성 이름과 동일해야 한다. 안그러면 못찾는다.
 그리고, 형변환을 포함한 변환-대입 로직을 모두 작성해야 한다. 이 단점이 너무 치명적이라 다음에 시도해보기로 했다.
 
-#### 3. Cursor를 JSON으로 변환한 뒤 POJO로 변환하기.
+### 3. Cursor를 JSON으로 변환한 뒤 POJO로 변환하기.
 
 Cursor가 담는 정보는 모두 key와 value로 이루어져있다는 점에서 JSON과 유사하다.
 따라서 둘의 상호 변환도 아주 쉽다.
 
 다음과 같은 코드로 간단하게 JSON 객체를 얻어낼 수 있다.
 
-~~~
+~~~kotlin
 fun cursorToJson(cursor: Cursor): JsonArray {
             // record 여럿이 담길 배열.
             val resultSet = JsonArray()
@@ -127,7 +128,7 @@ fun cursorToJson(cursor: Cursor): JsonArray {
  > Json은 JavaScript Object Notation의 준말이기도 하지만, 구글이 제공하는 클래스 이름이기도 하다. J만 대문자인게 포인트.
 
 
-##### 데이터 직렬화
+#### 데이터 직렬화
 
  JSON 객체를 얻어냈으면, 이를 데이터 클래스 객체로 변환해야 한다. 구글의 [Gson](https://github.com/google/gson) 라이브러리가 이를 도와준다.
 
@@ -145,7 +146,7 @@ dependencies {
 
 사용법은 다음과 같다.
 
- ~~~
+ ~~~kotlin
  val gson = Gson() // 먼저 인스턴스를 가져오고
  val json = cursorToJson(...) // json 객체도 가져오고
 
@@ -156,7 +157,7 @@ dependencies {
 
 
  >여기서 잠깐, 타입 객체는 아무것도 override하지 않는 익명 객체이다. C#의 `typeOf()` 같은 것이 없어서 번거로웠다. 그래서 하나 만들었다.
- ~~~
+ ~~~kotlin
  inline fun <reified T> typeOf(): Type = object: TypeToken<T>() {}.type
  val t = typeOf<String>() // String에 대한 타입 객체
  ~~~
@@ -168,7 +169,7 @@ dependencies {
 
  하지만 속성 이름이 다를 경우에는 notation을 통해 표기해주어야 한다.
 
- ~~~
+ ~~~kotlin
  data class MyData(
      @SerializedName("name")    val theName: String,
                                 val id: Int
@@ -186,7 +187,7 @@ dependencies {
  껍데기는 List가 될 수도 있고, Array가 될 수도 있다. Collection을 구현하는 클래스이면 가능한 것으로 보인다.(추정)
 
 
-### 쿼리 결과 컬렉션으로 받아보기
+## 쿼리 결과 컬렉션으로 받아보기
 
 JSON을 거치는 방법으로 `ContentResolver.query()`부터 `Gson.fromJson()`까지 다리가 완성되었다.
 
@@ -194,7 +195,7 @@ JSON을 거치는 방법으로 `ContentResolver.query()`부터 `Gson.fromJson()`
 
 함수의 원형은 다음과 같이 만든다.
 
-~~~
+~~~kotlin
 inline fun <reified T> queryToCollection(
     resolver: ContentResolver,
     uri: Uri,
@@ -209,14 +210,14 @@ inline fun <reified T> queryToCollection(
 뒤의 세 인자는 사용하지 않는 경우 편리성을 위해 기본값으로 null을 지정해주었다.
 
 반환 타입인 T는 `Collection<*>` 타입이어야 한다. 그렇지 않은 경우는 걸러준다.
-~~~
+~~~kotlin
 if (Types.typeOf<T>() is Collection<*>) {
     throw IllegalThreadStateException("Wrong generic type: not a collection.")
 }
 ~~~
 
 그런 다음 인자를 가지고 `resolver`의 `query()`를 실행하여 cursor를 얻고, JSON으로 변환해준다.
-~~~
+~~~kotlin
 val cursor = resolver.query(
     uri,
     projection,
@@ -228,14 +229,14 @@ val parsedJson = JsonHelper.cursorToJson(cursor).also { cursor.close() }
 ~~~
 
 마지막으로 이를 Gson으로 직렬화시켜 반환한다.
-~~~
+~~~kotlin
 return Gson().fromJson(
     parsedJson,
     Types.typeOf<T>()
 )
 ~~~
 
-### 결론
+## 결론
 
 퍼포먼스는 딱히 생각하지 않고 만들었다. 아마 느릴 것이다. 대규모 데이터를 가지고 실험해본 적은 없다.
 다만 범용성을 추구해서 어디에다 갖다붙여도 잘 작동하는 라이브러리 스타일 코드를 짜려고 했고, 어느정도 목표를 이룬 것 같다.
