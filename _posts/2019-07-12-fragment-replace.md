@@ -78,7 +78,7 @@ supportFragmentManager
 
 특이한 점이 하나 있었다.
 
-프래그먼트를 완전히 교체하여 `onPause` -> ... -> `onDetach`를 거쳐 다시 액티비티에서 붙으면서 `onAttach` -> ... -> `onResume`로 진행하는 과정에서는 `onResume`이 분명히 실행되는데도 불구하고 그렇지 않은 것처럼 동작했다.
+프래그먼트를 완전히 교체하여 `onPause` -> ... -> `onDetach`를 거쳐 다시 액티비티에 붙으면서 `onAttach` -> ... -> `onResume`로 진행하는 과정에서는 `onResume`이 분명히 실행되는데도 불구하고 그렇지 않은 것처럼 동작했다.
 
 ### 시도 1
 
