@@ -40,7 +40,7 @@ ContentResolver의 query 메소드는 결과를 [Cursor](https://developer.andro
 
 하지만 매번 루프를 돌릴 수는 없다. 이런 그림이 나오기를 원했다.
 
-~~~
+~~~kotlin
 val resultsInList: List<DataType> = myQuery(resolver, uri, ...)
 ~~~
 
