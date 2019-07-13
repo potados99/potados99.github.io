@@ -89,9 +89,9 @@ supportFragmentManager
 .replace(R.id.fragment_container, fragment)
 ~~~
 
-저 replace가 일어나기 전까지는 괜찮은 것이다.
+저 `replace`가 일어나기 전까지는 괜찮은 것이다.
 
-그래서 []스택 오버플로우](https://stackoverflow.com/a/45301078)를 잘 뒤져서 프래그먼트를 바꾸는 다른 방법을 찾아냈다.
+그래서 [스택 오버플로우](https://stackoverflow.com/a/45301078)를 잘 뒤져서 프래그먼트를 바꾸는 다른 방법을 찾아냈다.
 
 ~~~java
 FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
