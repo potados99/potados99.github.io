@@ -56,10 +56,13 @@ tags:
 
 ## Architecting android
 
-[Fernando Cejas](https://fernandocejas.com)라는 사람이 작성한 Architecting Android라는 글 3부작이 있다. 각각 [2014년](https://fernandocejas.com/2014/09/03/architecting-android-the-clean-way/), [2015년](https://fernandocejas.com/2015/07/18/architecting-android-the-evolution/), [2018년](https://fernandocejas.com/2018/05/07/architecting-android-reloaded/)에 작성된 글로, 안드로이드에 Clean Architecture를 최초로 도입한 시점부터 피드백을 받아 개선된 현재까지의 기록을 예제와 함께 남겨놓으셨다.
+[Fernando Cejas](https://fernandocejas.com)라는 사람이 작성한 Architecting Android라는 글 3부작이 있다.
+
+각각 [2014년](https://fernandocejas.com/2014/09/03/architecting-android-the-clean-way/), [2015년](https://fernandocejas.com/2015/07/18/architecting-android-the-evolution/), [2018년](https://fernandocejas.com/2018/05/07/architecting-android-reloaded/)에 작성된 글로, 안드로이드에 Clean Architecture를 최초로 도입한 시점부터 피드백을 받아 개선된 현재까지의 기록을 예제와 함께 남겨놓으셨다.
 
 ![cejas-clean-architecture](/assets/images/cejas-clean-architecture.png)
-    안드로이드 클린 아키텍처 in Cejas way...
+
+> 안드로이드 클린 아키텍처 in Cejas way...
 
 맨 밑의 Data 레이어는 Repository 패턴을 사용하며, 신뢰할 수 있는 단 하나의 데이터 소스 역할을 수행한다.
 
@@ -92,7 +95,7 @@ UseCase의 정의이다. Params 타입의 파라미터를 입력으로 받고 Ty
 
 ## 내 앱에 적용하기
 
-현재 개발중인 앱에 (거의) 그대로 가져와 도입하였다. 혹시 보고계신다면 Thang you Fernando!
+현재 개발중인 앱에 (거의) 그대로 가져와 도입하였다. 혹시 보고계신다면 Thank you Fernando!
 
 아래는 뷰모델 중 하나이다.
 
