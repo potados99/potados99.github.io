@@ -41,7 +41,6 @@ tags:
 이 Clean Architecture는 2012년에 [Robert C. Martin](https://twitter.com/unclebobmartin)(엉클 밥)이 공개했다.
 
 ![clean-architecture](/assets/images/clean-architecture.png)
-    클린 아키텍처 개관
 
 이 아키텍처의 목적은 다음을 달성하는 것이다:
 - 프레임워크 독립성: 프레임워크가 라이브러리에 의존하지 않는다.
