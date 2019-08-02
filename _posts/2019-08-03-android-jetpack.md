@@ -1,7 +1,7 @@
 ---
 title: "[Android Jetpack] DataBinding과 Navigation 둘러보기"
 date: 2019-08-03 04:41:45 +0900
-excerpt: "구글 샘플 앱 둘러보다가 발견한 신문물..."
+excerpt: "구글 샘플 앱 구경하다가 발견한 것들. 나온지 1년 넘은 시점에서 쓰는 뒷북"
 header:
     overlay_image: /assets/images/header-jetpack.png
 categories:
