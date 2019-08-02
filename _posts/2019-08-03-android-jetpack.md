@@ -1,5 +1,5 @@
 ---
-title: "[Android Jetpack] Navigation과 DataBinding 사용해보기"
+title: "[Android Jetpack] DataBinding과 Navigation 둘러보기"
 date: 2019-08-03 04:41:45 +0900
 excerpt: "구글 샘플 앱 둘러보다가 발견한 신문물..."
 header:
