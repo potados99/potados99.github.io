@@ -129,6 +129,7 @@ iOS에는 스토리보드가 있다.
 다음과 같이 쓰인다.
 
 1. 네비게이션 그래프를 작성한다.
+
 ~~~xml
 <fragment
     android:id="@+id/task_detail_fragment_dest"
