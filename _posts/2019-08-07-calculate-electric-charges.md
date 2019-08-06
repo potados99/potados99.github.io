@@ -79,7 +79,7 @@ tags:
 
 먼저 step function을 담을 수 있는 구조체를 정의한다.
 
-~~~C
+~~~c
 // types.h
 
 typedef int 	range_t;
@@ -105,7 +105,7 @@ struct step_function {
 
 그리고 step function의 적분을 계산할 함수를 만든다.
 
-~~~C
+~~~c
 // step_function.c
 
 // 범위 추출 도와주는 함수
@@ -156,7 +156,7 @@ value_t integrate_step_function(const struct step_function *restrict function, r
 
 알아보기 편하라고 메인 함수에 일단 다 집어넣었는데, 대략 간추리면 아래와 같다.
 
-~~~C
+~~~c
 // main.c
 
 if (argc < 2) {
@@ -202,7 +202,7 @@ return 0;
 
 그리고 제일 중요한 함수 정의는 여기에 있다.
 
-~~~C
+~~~c
 // electric_charges.h
 
 #define ELECTRIC_CHARGES_FUNCTION												\
