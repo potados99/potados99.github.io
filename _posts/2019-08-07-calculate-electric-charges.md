@@ -132,7 +132,7 @@ value_t integrate_step_function(const struct step_function *restrict function, r
 
 	value_t total = 0;
 	size_t n_steps = function->n_steps;
-	const struct step_piece \*steps = function->steps;
+	const struct step_piece *steps = function->steps;
 
 	struct numeric_range selection = {0, 0};
 
