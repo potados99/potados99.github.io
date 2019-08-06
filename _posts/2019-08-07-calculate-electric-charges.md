@@ -229,6 +229,9 @@ return 0;
 
 생략을 많이 했다. 원본은 [여기](https://github.com/potados99/c-apps/tree/master/electric-charges-calc)에 있다.
 
+![demo](/assets/images/elec-calc-demo.png)
+
+> 실제 요금과는 다를 수 있다.
 
 ## 결론
 
