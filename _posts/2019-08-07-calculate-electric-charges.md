@@ -231,7 +231,7 @@ return 0;
 
 ![demo](/assets/images/elec-calc-demo.png)
 
-> 실제 요금과는 다를 수 있다.
+> 450kWh 쓰면 69,816원. 실제 요금과는 다를 수 있다.
 
 ## 결론
 
