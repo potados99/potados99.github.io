@@ -64,7 +64,7 @@ tags:
 
 이런 함수를 [step function](https://en.wikipedia.org/wiki/Step_function) 또는 [piecewise function](https://en.wikipedia.org/wiki/Piecewise)이라고 부른다.
 
-대표적인 예시로 f(x) = |x|가 있다.
+대표적인 예시로 f(x) = abs(x)가 있다.
 
 ![절댓값 x](/assets/images/abs-x.svg)
 > 너무 뾰족해서 미분이 안된다.
