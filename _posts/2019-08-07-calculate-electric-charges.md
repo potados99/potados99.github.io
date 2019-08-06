@@ -3,7 +3,7 @@ title: "[C] 누진 적용된 전기요금 계산하기"
 date: 2019-08-07 03:23:49 +0900
 excerpt: "누진세의 공포 때문에 에어컨도 제대로 못 틀고있다. 누진 요금이 그렇게나 위험할까? 어느정도 써야 전기요금이 폭발하는걸까?"
 header:
-    overlay_image: /assets/images/electricity-meter.jpg
+    overlay_image: /assets/images/math-board.jpg
 categories:
     - life
 tags:
@@ -11,7 +11,7 @@ tags:
     - summer
     - electricity
 ---
-> 이미지 출처: [여기](https://constructionreviewonline.com/2018/03/nerc-releases-electricity-meter-regulation/)
+> 이미지 출처: [여기](https://www.rd.com/culture/math-lessons-real-life/)
 
 작년만큼은 아니어도 올해도 아주 덥다. 낮 기온이 30도 아래로 내려가는 것을 보기가 어렵다.
 
