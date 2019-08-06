@@ -229,6 +229,8 @@ return 0;
 
 생략을 많이 했다. 원본은 [여기](https://github.com/potados99/c-apps/tree/master/electric-charges-calc)에 있다.
 
+실행해보면 아래와 같다.
+
 ![demo](/assets/images/elec-calc-demo.png)
 
 > 450kWh 쓰면 69,816원. 실제 요금과는 다를 수 있다.
