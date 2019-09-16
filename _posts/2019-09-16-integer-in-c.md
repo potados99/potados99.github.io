@@ -6,8 +6,10 @@ categories:
     - study
 tags:
     - C
-    - summer
-    - electricity
+    - system-programming
+    - integer
+    - overflow
+    - arithmetic
 ---
 
 > 개념을 배우면서 쓰는 글이기 때문에 잘못된 이해에서 비롯된 틀린 서술이 존재할 여지가 다분합니다. 따라서 이 글은 학습 참고 용도로는 부적합합니다. 혹시나 이 비루한 글을 읽으시던 도중 잘못된 정보를 발견하셨다면 <potados99@gmail.com>로 연락 주신다면 정말로 감사하겠습니다 :)
