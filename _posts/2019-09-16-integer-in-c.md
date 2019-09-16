@@ -137,7 +137,7 @@ g(x) = 2^w - x
 C 표준에는 정수 연산에서의 rank를 정해놓는다.
 
 > C Standard, subclause 6.3.1.1        
-2. The rank of a signed integer type shall be greater than the rank of any signed integer type with less precision.    
+2. The rank of a signed integer type shall be greater than the rank of any signed integer type with less precision.     
 -> 부호가 있는 정수에서 정확도가 더 높은 것이 rank가 높다.
 3. The rank of long long int shall be greater than the rank of long int, which shall be greater than the rank of int, which shall be greater than the rank of short int, which shall be greater than the rank of signed char.
 -> rank는 long long int > long int > int > short int > signed char 순이다.
@@ -146,13 +146,13 @@ C 표준에는 정수 연산에서의 rank를 정해놓는다.
 
 또한 산술 연산시 conversion 규칙도 정해놓는다.
 
-> 2. If both operands are of the same integer type (signed or unsigned), the operand with the type of lesser integer conversion rank is converted to the type of the operand with greater rank.    
+> 2. If both operands are of the same integer type (signed or unsigned), the operand with the type of lesser integer conversion rank is converted to the type of the operand with greater rank.     
 -> 만약 부호가 같은데 정수 형이 다르다면 둘 중 높은 rank를 가진 type으로 변환된다.
 
-> 3. If the operand that has unsigned integer type has rank greater than or equal to the rank of the type of the other operand, the operand with signed integer type is converted to the type of the operand with unsigned integer type.
+> 3. If the operand that has unsigned integer type has rank greater than or equal to the rank of the type of the other operand, the operand with signed integer type is converted to the type of the operand with unsigned integer type.    
 -> unsigned 정수형의 피연산자가 signed 정수형의 피연산자보다 rank가 높거나 같다면 unsigned로 변환된다.
 
-> 4. If the type of the operand with signed integer type can represent all of the values of the type of the operand with unsigned integer type, the operand with unsigned integer type is converted to the type of the operand with signed integer type.
+> 4. If the type of the operand with signed integer type can represent all of the values of the type of the operand with unsigned integer type, the operand with unsigned integer type is converted to the type of the operand with signed integer type.    
 -> 만약 singed 정수가 다른 unsigned 정수형인 피연산자의 값을 모두 표현할 수 있다면 그 피연산자는 signed type으로 변환된다.
 
 > 5. Otherwise, both operands are converted to the unsigned integer type corresponding to the type of the operand with signed integer type.    
