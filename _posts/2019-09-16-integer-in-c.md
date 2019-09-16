@@ -209,3 +209,4 @@ bool tadd_ok(int x, int y) {
 
 - [2의 보수](https://ko.wikipedia.org/wiki/2의_보수)
 - [오버플로](https://ko.wikipedia.org/wiki/오버플로)
+- [INT02-C. Understand integer conversion rules](https://wiki.sei.cmu.edu/confluence/display/c/INT02-C.%2BUnderstand%2Binteger%2Bconversion%2Brules)
