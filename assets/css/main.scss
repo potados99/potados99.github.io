@@ -20,15 +20,21 @@ $type-size-8: 0.625em !default; // ~10px
   font-size: 0.1em;
 }
 
-$type-size-1: 0.1em !default;
-$type-size-2: 0.1em !default;
-$type-size-3: 0.1em !default; 
-$type-size-4: 0.1em !default; 
-$type-size-5: 0.1em !default;
-$type-size-6: 0.1em !default; 
-$type-size-7: 0.1em !default;
-$type-size-8: 0.1em !default; 
+html {
+  font-size: 16px;
 
+  @include breakpoint($medium) {
+    font-size: 16px;
+  }
+
+  @include breakpoint($large) {
+    font-size: 17px;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 18px;
+  }
+}
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
