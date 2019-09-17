@@ -139,7 +139,7 @@ C 표준에는 정수 연산에서의 rank를 정해놓는다.
 > C Standard, subclause 6.3.1.1        
 2. The rank of a signed integer type shall be greater than the rank of any signed integer type with less precision.     
 -> 부호가 있는 정수에서 정확도가 더 높은 것이 rank가 높다.
-3. The rank of long long int shall be greater than the rank of long int, which shall be greater than the rank of int, which shall be greater than the rank of short int, which shall be greater than the rank of signed char.
+3. The rank of long long int shall be greater than the rank of long int, which shall be greater than the rank of int, which shall be greater than the rank of short int, which shall be greater than the rank of signed char.    
 -> rank는 long long int > long int > int > short int > signed char 순이다.
 4. The rank of any unsigned integer type shall equal the rank of the corresponding signed integer type, if any.    
 -> 부호 없는 정수의 rank는 이에 상응하는 부호 있는 정수의 rank가 같다.
