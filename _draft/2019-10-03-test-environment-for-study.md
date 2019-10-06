@@ -50,7 +50,72 @@ Algorithm
 
 ## 뜯어고치기
 
- 먼저 잘 짜여진 파이썬 프로그램을 몇 개 참고해서 best practice를 알아본다.
+ 먼저 잘 짜여진 파이썬 프로그램을 참고해서 best practice를 알아본다.
+
+ GitHub에 algorithm-python 키워드를 넣어 검색하니 [이런 훌륭한 프로젝트](https://github.com/TheAlgorithms/Python)가 나왔다. 모든 알고리즘을 다 Python으로 구현했다고 하는데, 상당히 양이 방대하다. 그중 정렬 알고리즘에 속하는 `insertion_sort.py`를 살펴보았다.
+
+~~~python
+"""
+This is a pure python implementation of the insertion sort algorithm
+For doctests run following command:
+python -m doctest -v insertion_sort.py
+or
+python3 -m doctest -v insertion_sort.py
+For manual testing run:
+python insertion_sort.py
+"""
+
+
+def insertion_sort(collection):
+    """Pure implementation of the insertion sort algorithm in Python
+    :param collection: some mutable ordered collection with heterogeneous
+    comparable items inside
+    :return: the same collection ordered by ascending
+    Examples:
+    >>> insertion_sort([0, 5, 3, 2, 2])
+    [0, 2, 2, 3, 5]
+    >>> insertion_sort([])
+    []
+    >>> insertion_sort([-2, -5, -45])
+    [-45, -5, -2]
+    """
+
+    for loop_index in range(1, len(collection)):
+        insertion_index = loop_index
+        while (
+            insertion_index > 0
+            and collection[insertion_index - 1] > collection[insertion_index]
+        ):
+            collection[insertion_index], collection[insertion_index - 1] = (
+                collection[insertion_index - 1],
+                collection[insertion_index],
+            )
+            insertion_index -= 1
+
+    return collection
+
+
+if __name__ == "__main__":
+    user_input = input("Enter numbers separated by a comma:\n").strip()
+    unsorted = [int(item) for item in user_input.split(",")]
+    print(insertion_sort(unsorted))
+~~~
+
+ 웬 주석문 속에 인터프리터 입출력 같은 것을 써놓고는 `python3 -m doctest -v insertion_sort.py` 명령어로 테스트가 가능하다고 한다. doctest?
+
+
+### doctest
+
+[Python 공식 한글 문서 중 대화형 예제 테스트 페이지](https://docs.python.org/ko/3.8/library/doctest.html)에서는 doctest를 다음과 같이 안내한다.
+
+> doctest 모듈은 대화형 파이썬 세션처럼 보이는 텍스트를 검색한 다음, 해당 세션을 실행하여 표시된 대로 정확하게 작동하는지 검증합니다. doctest를 사용하는 몇 가지 일반적인 방법이 있습니다:    
+- 모든 대화식 예제가 설명된 대로 작동하는지 확인하여 모듈의 독스트링이 최신인지 확인합니다.
+- 테스트 파일이나 테스트 객체의 대화형 예제가 예상대로 작동하는지 확인하여 회귀 테스트를 수행합니다.
+- 입/출력 예제를 그대로 보여줌으로써 패키지에 대한 자습서를 작성합니다. 예제나 설명문 중 어느 것이 강조되는지에 따라, "문학적 테스트(literate testing)"나 "실행 가능한 설명서(executable documentation)"의 느낌을 줍니다.
+
+ doctest는 소스코드 내에서 Python 인터프리터 세션처럼 보이는 텍스트를 검색해서 실제로 그렇게 작동하는지 테스트해주는 모듈이다.
+
+
 
 
 ## Reference
