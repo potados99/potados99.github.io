@@ -10,10 +10,7 @@ tags:
     - algorithm
 ---
 
-> 아주 간단한 프로젝트 리팩토링을 다룬 글입니다. 이토록 간단한데도 불구하고 이 글을 쓴 것은 이것을 생각하느라 보낸 시간이 아까워 기록을 남겨두고 싶기 때문입니다.
-
-
-## 도입
+## 시작하며
 
  알고리즘 강의를 들으면서 매주 실습을 하고 있다. 한 주에 알고리즘을 3~4개씩 배운다. 그 주에 집에 가서 이를 직접 구현해보곤 하는데, 문제는 함수가 늘어날수록 프로그램이 점점 난장판이 되는 것이다.
 
@@ -52,7 +49,7 @@ Algorithm
 
  먼저 잘 짜여진 파이썬 프로그램을 참고해서 best practice를 알아본다.
 
- GitHub에 algorithm-python 키워드를 넣어 검색하니 [이런 훌륭한 프로젝트](https://github.com/TheAlgorithms/Python)가 나왔다. 모든 알고리즘을 다 Python으로 구현했다고 하는데, 상당히 양이 방대하다. 그중 정렬 알고리즘에 속하는 `insertion_sort.py`를 살펴보았다.
+ GitHub에 algorithm-python 키워드를 넣어 검색하다 [훌륭한 프로젝트](https://github.com/TheAlgorithms/Python)를 발견했다. 모든 알고리즘을 다 Python으로 구현했다고 하는데, 상당히 양이 방대하다. 그중 정렬 알고리즘에 속하는 `insertion_sort.py`를 살펴보았다.
 
 ~~~python
 """
@@ -101,7 +98,7 @@ if __name__ == "__main__":
     print(insertion_sort(unsorted))
 ~~~
 
- 웬 주석문 속에 인터프리터 입출력 같은 것을 써놓고는 `python3 -m doctest -v insertion_sort.py` 명령어로 테스트가 가능하다고 한다. doctest?
+ 주석문 속에 인터프리터 입출력 같은 것을 써놓고는 `python3 -m doctest -v insertion_sort.py` 명령어로 테스트가 가능하다고 한다. `-v`는 모든 메시지를 출력하라는 뜻이고 `-m [module]`은 특정 모듈을 사용하라는 뜻이다. 여기서 `doctest`라는 모듈이 등장한다.
 
 
 ### doctest
@@ -113,7 +110,53 @@ if __name__ == "__main__":
 - 테스트 파일이나 테스트 객체의 대화형 예제가 예상대로 작동하는지 확인하여 회귀 테스트를 수행합니다.
 - 입/출력 예제를 그대로 보여줌으로써 패키지에 대한 자습서를 작성합니다. 예제나 설명문 중 어느 것이 강조되는지에 따라, "문학적 테스트(literate testing)"나 "실행 가능한 설명서(executable documentation)"의 느낌을 줍니다.
 
- doctest는 소스코드 내에서 Python 인터프리터 세션처럼 보이는 텍스트를 검색해서 실제로 그렇게 작동하는지 테스트해주는 모듈이다.
+ doctest는 소스코드 내에서 Python 인터프리터 세션처럼 보이는 텍스트를 검색해서 실제로 그렇게 작동하는지 테스트해주는 모듈이다. 다시 말해서 모듈이나 함수 테스트를 주석 몇 줄만으로 간단하게 끝낼 수가 있다는거다.
+
+ ![wow](/assets/images/gotta_buy_it.jpg)
+
+> 이건 써야 한다. 테스트를 이렇게 간편하게 해주다니...
+
+
+### doctest 응용
+
+작은 예시를 작성해보았다.
+
+~~~python
+# add.py
+def add(a, b):
+    ''' return sum of a and b.
+    >>> add(3, 5)
+    8
+    >>> add(4, -2)
+    2
+    '''
+
+    return a + b
+~~~
+
+~~~
+$ python3 -m doctest -v add.py
+Trying:
+    add(3, 5)
+Expecting:
+    8
+ok
+Trying:
+    add(4, -2)
+Expecting:
+    2
+ok
+1 items had no tests:
+    add
+1 items passed all tests:
+   2 tests in add.add
+2 tests in 2 items.
+2 passed and 0 failed.
+Test passed.
+~~~
+
+
+### 기존 코드에 적용하기
 
 
 
