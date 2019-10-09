@@ -155,12 +155,133 @@ ok
 Test passed.
 ~~~
 
-
 ### 기존 코드에 적용하기
 
+ `sort.py`에 박혀있던 함수들을 모두 밖으로 끄집어내어 모듈화시키고, 각 함수에 docstring과 doctest를 추가해주었다.
 
+ 다음은 doctest를 적용한 insertion_sort.py이다.
+
+~~~python
+def insertion_sort(collection, verbose=False):
+    """Implementation of insertion sort in Python.
+
+    Args:
+        collection (list): Input to sort.
+        verbose (bool): Print every rotation if true.
+
+    Returns:
+        list: The same as the collection, with sort ascending applied.
+
+    Example:
+        >>> insertion_sort([3, 1, 7, 0, 4, 8, 2])
+        [0, 1, 2, 3, 4, 7, 8]
+
+        >>> insertion_sort([-91, -123, -1])
+        [-123, -91, -1]
+    """
+
+    for i in range(1, len(collection)):
+        if verbose: print("Rotation " + str(i))
+
+        n = collection[i]
+
+        # j from i - 1 to 0.
+        for j in range(i - 1, -2, -1):
+            if collection[j] <= n: break
+
+            collection[j + 1] = collection[j]
+            if verbose: print(collection)
+
+        collection[j + 1] = n
+
+        if verbose: print(collection)
+
+    return collection
+
+
+if __name__ == "__main__":
+    from common import invoker
+    invoker.from_input(insertion_sort)
+~~~
+
+ 주석 스타일은 [구글의 Python docstring 스타일](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)을 따랐다.
+
+ 각 정렬 함수는 verbose를 두 번째 인자로 받아 각 rotation마다 정렬 진행 과정을 볼 수 있게 했다. 만약 모듈을 직접 실행하면 `invoker` 모듈의 `from_input`함수가 실행되는데, 내용은 다음과 같다.
+
+ ~~~python
+ import argparse
+
+ def from_input(verbosable_sort_function):
+     parser = argparse.ArgumentParser()
+     parser.add_argument("--verbose", help="print every rotation", action="store_true")
+     parsed = parser.parse_args()
+
+     user_input = input("Enter numbers separated by a comma: ").strip()
+     unsorted = [int(item) for item in user_input.split(",")]
+     print(verbosable_sort_function(unsorted, parsed.verbose))
+ ~~~
+
+ 사용자로부터 입력받은 데이터로 정렬을 수행하여 결과를 출력한다. 이때 `--verbose`를 함께 넘기면 정렬 과정이 모두 출력된다.
+
+ 삽입정렬을 하는 `insertion_sort.py`의 예시를 보자. 그냥 실행하면 이렇게 입력 과정이 있고 결과만 출력된다.
+
+ ~~~
+ $ python3 insertion_sort.py
+ Enter numbers separated by a comma: 3, 2, 1
+ [1, 2, 3]
+ ~~~
+
+ `--verbose` 옵션을 넘기면 중간 과정이 모두 보인다.
+
+ ~~~
+ $ python3 insertion_sort.py --verbose
+ Enter numbers separated by a comma: 3, 2, 1
+ Rotation 1
+ [3, 3, 1]
+ [2, 3, 1]
+ Rotation 2
+ [2, 3, 3]
+ [2, 2, 3]
+ [3, 2, 3]
+ [1, 2, 3]
+ [1, 2, 3]
+ ~~~
+
+ 2번째 회전에서 3이 0 인덱스로 가는건 중간에 -1 인덱스에 접근했기 때문에 그렇다. -1 인덱스는 컬렉션의 맨 끝을 가리킨다. 따라서 가장 마지막 원소인 3이 잠시 0 인덱스에 머무르게 된다.
+
+ doctest 결과는 다음과 같다.
+
+ ~~~
+ $ python3 -m doctest insertion_sort.py -v
+ Trying:
+     insertion_sort([3, 1, 7, 0, 4, 8, 2])
+ Expecting:
+     [0, 1, 2, 3, 4, 7, 8]
+ ok
+ Trying:
+    insertion_sort([-91, -123, -1])
+ Expecting:
+     [-123, -91, -1]
+ ok
+ 1 items had no tests:
+     insertion_sort
+ 1 items passed all tests:
+    2 tests in insertion_sort.insertion_sort
+ 2 tests in 2 items.
+ 2 passed and 0 failed.
+ Test passed.
+ ~~~
+
+잘 돌아간다. `1 items had no tests`라고 뜨는건 모듈 테스트가 없어서 그런 것이다. 여기에서는 무시해도 된다.
+
+### 후기
+
+ 정렬 알고리즘을 하나 추가할 때마다 복사-붙여넣기를 반복해야 했다. 강의 때 새로 배운 것을 빠르게 구현하고 정리하기에는 번거롭다는 단점이 있다. 템플릿을 만들어서 필요할 때에 이름만 바꾸어 복사해주는 스크립트를 하나 작성해야 할 것 같다.
 
 
 ## Reference
 
-- []()
+- [Python 공식 웹사이트](https://www.python.org)
+- [doctest 참고 1](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=2ahUKEwjH8Luh047lAhWnyIsBHRxcC5oQFjAAegQIABAB&url=https%3A%2F%2Fdocs.python.org%2Fko%2F3.8%2Flibrary%2Fdoctest.html&usg=AOvVaw3S0gpZBoM960DhrIXM28OB)
+- [doctest 참고 2](https://m.blog.naver.com/PostView.nhn?blogId=dudwo567890&logNo=130166401598&proxyReferer=https%3A%2F%2Fwww.google.com%2F)
+- [PEP 257](https://www.python.org/dev/peps/pep-0257/)
