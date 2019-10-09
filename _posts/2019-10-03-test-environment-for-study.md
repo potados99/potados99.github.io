@@ -1,8 +1,7 @@
 ---
 title: "[Python] 알고리즘 구현체를 위한 테스트 환경 만들기"
 excerpt: "doctest 활용하기"
-date: 2019-10-03 14:44:01 +0900
-modified: 2019-10-09 16:31:00 +0900
+date: 2019-10-09 16:31:00 +0900
 categories:
     - study
 tags:
