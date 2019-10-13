@@ -1,7 +1,7 @@
 ---
-title: [Jekyll] 지킬 테마 적용기
+title: "[Jekyll] 지킬 테마 적용기"
 date: 2019-07-10 03:33:00 +0900
-excerpt: 블로그하기 어렵다..
+excerpt: "순수 삽질 후기"
 categories:
   - dev
 tags:

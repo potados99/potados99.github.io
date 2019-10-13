@@ -2,7 +2,7 @@
 title: "[Kotlin Android] Content Resolver의 query 결과를 Collection으로 바로 받아오기"
 date: 2019-07-10 22:00:17 +0900
 last_modified_at: 2019-07-12 04:39:00 +0900
-excerpt: 쿼리한 결과 처리하는 것도 일이다. 어떻게 하면 일을 조금 덜 수 있을까 고민하다가 생각난 것.
+excerpt: "타입 써주면 알아서 collection에 차곡차곡 담겨서 나오도록 만들기."
 header:
     overlay_image: /assets/images/kotlin-android.png
 categories:
@@ -100,7 +100,7 @@ fun cursorToJson(cursor: Cursor): JsonArray {
             if (!cursor.moveToFirst()) return resultSet
 
             do {
-                // record 하나가 JsonObjecta 하나에 대응됨.
+                // record 하나가 JsonObject 하나에 대응됨.
                 val rowObject = JsonObject()
 
                 // 각 column과 이에 해당하는 value 추가.
