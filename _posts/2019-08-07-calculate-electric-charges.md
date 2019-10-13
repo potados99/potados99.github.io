@@ -1,7 +1,7 @@
 ---
 title: "[C] 누진 적용된 전기요금 계산하기"
 date: 2019-08-07 03:23:49 +0900
-excerpt: "누진세의 공포 때문에 에어컨도 제대로 못 틀고있다. 누진 요금이 그렇게나 위험할까? 어느정도 써야 전기요금이 폭발하는걸까?"
+excerpt: "누진요금 step function 계산하기"
 header:
     overlay_image: /assets/images/math-board.jpg
 categories:
