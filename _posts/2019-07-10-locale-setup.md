@@ -1,7 +1,7 @@
 ---
-title: Jekyll 테마 적용기
+title: [Jekyll] 지킬 테마 적용기
 date: 2019-07-10 03:33:00 +0900
-excerpt: 블로그 시작하기 어렵다..
+excerpt: 블로그하기 어렵다..
 categories:
   - dev
 tags:
@@ -11,7 +11,7 @@ tags:
   - theme
 ---
 
-블로그를 시작하면서 [minimal-mistakes](https://github.com/mmistakes/minimal-mistakes) 테마를 적용하였다.
+블로그를 1년정도 묵혀두었다가 이제서야 다시 시작하려고 한다. 시작하는 김에 [새로운 테마](https://github.com/mmistakes/minimal-mistakes) 테마를 적용하려고 한다.
 
 처음에는 `_config.yml`만 수정하면 되는 줄 알았는데, 생각보다 복잡했다.
 
