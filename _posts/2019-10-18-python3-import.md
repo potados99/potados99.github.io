@@ -106,15 +106,15 @@ myproject
  import util
 
  def div(a, b):
-    """
-    >>> div(3, 2)
-	1.5
-	"""
+ 	"""
+ 	>>> div(3, 2)
+ 	1.5
+ 	"""
 
-	result = a / b
-	util.log("dividing...")
+ 	result = a / b
+ 	util.log("dividing...")
 
-	return result
+ 	return result
  ~~~
 
  ~~~python
