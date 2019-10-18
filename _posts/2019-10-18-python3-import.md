@@ -1,5 +1,5 @@
 ---
-title: "[Python] Python 3의 상대경로 패키지 import 제한 피해가기"
+title: "[Python] Python 3의 상대경로 import 문제 피해가기"
 excerpt: "여러 실행 환경에 대응하기"
 date: 2019-10-18 23:40:08 +0900
 categories:
@@ -174,7 +174,7 @@ ModuleNotFoundError: No module named 'util'
 > Explicit relative imports are an acceptable alternative to absolute imports.    
 Implicit relative imports should never be used and have been removed in Python3.    
 
- Python 3에서는 암묵적인 상대경로 import가 안된다는 것이다.
+ Python 3에서는 **암묵적인 상대경로 import가 안된다** 는 것이다.
 
  Python 2는 주어진 import 경로가 상대경로일 것이라고 암묵적으로 해석하고 같은 디렉토리에서 이를 찾는다.
 
@@ -228,8 +228,8 @@ Implicit relative imports should never be used and have been removed in Python3.
 
  정리하면 다음과 같다.
 
- - 상대경로 import를 포함한 python 모듈은 단독 실행이 불가능하다.
- - 절대경로 import를 포함한 python 모듈은 패키지 내에서 import가 어렵다.
+ - **상대경로 import를 포함한 python 모듈은 단독 실행이 불가능하다.**
+ - **패키지 내에서 절대경로 import는 쉽지 않다.**
 
 
  패키지 안에 들어있는 모듈을 단독으로 실행하는 것이 python 철학에는 맞지 않는 모양인 것 같은데, 모듈만 실행하고 싶을 때가 종종 있다. 당장 위처럼 `doctest`를 모듈 단위로 돌리고 싶을 때가 있다.
