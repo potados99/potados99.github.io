@@ -7,7 +7,11 @@ email                 : "potados99@gmail.com"
 locale                : "ko-KR"
 minimal_mistakes_skin : "default"
 search                : true
-
+comments:
+  provider            : "disqus"
+  disqus:
+    shortname         : "potados99"
+    
 # 빌드 설정
 markdown              : kramdown
 remote_theme          : mmistakes/minimal-mistakes
