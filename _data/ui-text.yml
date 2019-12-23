@@ -589,7 +589,7 @@ ko: &DEFAULT_KO
   tags_label                 : "태그:"
   categories_label           : "카테고리:"
   date_label                 : "업데이트:"
-  comments_label             : "댓글남기기"
+  comments_label             : "댓글"
   comments_title             : "댓글"
   more_label                 : "더 보기"
   related_label              : "관련 글"
