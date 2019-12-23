@@ -1,0 +1,56 @@
+#!/bin/zsh
+
+# Useful when creating new post.
+# Usage: ./new
+
+date=$(date +%Y-%m-%d)
+time=$(date +%H:%M:%S)
+date_time="$date $time"
+
+echo "New post from $date_time.\n"
+
+echo -n "Title: "
+read title
+
+outfile="_posts/$date-$title.md"
+
+# Check if any post with the same title exists.
+if [ -f $outfile ]; then
+    echo "$outfile already exists."
+    exit 0
+fi
+
+echo -n "Excerpt: "
+read excerpt
+
+echo -n "Categories (space separated): "
+read categories
+
+echo -n "Tags (space separated): "
+read tags
+
+# Replace every space-padded string to "- (captured);".
+# And then cut last character ';'.
+# We use ';' to represent newline character.
+# This suck happens because the newline character is a bit tricky to handle.
+tags=$(echo $tags | sed "s/[ ]*\([^ ]*\)[ ]*/   - \1;/g" | sed "s/.$//")
+categories=$(echo $categories | sed "s/[ ]*\([^ ]*\)[ ]*/   - \1;/g" | sed "s/.$//")
+
+infile="_draft/template.md"
+
+content=$(cat $infile |
+sed "s/__title__/$title/" |
+sed "s/__excerpt__/$excerpt/" |
+sed "s/__date_time__/$date_time/" |
+sed "s/__categories__/$categories/" |
+sed "s/__tags__/$tags/" |
+tr ';' '\n')
+
+echo "\nPreview:"
+echo $content
+
+echo "Press enter to continue."
+read
+
+echo $content > $outfile
+echo "New post created at $outfile."
