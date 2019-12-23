@@ -6,25 +6,17 @@ description           : "개발 & 기타 등등"
 email                 : "potados99@gmail.com"
 locale                : "ko-KR"
 minimal_mistakes_skin : "default"
-search                : false
+search                : true
 
 # 빌드 설정
 markdown              : kramdown
 remote_theme          : mmistakes/minimal-mistakes
 
-# 언어별 데이터 설정
-#data:
-#  ui-text:
-#    en-US:
-#      recent_posts    : "Recent Posts"
-#    ko-KR:  
-#      recent_posts    : "최근 글"
-  
 # 출력  
 permalink             : /:categories/:title/
 paginate              : 5 # amount of posts to show
 paginate_path         : /page:num/
-timezone              : # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone              : "KR"
 
 include:
   - _pages
@@ -79,9 +71,9 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: false
-      comments: false
-      share: false
+      read_time: true
+      comments: true
+      share: true
       related: true
   # _pages
   - scope:
