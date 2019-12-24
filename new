@@ -7,7 +7,8 @@ date=$(date +%Y-%m-%d)
 time=$(date +%H:%M:%S)
 date_time="$date $time"
 
-echo "New post from $date_time.\n"
+echo "New post from $date_time."
+echo ""
 
 echo -n "Permalink name: "
 read permalink
@@ -50,7 +51,8 @@ sed "s/__categories__/$categories/" |
 sed "s/__tags__/$tags/" |
 tr ';' '\n')
 
-echo "\nPreview:"
+echo ""
+echo "Preview:"
 echo $content
 
 echo "Press enter to continue."
