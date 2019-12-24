@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Useful when creating new post.
 # Usage: ./new
@@ -7,8 +7,7 @@ date=$(date +%Y-%m-%d)
 time=$(date +%H:%M:%S)
 date_time="$date $time"
 
-echo "New post from $date_time."
-echo ""
+echo "New post from $date_time.\n"
 
 echo -n "Permalink name: "
 read permalink
@@ -51,8 +50,7 @@ sed "s/__categories__/$categories/" |
 sed "s/__tags__/$tags/" |
 tr ';' '\n')
 
-echo ""
-echo "Preview:"
+echo "\nPreview:"
 echo $content
 
 echo "Press enter to continue."
