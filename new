@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # Useful when creating new post.
 # Usage: ./new
@@ -9,16 +9,20 @@ date_time="$date $time"
 
 echo "New post from $date_time.\n"
 
-echo -n "Title: "
-read title
+echo -n "Permalink name: "
+read permalink
 
-outfile="_posts/$date-$title.md"
+permalink=$(echo $permalink | sed "s/[ ]/-/g")
+outfile="_posts/$date-$permalink.md"
 
 # Check if any post with the same title exists.
 if [ -f $outfile ]; then
     echo "$outfile already exists."
     exit 0
 fi
+
+echo -n "Title: "
+read title
 
 echo -n "Excerpt: "
 read excerpt
