@@ -14,7 +14,7 @@ comments:
 analytics:
   provider               : "google"
   google:
-    tracking_id          : ""
+    tracking_id          : "UA-154995965-1"
     anonymize_ip         : false
 
 # 빌드
