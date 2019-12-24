@@ -1,6 +1,6 @@
 # 사이트 설정 파일
 
-# 기본 설정
+# 기본
 title                 : "감자도스"
 description           : "개발 & 기타 등등"
 email                 : "potados99@gmail.com"
@@ -11,8 +11,13 @@ comments:
   provider            : "disqus"
   disqus:
     shortname         : "potados99"
-    
-# 빌드 설정
+analytics:
+  provider               : "google"
+  google:
+    tracking_id          : ""
+    anonymize_ip         : false
+
+# 빌드
 markdown              : kramdown
 remote_theme          : mmistakes/minimal-mistakes
 
@@ -66,7 +71,7 @@ footer:
       icon              : "fas fa-fw fa-envelope-square"
       url               : "mailto:potados99@gmail.com"
 
-# 레이아웃 설정
+# 레이아웃
 defaults:
   # _posts
   - scope:
@@ -76,6 +81,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
+      toc: true
       comments: true
       share: false
       related: true
