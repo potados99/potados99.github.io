@@ -1,5 +1,5 @@
 ---
-title: "[shell] 포스트 헤더 자동으로 만들기"
+title: "[Shell] 포스트 헤더 자동으로 만들기"
 excerpt: "쉘 스크립트 자동화"
 date: 2019-12-24 15:21:32 +0900
 categories:
