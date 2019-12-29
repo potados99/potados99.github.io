@@ -97,8 +97,8 @@ if __name__ == "__main__":
     # 입출력용 전광판 인스턴스를 만든다.
     display = Display()
 
-    # 입력은 6줄
-    lines = [input() for _ in range(7)]
+    # 입력은 7줄
+    lines = [input() for _ in range(Display.char_height)]
 
     # 입력을 해석해서 숫자 리스트를 얻는다.
     parsed = display.parse(lines)
