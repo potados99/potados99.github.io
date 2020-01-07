@@ -13,7 +13,8 @@ echo -n "Permalink name: "
 read permalink
 
 permalink=$(echo $permalink | sed "s/[ ]/-/g")
-outfile="_posts/$date-$permalink.md"
+infile="./.post_template.md"
+outfile="./_drafts/$date-$permalink.md"
 
 # Check if any post with the same title exists.
 if [ -f $outfile ]; then
@@ -39,8 +40,6 @@ read tags
 # This suck happens because the newline character is a bit tricky to handle.
 categories=$(echo $categories | sed "s/[ ]*\([^ ]*\)[ ]*/   - \1;/g" | sed "s/.$//")
 tags=$(echo $tags | sed "s/[ ]*\([^ ]*\)[ ]*/   - \1;/g" | sed "s/.$//")
-
-infile="_draft/template.md"
 
 content=$(cat $infile |
 sed "s/__title__/$title/" |
