@@ -422,6 +422,10 @@ void do_on_pick(context *c, int *selected) {
 
 오랜만에 메모리와 포인터에 대해 생각해볼 만한 기회였다.
 
+## 스페셜 땡스 투
+
+[스승님](https://github.com/ryuspace) 도움 주셔서 감사합니다 ~~이렇게 쓰는거 맞겠지..?~~
+
 ## Reference
 
 - [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
