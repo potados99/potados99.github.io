@@ -88,7 +88,6 @@ struct node {
     struct node     *special;
 };
 ~~~
-*placeholder*
 
 `다음 노드(일반)`은 검은 노드에서 다음 노드로 이어지는 **빨간 길** 에 있는 노드를 뜻하며, `다음 노드(특별)`은 파란 노드에서 다음 노드로 이어지는 두 길 중 **파란 길** 에 있는 노드를 뜻한다.
 
@@ -99,7 +98,6 @@ struct map {
     struct node    *last;
 }
 ~~~
-*placeholder*
 
 아무런 정보가 없는 시작 노드는 존재하지만 **별도의 끝 노드는 만들지 않았다.** 현재 노드가 `null`이 아니라면 끝에 도달하지 않은 것이다.
 
@@ -117,7 +115,6 @@ struct player {
     bool            finished;
 }
 ~~~
-*placeholder*
 
 ### 게임 정보 만들기
 
@@ -129,7 +126,6 @@ struct _context {
     struct player  *players[]; // 이 부분은 틀렸다. 아래에서 다루겠음.
 }
 ~~~
-*placeholder*
 
 ### 스코어링
 
@@ -178,7 +174,6 @@ void for_each_permutation(callback on_pick, context *c) {
     dfs(0, new int[10] {0, }, on_pick, c);
 }
 ~~~
-*placeholder*
 
 `dfs` 함수가 비대해지는 것이 싫어 함수 포인터를 사용해 람다식을 흉내내었다.
 
@@ -255,7 +250,6 @@ void move(context *c, int player_index, int how_many) {
     p->current = valid ? cursor : p->current;
 }
 ~~~
-*placeholder*
 
 ## ~또~ 망했다!
 
@@ -294,7 +288,6 @@ struct _context {
     struct player  *players[]; // 요거요거
 }
 ~~~
-*placeholder*
 
 포인터의 배열을 만든다고 저렇게 선언해놓았는데, 크기를 안 써주니 사실상 아래와 똑같았던 것이다.
 
@@ -304,7 +297,6 @@ struct _context {
     struct player  **players; // *players[]랑 똑같음.
 }
 ~~~
-*placeholder*
 
 그렇다... 할당도 안 된 공간에 무턱대고 대입을 한 것이다.
 
@@ -319,7 +311,6 @@ for (int i = 0; i < 4; ++i) {
     c->players[i] = p; // 거긴 네가 들어갈 곳이 아니라구!
 }
 ~~~
-*placeholder*
 
 `c->players`의 크기는 내가 원하던 `8*4`바이트가 아니라 그냥 `8`바이트인데, `8*i` 영역에 접근해서 값을 써버리니, `map`의 다른 노드에 그 값이 덮어씌워진 것이다!  
 
@@ -332,7 +323,6 @@ struct _context {
     struct player  *players[4];
 }
 ~~~
-*placeholder*
 
 ### 문제를 잘못 이해했다
 
@@ -378,35 +368,16 @@ struct _context {
 
 반환값을 사용해 전달하기로 했다.
 
-바뀐 `move`함수는 다음과 같다:
+`move`함수에서 바뀐 부분은 다음과 같다:
 
 ~~~c
 /**
  * return: keep of not
  */
 bool move(context *c, int player_index, int how_many) {
-    if (how_many < 1) return true;
-    if (c->players[player_index]->finished) return true;
-    if (c->players[player_index]->current == nullptr) return true;
+    ...
 
-    player *p = c->players[player_index];
-    node *cursor = p->current;
-
-    cursor = (cursor->color == blue) ? cursor->special : cursor->next;
-    how_many--;
-
-    // now go the next.
-    for (int i = 0; i < how_many; ++i) {
-        if (cursor == nullptr) break;
-        cursor = cursor->next;
-    }
-
-    if (cursor == nullptr) {
-        p->current = nullptr;
-        p->finished = true;
-        return true;
-    }
-
+    // 이 부분이 달라졌다. valid하지 않으면 그냥 끝낸다.
     if (how_many_are_there(c, cursor) > 0) return false;
 
     p->score += cursor->num;
@@ -415,8 +386,37 @@ bool move(context *c, int player_index, int how_many) {
     return true;
 }
 ~~~
-*placeholder*
 
+저 함수를 호출하는 쪽에서는 아래처럼 처리했다:
+
+~~~c
+void do_on_pick(context *c, int *selected) {
+    for (int i = 0; i < 10; ++i)
+        // 하나라도 false가 뜨면 즉시 해당 케이스를 종료하고 반환한다.
+        if (!move(c, selected[i], nums[i])) {
+            reset(c);
+            return;
+        }
+
+    int local_max = get_score_sum(c);
+    if (local_max > max)
+        max = local_max;
+
+    reset(c);
+}
+~~~
+
+결국 해결했다.
+
+![정답](/assets/images/17825_assign.png)
+
+## 후기
+
+무척이나 고통스러웠다...
+
+정말이지 갈 길이 멀었다. 문제를 보자 마자 시간 안에 푸는 것은 아직은 많이 힘든 것 같다.
+
+오랜만에 메모리와 포인터에 대해 생각해볼 만한 기회였다.
 
 ## Reference
 
