@@ -424,7 +424,7 @@ void do_on_pick(context *c, int *selected) {
 
 ## 스페셜 땡스 투
 
-[스승님](https://github.com/ryuspace) 도움 주셔서 감사합니다 ~~이렇게 쓰는거 맞겠지..?~~
+[스승님](https://github.com/ryuspace) 도움 주셔서 감사합니다 ~~이렇게 쓰는거 맞죠..?~~
 
 ## Reference
 
