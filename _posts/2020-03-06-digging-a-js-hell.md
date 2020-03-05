@@ -87,7 +87,7 @@ ES6은 모듈을 다룰 때 `import`와 `export`를 사용한다.
 
 ## 엿 하나
 
-Node 12에서 ES module의 사용은 **실험적으로 지원된다.** ~소심한 것들.~
+Node 12에서 ES module의 사용은 **실험적으로 지원된다.** ~~소심한 것들.~~
 
 그냥 실행했다가는 `Uncaught SyntaxError: Cannot use import statement outside a module` 라며 뻗는다.
 
@@ -179,7 +179,7 @@ npm으로 패키지를 설치할 때마다 링크가 날아가거나 설치한 �
 
  이는 원작자가 경고한 부분이기도 한데, 무시하고 `npm install`을 수행했다가 **.git까지 날아가버렸다**
 
- 푸시 안한 커밋 다 날아가나 싶었는데 다행이 타임머신 백업이 살아있어 복구했다 ~(고마워요 애플)~
+ 푸시 안한 커밋 다 날아가나 싶었는데 다행이 타임머신 백업이 살아있어 복구했다 ~~(고마워요 애플)~~
 
 ### module-alias
 
@@ -287,7 +287,7 @@ Jest에게 babel로 트랜스파일된 소스를 넘겨주면 되지 않을까 �
 
 `transform` 중에 `jest-transform-esm`이 있었으니, [아주 긴 이슈와 토론](https://github.com/standard-things/esm/issues/706)을 거쳐 만들어진 패키지였다.
 
-`babel-jest`를 저 `jest-transform-esm`로 대체하고 `babel`을 싹-다 날려버렸다. ~(어우 시원해 ><)~
+`babel-jest`를 저 `jest-transform-esm`로 대체하고 `babel`을 싹-다 날려버렸다. ~~(어우 시원해 ><)~~
 
 그런데 그래도 같은 오류가 반복되었다.
 
