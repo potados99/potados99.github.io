@@ -103,8 +103,7 @@ Node 12에서 ES module의 사용은 **실험적으로 지원된다.** ~~소심�
 
 ![f](/assets/images/bullshit.gif)
 
-> 아주그냥 import 한번 쓰기 더럽게 힘들다.    
-2020년에 2015년 기술좀 쓰겠다는데 아직도 지원이 이따구야....
+> 어 ? 2020년에 어? 2015년 기술좀 쓰겠다는데 어? 아직도 지원을....
 
 한번 실행하려면 명령이 `node --experimental-modules --es-module-specifier-resolution=node index.js` 이렇게 길어진다.
 
