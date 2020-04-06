@@ -1,0 +1,63 @@
+I"�<blockquote>
+  <p>이 글은 4부작입니다.</p>
+  <ul>
+    <li><a href="https://potados99.github.io/fun/coap-light-0">[책상 보조등 제어하기] 0. 구성</a></li>
+    <li><a href="https://potados99.github.io/fun/coap-light-1">[책상 보조등 제어하기] 1. 프로토콜</a></li>
+    <li><strong>[책상 보조등 제어하기] 2. 하드웨어]</strong></li>
+    <li><a href="https://potados99.github.io/fun/coap-light-3">[책상 보조등 제어하기] 3. 소프트웨어</a></li>
+  </ul>
+</blockquote>
+
+<p>이전 글 <em>[책상 보조등 제어하기] 1. 프로토콜</em> 에서 이어지는 글입니다.</p>
+
+<blockquote>
+  <p>틀린 서술이 많을 것 같습니다.   <br />
+혹시나 발견하신다면 댓글 남겨주시거나 <a href="mailto:potados99@gmail.com">potados99@gmail.com</a>으로 피드백 보내주신 주신다면 정말 감사하겠습니다 :)</p>
+</blockquote>
+
+<h2 id="하드웨어">하드웨어</h2>
+
+<h3 id="스위칭-회로">스위칭 회로</h3>
+
+<p>불을 켜거나 끄기 위해서는 스위칭 회로가 필요하다. 트랜지스터(BJT)와 모스펫(MOSFET)은 크게 보면 같은 기능을 수행하지만 전자는 전류에 의해, 후자는 전압에 의해 작동한다는 차이가 있다.</p>
+
+<p>NodeMCU의 GPIO는 3.3v 전압에 최대 20mA 전류를 출력할 수 있다. 이때 유의할 것은, NodeMCU는 아날로그 출력을 할 수 없기 때문에 밝기 조절을 위해서 <a href="https://thrillfighter.tistory.com/589">PWM</a>을 사용한다는 것이다.</p>
+
+<p>즉, 빠른 펄스를 사용한다는 것인데 이는 <a href="https://electronics.stackexchange.com/questions/31594/mosfet-when-can-we-not-assume-that-the-gate-current-is-0">MOSFET의 게이트 전류 요구량을 증가시키는 원인이 된다</a>. NodeMCU의 GPIO는 많은 전류를 흘릴 수 없으므로 별도의 게이트 드라이버가 필요한 것이다.</p>
+
+<p>따라서 모스펫 대신 트랜지스터를 사용한다. 이때 트랜지스터는 아주 작은 전류로부터 12V 1A나 되는 큰 전류를 내보내야 하므로 전류 이득이 아주 큰 것을 사용해야 한다. <a href="https://www.onsemi.com/pub/Collateral/TIP120-D.PDF">TIP-120</a>은 NPN <a href="https://mathphysics.tistory.com/334">달링턴</a> 트랜지스터이다. 두 개의 트랜지스터를 묶어놓은 것과 같아 전류 이득이 매우 크다.</p>
+
+<p>TIP-120의 <a href="https://www.onsemi.com/pub/Collateral/TIP120-D.PDF">데이터시트</a>에 의하면, 컬렉터 전류가 2A일 때 베이스 전류 1mA 정도면 거의 완전히 ‘켜진’ 상태가 된다. 다만 컬렉터 전류가 1A일 때 saturation voltage가 약 0.75v정도로 적지 않기 때문에 약간의 밝기 손실이 있는 점 감안해야 한다.</p>
+
+<h3 id="회로도">회로도</h3>
+
+<p>회로도를 그려보자. 다음 것들이 필요하다:</p>
+
+<ul>
+  <li>NodeMCU</li>
+  <li>5v DC</li>
+  <li>12v DC</li>
+  <li>TIP-120</li>
+  <li>300Ohm resistor</li>
+  <li>LED strip</li>
+  <li>0.96” 6Pin SPI OLED Display Module</li>
+</ul>
+
+<p><img src="/assets/images/node-circuit.png" alt="node-circuit" /></p>
+
+<h2 id="reference">Reference</h2>
+<ul>
+  <li>
+    <p><a href="https://electronics.stackexchange.com/questions/31594/mosfet-when-can-we-not-assume-that-the-gate-current-is-0">MOSFET: When can we not assume that the gate current is 0?</a></p>
+  </li>
+  <li>
+    <p><a href="https://thrillfighter.tistory.com/589">아두이노 PWM(pulse width modulation) 펄스폭변조란?</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.onsemi.com/pub/Collateral/TIP120-D.PDF">TIP-120 data sheet</a></p>
+  </li>
+  <li>
+    <p><a href="https://mathphysics.tistory.com/334">11. 달링턴 회로, 피드백 쌍 회로</a></p>
+  </li>
+</ul>
+:ET
