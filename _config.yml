@@ -1,102 +1,46 @@
-# 사이트 설정 파일
+# Site Info
+title:              "감자도스"
+description:        "사진 찍는 개발자"
+author_name:        "송병준" # change this to your name
+logo_url:           https://avatars1.githubusercontent.com/u/35878712?v=4 # Get it from GitHub API: https://api.github.com/users/<username>
 
-# 기본
-title                 : "감자도스"
-description           : "개발 & 기타 등등"
-email                 : "potados99@gmail.com"
-locale                : "ko-KR"
-minimal_mistakes_skin : "default"
-search                : true
-comments:
-  provider            : "disqus"
-  disqus:
-    shortname         : "potados99"
-analytics:
-  provider               : "google"
-  google:
-    tracking_id          : "UA-154995965-1"
-    anonymize_ip         : false
+# Site Settings
+url:                https://potados99.github.io # main url
+permalink:          /:title # Post permalink
+timezone:           Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+mathjax:            true  # enables support for mathjax - set to 'false' to disable
 
-# 빌드
-markdown              : kramdown
-remote_theme          : mmistakes/minimal-mistakes
+# Analytics
+google_analytics:   UA-154995965-1
 
-# 출력  
-permalink             : /:categories/:title/
-paginate              : 5 # amount of posts to show
-paginate_path         : /page:num/
-timezone              : "KR"
+# Comments
+disqus:             potados99
 
-include:
-  - _pages
+# Site Build
+highlighter:        rouge
+markdown:           kramdown
+kramdown:
+    input:          GFM
+sass:
+    style:          :compressed
 
-# 플러그인
+# Other Params
+include:            [ "robots.txt" ]
+exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "script" ]
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
 
-# 글쓴이
-author:
-  name                  : "송병준"
-  avatar                : "/assets/images/avatar.jpeg"
-  bio                   : "소프트웨어 장인정신"
-  location              : "대한민국 인천"
-  email                 : "potados99@gmail.com"
-  button                : false
-  home                  : "https://potados99.github.io/about/"
-  links:    
-    - label             : "GitHub"
-      icon              : "fab fa-fw fa-github"
-      url               : "https://github.com/potados99"
-    - label             : "Instagram"
-      icon              : "fab fa-fw fa-instagram"
-      url               : "https://instagram.com/ix_potados/"
-    - label             : "Email"
-      icon              : "fas fa-fw fa-envelope-square"
-
-# 페이지 하단
-footer:
-  links:
-    - label             : "GitHub"
-      icon              : "fab fa-fw fa-github"
-      url               : "https://github.com/potados99"
-    - label             : "Instagram"
-      icon              : "fab fa-fw fa-instagram"
-      url               : "https://instagram.com/ix_potados/"
-    - label             : "Email"
-      icon              : "fas fa-fw fa-envelope-square"
-      url               : "mailto:potados99@gmail.com"
-
-# 레이아웃
 defaults:
-  # _posts
   - scope:
-      path: ""
-      type: posts
+      path:         ""
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      toc: true
-      comments: true
-      share: false
-      related: true
-  # _pages
+      layout:       "null"
   - scope:
-      path: "_pages"
-      type: pages
+      type:         "pages"
     values:
-      layout: single
-      author_profile: true
-
-category_archive:
-  type: liquid
-  path: /categories/
-  
-tag_archive:
-  type: liquid
-  path: /tags/
+      layout:       "page"
+  - scope:
+      type:         "posts"
+    values:
+      layout:       "post"
+      comments:     true

@@ -1,0 +1,12 @@
+I"+<h2>누구인가?</h2>
+
+<p><img src="https://t1.daumcdn.net/cfile/tistory/2676F93D584F741B31" /></p>
+
+<div id="words"></div>
+
+<script>
+const lastPath = window.location.href.split('/').pop();
+document.getElementById('words').innerHTML = `<h1>누가 ${lastPath} 소리를 내었어!</h1>`;
+</script>
+
+:ET

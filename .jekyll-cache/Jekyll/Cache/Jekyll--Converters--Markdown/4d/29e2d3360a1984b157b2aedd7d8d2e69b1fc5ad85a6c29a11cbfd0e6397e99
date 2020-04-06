@@ -1,0 +1,349 @@
+I"!�<h2 id="들어가며">들어가며</h2>
+
+<p><a href="https://www.acmicpc.net/problem/16159">문제 링크</a></p>
+
+<p>문제 설명은 빠르게 이해된다. 간단하다.</p>
+
+<p>주어진 숫자들로 만들 수 있는 순열들 중에서 주어진 순열 바로 다음 순열을 가져오면 된다.</p>
+
+<p>예를 들어 이런 거다.</p>
+
+<p><code class="highlighter-rouge">2, 1, 4</code>가 주어지면 <code class="highlighter-rouge">2, 4, 1</code>,</p>
+
+<p><code class="highlighter-rouge">1, 2, 3</code>이 주어지면 <code class="highlighter-rouge">1, 3, 2</code></p>
+
+<p><code class="highlighter-rouge">5, 2, 4, 6, 3</code>이 주어지면 <code class="highlighter-rouge">5, 2, 6, 3, 4</code></p>
+
+<p>풀어보자.</p>
+
+<h2 id="접근">접근</h2>
+
+<p>입출력 부분과 처리 부분으로 나누어서 접근한다.</p>
+
+<h3 id="입출력">입출력</h3>
+
+<p>귀찮게도 입출력을 그냥 숫자가 아니라 전광판 픽셀 matrix로 준다.</p>
+
+<p><code class="highlighter-rouge">1, 4, 2</code>는 아래처럼 나온다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>000000000000000000
+000100000100011110
+001100001100000010
+000100010100011110
+000100111110010000
+000100000100011110
+000000000000000000
+</code></pre></div></div>
+
+<p>우리에게 필요한 것은 저런 전광판 표현과 숫자로 된 리스트를 자유롭게 오갈 수 있게 해주는 모듈이다.</p>
+
+<p>저 끔찍한 0101을 Python 리스트 객체로 바꿔주거나, 리스트를 다시 저 끔찍한 0101로 바꿔주는 역할을 한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>000000000000000000
+000100000100011110
+001100001100000010      -- parse --&gt;
+000100010100011110                      [1, 4, 2]
+000100111110010000      &lt;-- print --
+000100000100011110
+000000000000000000
+</code></pre></div></div>
+
+<p>이름은 <code class="highlighter-rouge">Display</code>로 하자. 전광판을 나타내는 적절한 단어가 저것밖에 생각이 안난다(ㅋㅋㅋ).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Display</span><span class="p">:</span>
+    <span class="n">char_width</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">char_height</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="o">...</span>
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_strings</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">print</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="o">...</span>
+</code></pre></div></div>
+
+<p>이렇게 생겼다.</p>
+
+<h3 id="처리">처리</h3>
+
+<p>다음 순열 구하는 함수도 하나 만들자.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">next_permutation</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+    <span class="o">...</span>
+</code></pre></div></div>
+
+<h3 id="메인-루틴">메인 루틴</h3>
+
+<p>그럼 이제 이렇게 쓰면 된다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="c1"># 입출력용 전광판 인스턴스를 만든다.
+</span>    <span class="n">display</span> <span class="o">=</span> <span class="n">Display</span><span class="p">()</span>
+
+    <span class="c1"># 입력은 7줄
+</span>    <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="nb">input</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Display</span><span class="o">.</span><span class="n">char_height</span><span class="p">)]</span>
+
+    <span class="c1"># 입력을 해석해서 숫자 리스트를 얻는다.
+</span>    <span class="n">parsed</span> <span class="o">=</span> <span class="n">display</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+
+    <span class="c1"># 얻은 숫자 리스트의 다음 순열을 구한다.
+</span>    <span class="nb">next</span> <span class="o">=</span> <span class="n">next_permutation</span><span class="p">(</span><span class="n">parsed</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">next</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="c1"># 다음 순열이 없으면 "The End" 출력
+</span>        <span class="k">print</span><span class="p">(</span><span class="s">"The End"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># 있으면 전광판으로 출력
+</span>        <span class="n">display</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="nb">next</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="구현">구현</h2>
+
+<p>이제 만들어보자.</p>
+
+<h3 id="display">Display</h3>
+
+<p>전광판 폰트는 이렇게 생겼다.</p>
+
+<p><img src="https://upload.acmicpc.net/6078e13a-f26f-4d8f-bf15-912959dffb05/-/preview/" alt="display" /></p>
+
+<p>그렇다. 노가다를 해야 한다.</p>
+
+<p>숫자당 <code class="highlighter-rouge">6*7=42</code>비트, 10개의 숫자, <code class="highlighter-rouge">420</code>개 비트를 코드에 박아놓아야 한다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Display</span><span class="p">:</span>
+    <span class="o">...</span>
+    <span class="n">font</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="o">...</span><span class="err">여기에</span> <span class="err">노가다의</span> <span class="err">산물</span> <span class="err">투입</span><span class="o">...</span>
+    <span class="p">]</span>
+    <span class="o">...</span>
+</code></pre></div></div>
+
+<p>일단 작성을 할 때에는 각 픽셀을 0 또는 1로 구분하여 이진 상수로 쓴다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">font</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mb">0b000000_001100_010010_010010_010010_001100_000000</span><span class="p">,</span> <span class="c1"># 0
+</span>    <span class="mb">0b000000_000100_001100_000100_000100_000100_000000</span><span class="p">,</span> <span class="c1"># 1
+</span>    <span class="o">...</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<p>다 작성했으면 이제 이걸 Python 인터프리터에 넣고 돌려서 아래와 같은 리스트를 얻어낸다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">font</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mh">0x312492300</span><span class="p">,</span> <span class="mh">0x10c104100</span><span class="p">,</span> <span class="mh">0x782790780</span><span class="p">,</span> <span class="mh">0x702102700</span><span class="p">,</span> <span class="mh">0x10c53e100</span><span class="p">,</span>
+    <span class="mh">0x79070248c</span><span class="p">,</span> <span class="mh">0x410792780</span><span class="p">,</span> <span class="mh">0x782104100</span><span class="p">,</span> <span class="mh">0x792792780</span><span class="p">,</span> <span class="mh">0x1e492782082</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<p>그리고 아래 함수를 써서 저 비트들로부터 0101로 이루어진 전광판 각 숫자의 리스트를 얻어낸다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">bit_matrix</span><span class="p">(</span><span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+     <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">):</span>
+         <span class="k">return</span> <span class="bp">None</span>
+
+     <span class="n">on_bits</span> <span class="o">=</span> <span class="n">font</span><span class="p">[</span><span class="n">num</span><span class="p">]</span>
+     <span class="n">rows</span> <span class="o">=</span> <span class="p">[]</span>
+     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">):</span>
+         <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
+         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+             <span class="n">row</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">on_bits</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span>
+             <span class="n">on_bits</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span>
+
+          <span class="n">rows</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+
+      <span class="k">return</span> <span class="n">rows</span>
+</code></pre></div></div>
+
+<p>저것 또한 Python 인터프리터에 넣고 돌리면 아래와 같은 리스트가 나온다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bitmaps</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<p>이걸 런타임에 안하고 지금 하는 이유는 실행 시간을 조금이라도 줄이기 위함이다.</p>
+
+<p>인터프리터가 저 리터럴을 읽어 <code class="highlighter-rouge">bitmaps</code>을 메모리에 올리는 시간이 <code class="highlighter-rouge">bit_matrix</code>를 10번 호출해 비트맵을 만드는 것보다 훠어어어어얼씬 적게 걸린다.</p>
+
+<p>자 이제 <code class="highlighter-rouge">parse</code>와 <code class="highlighter-rouge">print</code>를 만들어보자.</p>
+
+<h4 id="parse">parse</h4>
+
+<p>파싱이 조금 귀찮은데, 숫자가 하나 이상인 경우 이를 모두 분리해내야 하기 때문이다.</p>
+
+<p>먼저 숫자 하나짜리 전용 <code class="highlighter-rouge">_parse_single</code> 메소드를 만들어보자.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">_parse_single</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_strings</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="n">bin_string</span> <span class="o">=</span> <span class="s">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row_strings</span><span class="p">)</span>
+    <span class="n">bits</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bin_string</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">bits</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">font</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">bits</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>스트링으로 이루어진 <code class="highlighter-rouge">['000000', '011100', ...]</code> 이런 리스트를 인자로 받는다.</p>
+
+<p>아주 다행이게도 저 각 줄들을 이어붙이면 <code class="highlighter-rouge">000000011100...</code> 이런 식으로 위에서 만든 <code class="highlighter-rouge">font</code>와 똑같은 모습이 나온다.</p>
+
+<p>저렇게 이어붙인 스트링을 그대로 숫자로 바꾸기만 하면, <code class="highlighter-rouge">font</code> 리스트 내에서 해당 숫자의 위치를 찾아 반환할 수 있다.</p>
+
+<p>만약 입력이 어떤 숫자와도 일치하지 않으면 -1을 반환한다. 물론 이런 경우가 생길 일은 없지만 개발 과정에서 유용하므로 추가했다.</p>
+
+<p>이제 여러 숫자가 붙어있는 스트링을 파싱해보자.</p>
+
+<p>핵심 아이디어는 스트링 덩어리를 N개로 쪼개어 <code class="highlighter-rouge">_parse_single</code>을 N번 부르는 것이다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_strings</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="c1"># 첫 줄로부터 숫자의 개수를 유추.
+</span>    <span class="n">n_digits</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">row_strings</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">char_width</span>
+
+    <span class="c1"># 각 숫자를 나타내는 스트링을 저장할 리스트를 n_digits개 생성.
+</span>    <span class="n">digits</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_digits</span><span class="p">)]</span>
+
+
+    <span class="k">for</span> <span class="n">long_line</span> <span class="ow">in</span> <span class="n">row_strings</span><span class="p">:</span>
+        <span class="c1"># 각 줄을 6글자씩 n_digits개로 쪼갬.
+</span>        <span class="n">splited_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">long_line</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">char_width</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">long_line</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">char_width</span><span class="p">)]</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_digits</span><span class="p">):</span>
+            <span class="c1"># n_digits조각 난 스트링을 digits에 차례대로 담아줌.
+</span>            <span class="n">digits</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">splited_lines</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+    <span class="c1"># digits의 각 원소(각 숫자를 나타내는 스트링들)를 가지고 _parse_single을 호출한 결과를 모아 반환.
+</span>    <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_parse_single</span><span class="p">(</span><span class="n">digit</span><span class="p">)</span> <span class="k">for</span> <span class="n">digit</span> <span class="ow">in</span> <span class="n">digits</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h4 id="print">print</h4>
+
+<p><code class="highlighter-rouge">print</code>는 <code class="highlighter-rouge">parse</code>와 반대로 스트링들을 가로로 붙여서 출력해야 한다. 이때는 아까 구해놓은 <code class="highlighter-rouge">bitmaps</code>를 활용한다. <code class="highlighter-rouge">bitmaps</code>는 3차원 리스트로, 각 숫자는 2차원 리스트(row-major)로 이루어져 있다.</p>
+
+<p>루프를 적당히 중첩하여 구현한다. 아, 캐시 고려하지 않았고 효율은 극악이다(ㅋㅋㅋ).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">bitmaps</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">char_height</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">digit</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">)):</span>
+            <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">char_width</span><span class="p">):</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">digit</span><span class="p">][</span><span class="n">line</span><span class="p">][</span><span class="n">column</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">""</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="next_permutation">next_permutation</h3>
+
+<p>주어진 순열의 다음 순열을 구한다.</p>
+
+<p>처음에는 모든 순열의 경우를 구한 다음 정렬해서 주어진 순열의 다음 것을 찾으려고 했다.</p>
+
+<p><img src="/assets/images/16159-fails.png" alt="wow..." /></p>
+
+<p>그런데 그건 <strong>O(n!)</strong> 아니던가…</p>
+
+<p><img src="/assets/images/wtf.jpg" alt="wtf..." /></p>
+<blockquote>
+  <p>사실 새벽이라 정신없었다..</p>
+</blockquote>
+
+<p>아무튼 다음 순열은 주어진 순열만 가지고도 구할 수 있다. 인간이 쓰는 방법을 그대로 모방해보자.</p>
+
+<p>먼저 일반화된 규칙을 찾기 위해 예시를 몇 개 보자.</p>
+
+<p>12345 -&gt; 12354</p>
+
+<p>54321 -&gt; 없음</p>
+
+<p>82374 -&gt; 82437</p>
+
+<p>19283 -&gt; 19328</p>
+
+<p>15432 -&gt; 21345</p>
+
+<p>숫자가 변한 자리들만 표시해보자.</p>
+
+<p>123<strong>45</strong> -&gt; 123<strong>54</strong></p>
+
+<p>82<strong>374</strong> -&gt; 82<strong>437</strong></p>
+
+<p>19<strong>283</strong> -&gt; 19<strong>328</strong></p>
+
+<p><strong>15432</strong> -&gt; <strong>21345</strong></p>
+
+<p>찾았다!</p>
+
+<p>맨 오른쪽에서부터 왼쪽으로 볼 때, <strong>상승세가 멈추는 곳 다음 수까지</strong> 바뀐다.</p>
+
+<p>자세히 들여다보자.</p>
+
+<p><code class="highlighter-rouge">[8, 2, 3, 7, 4]</code>를 예시로 보자.</p>
+
+<p>오른쪽부터 볼 때, 4 -&gt; 7까지는 상승세가 이어진다.</p>
+
+<p>그러나 7 -&gt; 3에서 꺾인다.</p>
+
+<p>이때 <strong>3의 인덱스</strong> 를 <code class="highlighter-rouge">x</code>라고 하자.</p>
+
+<p><code class="highlighter-rouge">x</code>부터 마지막 인덱스까지(3, 7, 4 구간)의 숫자를 바꾸면 된다.</p>
+
+<p>그럼 숫자를 어떻게 바꾸면 될까?</p>
+
+<p>82<strong>374</strong> 에서 <strong>374</strong> 만 떼어놓고 보자.</p>
+
+<p>374보다 바로 한 단계 큰 수를 만들어야 한다.</p>
+
+<p>먼저 MSB를 <strong>3을 제외하고 3보다 큰 가장 작은 수</strong> 로 선정한다.</p>
+
+<p>3을 제외하면 7과 4가 남는데, 3보다 큰 수 중 가장 작은 수는 4이다.</p>
+
+<p>4를 가장 앞에 배치하면 이제 남은 수는 오름차순으로 정렬하면 된다.</p>
+
+<p>그러면 437이 된다.</p>
+
+<p>이를 82와 다시 합치면 82437이 된다.</p>
+
+<p>구현은 이걸 그대로 가져다 옮기면 된다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">next_permutation</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+    <span class="n">index_digit_to_swap</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">last_digit_value</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">sequence</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">last_digit_value</span><span class="p">:</span>
+            <span class="n">index_digit_to_swap</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="k">break</span>
+        <span class="n">last_digit_value</span> <span class="o">=</span> <span class="n">sequence</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="n">min_index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">last_min</span> <span class="o">=</span> <span class="mi">99999</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">index_digit_to_swap</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">sequence</span><span class="p">[</span><span class="n">index_digit_to_swap</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">sequence</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">last_min</span><span class="p">:</span>
+            <span class="n">min_index</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="n">last_min</span> <span class="o">=</span> <span class="n">sequence</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="n">sequence</span><span class="p">[</span><span class="n">index_digit_to_swap</span><span class="p">],</span> <span class="n">sequence</span><span class="p">[</span><span class="n">min_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">sequence</span><span class="p">[</span><span class="n">min_index</span><span class="p">],</span> <span class="n">sequence</span><span class="p">[</span><span class="n">index_digit_to_swap</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">sequence</span><span class="p">[:</span><span class="n">index_digit_to_swap</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">sequence</span><span class="p">[</span><span class="n">index_digit_to_swap</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span>
+</code></pre></div></div>
+
+<h2 id="마치며">마치며</h2>
+
+<p>새벽에 갑자기 머리를 써서 당이 뚝 떨어졌다. 너무 정신없게 풀어서 코드가 좀 못생겼다.</p>
+
+<p>나중에 다시 뜯어고쳐야겠다.</p>
+
+<h2 id="reference">Reference</h2>
+
+<ul>
+  <li><a href="https://www.python.org/dev/peps/pep-0515/">PEP 515</a></li>
+</ul>
+:ET
