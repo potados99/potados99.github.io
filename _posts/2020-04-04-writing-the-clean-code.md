@@ -151,7 +151,7 @@ function forEachElement(collection, action) {
       element.a !== null ||
       element.b !== undefined ||
       element.b !== null)) {
-      action(b);
+      action(element);
     }
   }
 }
@@ -163,7 +163,7 @@ function forEachElement(collection, action) {
 function forEachElement(collection, action) {
   for (const element of collection) {
     if (isValid(element)) {
-      action(b);
+      action(element);
     }
   }
 }
