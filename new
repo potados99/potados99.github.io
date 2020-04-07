@@ -25,28 +25,19 @@ fi
 echo -n "Title: "
 read title
 
-echo -n "Excerpt: "
-read excerpt
-
 echo -n "Categories (space separated): "
 read categories
-
-echo -n "Tags (space separated): "
-read tags
 
 # Replace every space-padded string to "- (captured);".
 # And then cut last character ';'.
 # We use ';' to represent newline character.
 # This suck happens because the newline character is a bit tricky to handle.
 categories=$(echo $categories | sed "s/[ ]*\([^ ]*\)[ ]*/   - \1;/g" | sed "s/.$//")
-tags=$(echo $tags | sed "s/[ ]*\([^ ]*\)[ ]*/   - \1;/g" | sed "s/.$//")
 
 content=$(cat $infile |
 sed "s/__title__/$title/" |
-sed "s/__excerpt__/$excerpt/" |
 sed "s/__date_time__/$date_time/" |
 sed "s/__categories__/$categories/" |
-sed "s/__tags__/$tags/" |
 tr ';' '\n')
 
 echo "\nPreview:"
