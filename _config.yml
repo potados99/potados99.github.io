@@ -6,7 +6,7 @@ logo_url:           https://avatars1.githubusercontent.com/u/35878712?v=4 # Get 
 
 # Site Settings
 url:                https://potados99.github.io # main url
-permalink:          /:categories/:title # Post permalink
+permalink:          /:categories/:title/ # Post permalink
 timezone:           Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 mathjax:            true  # enables support for mathjax - set to 'false' to disable
 
