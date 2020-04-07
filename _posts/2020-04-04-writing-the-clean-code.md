@@ -1,12 +1,8 @@
 ---
 title: "[생각] 코드 예쁘게 짜기"
-excerpt: "코드를 짜는 목적부터 생각해보자"
-date: 2020-04-04 02:41:10 +0900
+updated: 2020-04-04 02:41:10 +0900
 categories:
    - dev
-tags:
-   - code
-   - clean-code
 ---
 
 # 들어가며
