@@ -18,7 +18,15 @@ layout: default
 		<ul>
 			<li>
 				<div class="post-date code">
-					<span>{{ post.date | date: "%m/%d" }}</span>
+					<span>
+						{% assign past_ts = post.date | date: '%s' | plus: 0 %}
+						{% assign current_ts = site.time | date: '%s' | plus: 0 %}
+						{% assign delta_ts = current_ts | minus: past_ts %}
+						{% assign seven_days_ts = 86400 | times: 7 %}
+
+						{% if seven_days_ts > delta_ts %}N {% endif %}
+						{{ post.date | date: "%m/%d" }}
+					</span>
 				</div>
 				<div class="title">
 					<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
