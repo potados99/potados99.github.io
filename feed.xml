@@ -10,6 +10,7 @@ layout: null
     {% for post in site.posts %}
       {% unless post.draft %}
         <item>
+          <copyright>Copyright 2018-2020, 송병준</copyright>
           <title>{{ post.title | xml_escape }}</title>
           <description>{{ post.content | xml_escape }}</description>
           <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
