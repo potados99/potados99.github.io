@@ -10,7 +10,7 @@ layout: null
     {% for post in site.posts %}
       {% unless post.draft %}
         <item>
-          <author>{{ site.author_name | xml_escape}} &lt;{{ site.author_email }}&gt;</author>
+          <author>{{ site.author_email }} ({{ site.author_name | xml_escape}})</author>
           <title>{{ post.title | xml_escape }}</title>
           {% for cat in post.categories %}
             <category>{{ cat | xml_escape }}</category>
