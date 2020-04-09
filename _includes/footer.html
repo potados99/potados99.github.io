@@ -1,4 +1,21 @@
 <div class="footer">
-  <span class="block">&copy; {{ site.time | date: '%Y' }} {{ site.author_name }}</span>
-  <span class="block"><small>&lt;/&gt; Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/heiswayi/the-plain">The Plain theme</a>.</small></span>
+  <span class="block">
+    &copy; {{ site.time | date: '%Y' }} {{ site.author_name }}
+  </span>
+  <span class="block">
+    <small>
+      <a href="mailto:{{ site.author_email }}">Email</a> ·
+      <a href="{{ site.social.github }}">GitHub</a> ·
+      <a href="{{ site.social.instagram }}">Instagram</a>
+    </small>
+  </span>
+  <span class="block">
+    <small>
+      &lt;/&gt;
+      Powered by
+      <a href="https://jekyllrb.com/">Jekyll</a> ·
+      <a href="https://pages.github.com">GitHub Pages</a> ·
+      <a href="https://github.com/heiswayi/the-plain">The Plain theme</a>
+    </small>
+  </span>
 </div>

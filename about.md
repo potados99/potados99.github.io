@@ -7,5 +7,6 @@ title: "감자도스 블로그"
 
 밥을 잘 먹어야 행복해집니다.
 
+**Email**: <potados99@gmail.com>    
 **GitHub**: [potados99](https://github.com/potados99)    
-**Contact**: <potados99@gmail.com>
+**Instagram**: [ix_potados](https://www.instagram.com/ix_potados/)    
