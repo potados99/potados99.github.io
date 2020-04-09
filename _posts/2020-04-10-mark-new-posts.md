@@ -18,7 +18,7 @@ categories:
 {% raw %}
 ~~~html
 ...
-<h1>{{ site.title }}</h1>
+<tag>{{ site.title }}</tag>
 ...
 ~~~
 {% endraw %}
