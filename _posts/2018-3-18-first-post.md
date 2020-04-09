@@ -1,14 +1,8 @@
 ---
 title: "블로그 시작"
-excerpt: "새로운 시작"
 date: 2018-03-18 01:00:00 +0900
 categories:
     - dev
-tags:
-    - blog
-    - begin
-    - start
-    - first
 ---
 
 ## GitHub 블로그 시작
