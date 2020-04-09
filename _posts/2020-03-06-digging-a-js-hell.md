@@ -1,16 +1,8 @@
 ---
 title: "[삽질] 자바스크립트로 서버 짜기: 대삽질 후기"
-excerpt: "자바스크립트는 물론 서버 노베이스부터 배포까지..."
 date: 2020-03-06 01:42:51 +0900
 categories:
    - dev
-tags:
-   - nodejs
-   - js
-   - javascript
-   - es6
-   - server
-   - digging
 ---
 
 # 들어가며
