@@ -12,7 +12,7 @@ layout: null
         <item>
           <author>{{ site.author_name | xml_escape}}</author>
           <title>{{ post.title | xml_escape }}</title>
-          <category>{{ post.categories | xml_escape}}</category>
+          <category>{{ post.categories[0] | xml_escape}}</category>
           <description>{{ post.content | xml_escape }}</description>
           <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
           <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
