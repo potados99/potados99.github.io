@@ -10,11 +10,13 @@ layout: null
     {% for post in site.posts %}
       {% unless post.draft %}
         <item>
-          <author>{{ site.author_name | xml_escape}}</author>
+          <author>{{ site.author_name | xml_escape}} &lt;{{ site.author_email }}&gt;</author>
           <title>{{ post.title | xml_escape }}</title>
-          <category>{{ post.categories[0] | xml_escape}}</category>
+          {% for cat in post.categories %}
+            <category>{{ cat | xml_escape }}</category>
+          {% endfor %}
           <description>{{ post.content | xml_escape }}</description>
-          <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+          <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
           <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
           <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
         </item>
