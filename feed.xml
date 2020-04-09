@@ -10,8 +10,9 @@ layout: null
     {% for post in site.posts %}
       {% unless post.draft %}
         <item>
-          <copyright>Copyright 2018-2020, 송병준</copyright>
+          <author>{{ site.author_name }}</author>
           <title>{{ post.title | xml_escape }}</title>
+          <category>{{ post.categories }}</category>
           <description>{{ post.content | xml_escape }}</description>
           <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
           <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
