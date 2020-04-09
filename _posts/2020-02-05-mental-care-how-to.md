@@ -1,15 +1,8 @@
 ---
 title: "[생각] 정신건강관리전략"
-excerpt: "어떻게 살아갈 것인가"
 date: 2020-02-05 15:14:25 +0900
 categories:
    - writings
-tags:
-   - me
-   - introvert
-   - happiness
-   - life
-   - mentality
 ---
 
 ## 들어가며
