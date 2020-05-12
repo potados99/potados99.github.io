@@ -15,6 +15,7 @@ url:                https://potados99.github.io # main url
 permalink:          /:categories/:title/ # Post permalink
 timezone:           Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 mathjax:            true  # enables support for mathjax - set to 'false' to disable
+new_badge_period:   7
 
 # Analytics
 google_analytics:   UA-154995965-1
