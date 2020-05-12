@@ -11,7 +11,7 @@ social:
     instagram:      https://www.instagram.com/ix_potados/
 
 # Site Settings
-url:                https://potados99.github.io # main url
+url:                https://blog.potados.net # main url
 permalink:          /:categories/:title/ # Post permalink
 timezone:           Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 mathjax:            true  # enables support for mathjax - set to 'false' to disable
