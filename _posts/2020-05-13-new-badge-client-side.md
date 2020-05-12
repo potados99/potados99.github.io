@@ -15,6 +15,7 @@ categories:
 
 이전 코드는 아래와 같이 생겼었다.
 
+{% raw %}
 ~~~html
 <!-- index.html -->
 <section>
@@ -45,6 +46,7 @@ categories:
 
 </section>
 ~~~
+{% endraw %}
 
 Jekyll의 for문으로 글 목록을 빌드 타임에 생성하는 코드이다. 이제 이것을 사용자의 브라우저에서 실시간으로 실행되는 방식으로 바꾸어야 한다.
 
