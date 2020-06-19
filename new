@@ -3,6 +3,8 @@
 # Useful when creating new post.
 # Usage: ./new
 
+DIR="$(dirname "$(realpath "$0")")"
+
 date=$(date +%Y-%m-%d)
 time=$(date +%H:%M:%S)
 date_time="$date $time"
@@ -13,8 +15,8 @@ echo -n "Permalink name: "
 read permalink
 
 permalink=$(echo $permalink | sed "s/[ ]/-/g")
-infile="./.post_template.md"
-outfile="./_drafts/$date-$permalink.md"
+infile="$DIR/.post_template.md"
+outfile="$DIR/_drafts/$date-$permalink.md"
 
 # Check if any post with the same title exists.
 if [ -f $outfile ]; then

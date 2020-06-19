@@ -1,0 +1,38 @@
+#!/bin/zsh
+
+DIR="$(dirname "$(realpath "$0")")"
+
+IMAGES_DIR="$DIR/assets/images"
+
+usage() {
+	echo "Usage: ./image [image path]"
+	exit 1
+}
+
+copy_image() {
+	what=$1
+	to=$IMAGES_DIR
+
+	cp $what $to
+}
+
+get_image_md() {
+	filename="$(basename $1)"
+
+	echo "![$filename](/assets/images/$filename)"
+}
+
+# Param check
+if [ $# -eq 0 ]; then
+	usage
+fi
+
+imagepath=$1
+
+# Copy given image to assets/images.
+copy_image $imagepath
+
+# Get markdown expression for the image and copy it to clipboard..
+get_image_md $imagepath | pbcopy
+
+echo "Copied to clipboard!"
