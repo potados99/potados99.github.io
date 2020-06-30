@@ -151,9 +151,6 @@ blockquote {
     }
   }
 }
-iframe {
-  margin: 45px 0 !important;
-}
 ul,
 ol {
   margin: 20px 0;
@@ -224,21 +221,21 @@ table {
 iframe {
   width: 100%;
 }
+.divider {
+  background: #ddd;
+  background: -webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0)),color-stop(#ccc),to(rgba(255,255,255,0)));
+  background: -webkit-linear-gradient(left,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
+  background: linear-gradient(to right,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
+  height: 1px;
+  margin: 2em 0;
+}
 article {
-  max-width: 500px;
+  max-width: 570px;
   margin: 0 auto;
   h1.title {
     line-height: 1.4em;
     text-align: center;
     font-size: 1.4em;
-  }
-  .divider {
-    background: #ddd;
-    background: -webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0)),color-stop(#ccc),to(rgba(255,255,255,0)));
-    background: -webkit-linear-gradient(left,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
-    background: linear-gradient(to right,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
-    height: 1px;
-    margin: 2em 0;
   }
   .center {
     text-align: center;
@@ -309,13 +306,12 @@ article {
 .comments,
 .footer {
   text-align: center;
-  max-width: 500px;
+  max-width: 570px;
   margin: 0 auto;
   font-size: 0.8rem;
 }
 .page-navigation,
 .comments {
-  margin: 50px auto 0 auto;
   a {
     display: inline-block;
     text-decoration: none;
@@ -324,6 +320,12 @@ article {
   span {
     display: inline-block;
   }
+}
+.page-navigation {
+  margin: 20px auto 0 auto;
+}
+.comments {
+  margin: 50px auto 0 auto;
 }
 .footer {
   margin-top: 50px;
@@ -334,7 +336,7 @@ article {
   }
 }
 section {
-  max-width: 500px;
+  max-width: 570px;
   margin: 0 auto 50px auto;
   ul {
     list-style: none;
