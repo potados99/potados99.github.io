@@ -51,9 +51,17 @@ GIT_AUTHOR_DATE=$N_DAYS_BEFORE GIT_COMMITTER_DATE=$N_DAYS_BEFORE git commit $@
 
 ~~~shell
 $ ./commit-n-days-before 1 -m "Add script."
-go[master 3a1a4f8] Add script.
+[master 3a1a4f8] Add script.
  1 file changed, 29 insertions(+)
  create mode 100755 commit-n-days-before
 ~~~
 
+헤헤.
+
 ## 마치며
+
+![github-grass-filled.png](/assets/images/github-grass-filled.png)
+
+마지막 잔디 두 칸이 찼다.
+
+오늘부터는 빈 칸을 만들지 않을 계획이다. ㅎ
