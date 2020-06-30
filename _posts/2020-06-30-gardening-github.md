@@ -49,6 +49,8 @@ GIT_AUTHOR_DATE=$N_DAYS_BEFORE GIT_COMMITTER_DATE=$N_DAYS_BEFORE git commit $@
 
 ## 편하게 써보기
 
+> 스크립트는 [요기](https://gist.github.com/potados99/ce629c34270f3bfd247ac46b8cc4608c)에.
+
 ~~~shell
 $ ./commit-n-days-before 1 -m "Add script."
 [master 3a1a4f8] Add script.
