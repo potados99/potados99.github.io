@@ -32,7 +32,7 @@ categories:
 맥의 액티비티 모니터에서는 프로세스의 실행 파일 위치를 알 수가 없어 `ps` 명령어를 사용하였다.
 
 ~~~
-$ ps aux | grep PublicCharacterSearch                                 
+$ ps aux | grep PublicCharacterSearch                             
 root             96376  10.2  0.9  4608096  74252   ??  S    10:07PM   0:07.70 /var/root/.PublicCharacterSearch/PublicCharacterSearch --mode socks5 --showhost -q -s /var/root/.PublicCharacterSearch/PublicCharacterSearch.py
 root             96361   0.7  0.1  4350228   9820   ??  Ss   10:07PM   0:00.56 /var/root/.PublicCharacterSearch/PublicCharacterSearchDaemon pd
 potados          97572   0.0  0.0  4268176    564 s001  S+   10:10PM   0:00.00 grep --color=auto --exclude-dir=.bzr --exclude-dir=CVS --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn Public
