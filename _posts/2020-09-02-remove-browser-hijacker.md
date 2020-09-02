@@ -44,7 +44,7 @@ root             96374   0.0  0.1  4317620  11152   ??  S    10:07PM   0:00.24 /
 어떻게 루트 권한이 필요한 디렉토리까지 진입했는지는 알 수가 없지만 아무튼 삭제했다.
 
 ~~~
-rm -rf /var/root/.PublicCharacterSearch/
+$ rm -rf /var/root/.PublicCharacterSearch/
 ~~~
 
 ## 프로파일 지우기
