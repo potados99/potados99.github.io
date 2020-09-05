@@ -11,7 +11,7 @@ html {
 body {
   padding: 20px;
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.5;
   word-wrap: break-word;
   font-weight: normal;
@@ -31,7 +31,7 @@ h5,
 h6 {
   margin-top: 24px;
   margin-bottom: 16px;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1.25;
 }
 h1,
@@ -359,6 +359,11 @@ article {
     font-weight: bold;
   }
 }
+
+ul {
+  padding-left: 2em;
+}
+
 section {
   max-width: 500px;
   margin: 0 auto 50px auto;
