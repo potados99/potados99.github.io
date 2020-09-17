@@ -5,7 +5,7 @@ categories:
    - dev
 ---
 
-> 이 글은 [원문](https://qiita.com/chibatching/items/19ec43c62db2e38ce673)([@chibatching](https://twitter.com/chibatching))의 [번역본](https://medium.com/@thagikura/reduce-the-number-of-inflation-of-viewholders-drastically-by-sharing-a-viewpool-across-multiple-249d5fc6d28)([@Takeshi Hagikura](https://medium.com/@thagikura))을 상당수 참고하여 쓴 글입니다.
+> 이 글은 [원문](https://qiita.com/chibatching/items/19ec43c62db2e38ce673)([@chibatching](https://twitter.com/chibatching))의 [번역본](https://medium.com/@thagikura/reduce-the-number-of-inflation-of-viewholders-drastically-by-sharing-a-viewpool-across-multiple-249d5fc6d28)([@Takeshi Hagikura](https://medium.com/@thagikura))을  참고하여 쓴 글입니다.
 
 ## 들어가며
 
