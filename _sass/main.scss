@@ -204,12 +204,13 @@ pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
+  border-radius: 5px;
+  padding: 16px;
   line-height: 1.45;
   white-space: pre;
   overflow: auto;
+  word-wrap: normal;
   background-color: #f6f8fa;
-  border-radius: 5px;
-  padding: 16px;
   code {
     color: inherit;
     background-color: transparent;
@@ -250,7 +251,7 @@ iframe {
   margin: 2em 0;
 }
 article {
-  max-width: 750px;
+  max-width: 600px;
   margin: 0 auto;
   h1.title {
     padding-top: 0;
@@ -330,7 +331,7 @@ article {
 .comments,
 .footer {
   text-align: center;
-  max-width: 750px;
+  max-width: 600px;
   margin: 0 auto;
   font-size: 0.8rem;
 }
