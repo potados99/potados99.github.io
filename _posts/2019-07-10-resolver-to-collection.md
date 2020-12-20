@@ -212,7 +212,7 @@ inline fun <reified T> queryToCollection(
 반환 타입인 T는 `Collection<*>` 타입이어야 한다. 그렇지 않은 경우는 걸러준다.
 ~~~kotlin
 if (Types.typeOf<T>() !is Collection<*>) {
-    throw IllegalStateException("Wrong generic type: not a collection.")
+    throw IllegalArgumentException("Wrong generic type: not a collection.")
 }
 ~~~
 
