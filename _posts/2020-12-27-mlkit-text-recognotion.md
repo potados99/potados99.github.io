@@ -53,7 +53,7 @@ Use case라는게 거창한게 아니고 그냥 빌더로 뚝딱 만들 수 있�
 
 ## 간단한 구현
 
-API는 아래처럼 쓰면 된다.
+API는 아래처럼 쓰면 된다. 진짜 간단하다.
 
 ~~~kotlin
 val cameraProviderFuture = ProcessCameraProvider.getInstance(mContext)
@@ -96,7 +96,7 @@ cameraProviderFuture.addListener({
 
 이런걸 무료로 풀다니..대단해 구글...
 
-## Reference
+## References
 
 - https://github.com/googlesamples/mlkit/tree/master/android/vision-quickstart
 - https://developers.google.com/ml-kit/samples
