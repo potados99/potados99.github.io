@@ -57,35 +57,39 @@ API는 아래처럼 쓰면 된다. 진짜 간단하다.
 
 ~~~kotlin
 val cameraProviderFuture = ProcessCameraProvider.getInstance(mContext)
-val textRecognizer: TextRecognizer = TextRecognition.getClient()
+        val textRecognizer: TextRecognizer = TextRecognition.getClient()
+        val executor = ContextCompat.getMainExecutor(this)
 
-cameraProviderFuture.addListener({
-    val provider = cameraProviderFuture.get()
+        cameraProviderFuture.addListener({
+            val provider = cameraProviderFuture.get()
 
-    val previewUseCase = Preview.Builder().build().apply {
-        setSurfaceProvider(previewView.createSurfaceProvider())
-    }
-
-    val analysisUseCase = ImageAnalysis.Builder().build().apply {
-        setAnalyzer(ContextCompat.getMainExecutor(this@MainActivity),
-            { image: ImageProxy ->
-                textRecognizer.process(
-                    InputImage.fromMediaImage(
-                      image.image!!,
-                      image.imageInfo.rotationDegrees
-                    )
-                ).addOnSuccessListener {
-                    // 인식이 끝났을 때에 할 일
-                }.addOnCompleteListener {
-                    image.close()
-                }
+            val previewUseCase = Preview.Builder().build().apply {
+                setSurfaceProvider(previewView.createSurfaceProvider())
             }
-        )
-    }
 
-    provider.bindToLifecycle(this, CameraSelector.DEFAULT_BACK_CAMERA, previewUseCase, analysisUseCase)
+            val analysisUseCase = ImageAnalysis.Builder().build().apply {
+                setAnalyzer(executor, { image: ImageProxy ->
+                    textRecognizer.process(
+                        InputImage.fromMediaImage(
+                            image.image!!,
+                            image.imageInfo.rotationDegrees
+                        )
+                    ).addOnSuccessListener {
+                        // 인식이 끝났을 때에 할 일
+                    }.addOnCompleteListener {
+                        image.close()
+                    }
+                })
+            }
 
-}, ContextCompat.getMainExecutor(this))
+            provider.bindToLifecycle(
+                this,
+                CameraSelector.DEFAULT_BACK_CAMERA,
+                previewUseCase,
+                analysisUseCase
+            )
+
+        }, executor)
 ~~~
 
 ## 제대로 된 구현
