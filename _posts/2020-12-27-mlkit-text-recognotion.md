@@ -57,7 +57,7 @@ API는 아래처럼 쓰면 된다. 진짜 간단하다.
 
 ~~~kotlin
 val cameraProviderFuture = ProcessCameraProvider.getInstance(mContext)
-val textRecognizer: TextRecognizer = TextRecognition.getClient()
+val textRecognizer = TextRecognition.getClient()
 val executor = ContextCompat.getMainExecutor(this)
 
 cameraProviderFuture.addListener({
