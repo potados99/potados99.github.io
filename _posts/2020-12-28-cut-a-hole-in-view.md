@@ -174,7 +174,7 @@ private fun drawHole(canvas: Canvas) {
 
 ## 마치며
 
-`Canvas`를 직접 다룰 줄이야...
+`Canvas`를 직접 다루게 될 줄이야...
 
 ## References
 
