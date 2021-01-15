@@ -128,6 +128,8 @@ remoteConfig.fetchAndActivate()
 
 ![후후](https://lh3.googleusercontent.com/proxy/QvpgNf3pHge2i3JGTGRaQ18trKhvpeG1hrdEX1rtg4tsPoeAtnlafln6IijPkNRY6rX2WIniLHKHj4QOyNtfpfjHZrj4PwQk1nfN23aLwGJ8cYXq6iUSO2khEYweVZZFwChZMaPrUby8l1-Dd5C94XxzBYsYejtopea38GCXj3phel8j)
 
+> 히히 될까요?
+
 ## Async의 함정
 
 `fetchAndActivate`는 당연히 비동기로 실행될겁니다. 서버에서 무언가를 가져와야 할 것이니까요. 그래도 우리는 기본값을 설정해 주었으므로 fetch가 끝날 때까지는 기본값을 가져다 쓸 수 있겠죠..?
