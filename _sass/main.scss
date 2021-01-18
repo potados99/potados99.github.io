@@ -403,6 +403,7 @@ list-item {
   .title {
     font-size: 28px;
     font-weight: bold;
+    line-height: 1.5;
   }
   .summary {
     font-size: 15px;
@@ -420,9 +421,7 @@ article {
   .title {
     font-size: 28px;
     font-weight: bold;
-    padding-top: 0;
-    margin-top: 0;
-    border: none;
+    line-height: 1.5;
   }
   .post-date {
     letter-spacing: 0.75px;
