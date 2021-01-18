@@ -474,8 +474,6 @@ remoteConfig.fetchAndActivate().addOnCompleteListener {
 
 **끝!**
 
-![끝](https://lh3.googleusercontent.com/proxy/UvO7-2phxiaM-F5Kghy19KnFwoCa8MiIpl2-dxh_b9HMe0lu461RH_t_pJmf22bwn8xqMU1H75fDoFQ3azgZPYCfpTsLzeVWMrKiKdiOTNHCFugLTRUpsMIjtv0Zqy87glJbXjJOQL-_4cve4lWYRcItWDky3e0ocvGnKTrMFPpwRsxZAs-DD-Xm6gBiRR16tHitrHmqbzL14EnJemG4qt2P9Kx2L67QzHNf23iWn4sYVdbnRO0BPXn0XUk_4mhCND1PuiMwtYr6AHXE6nBklRci3cCS2KOn55-1JBTgwvZFqmnzKIHpu5d7z3kh)
-
 ## 마치며
 
 쓰다 보니 글이 너무 길어졌네요. 에디터가 버벅이기 시작합니다.
