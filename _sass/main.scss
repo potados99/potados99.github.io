@@ -189,12 +189,13 @@ pre,
   font-family: Consolas, monaco, monospace;
 }
 code {
+  color: #f8f8f2;
+  background-color: #272822;
   font-size: 85%;
   border: solid transparent 1px;
   border-radius: 5px;
-  background: rgba(27,31,35,.05);
-  margin: 0px 2px;
-  padding: 0px 3px;
+  margin: 1px 3px;
+  padding: 1px 3px;
 }
 pre {
   display: block;
