@@ -17,14 +17,27 @@ layout: default
 
 		<ul>
 			<li>
-				<div class="post-date code">
-					<span class="date-text" data-date="{{ post.date | date_to_xmlschema }}">
-						{{ post.date | date: "%m/%d" }}
-					</span>
-				</div>
-				<div class="title">
-					<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
-				</div>
+				<list-item>
+
+					<a href="{{ post.url }}">
+
+						<div class="post-date code">
+							<span class="date-text" data-date="{{ post.date | date_to_xmlschema }}">
+								{{ post.date | date: "%m/%d" }}
+							</span>
+						</div>
+
+						<div class="title">
+							{{ post.title }}
+						</div>
+
+						<div class="summary">
+							{{ post.summary }}
+						</div>
+
+					</a>
+
+				</list-item>
 			</li>
 		</ul>
 
