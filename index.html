@@ -47,7 +47,7 @@ title: "감자도스 블로그"
 			const diff = (currentDate.getTime() - createDate.getTime()) / (1000 * 86400);
 
 			if (diff < {{ site.new_badge_period | default: 7 }}) {
-				dateText.innerText = '새 글! ' + dateText.innerText;
+				dateText.innerText =  dateText.innerText + ' · 새 글!';
 			}
 		}
 	</script>
