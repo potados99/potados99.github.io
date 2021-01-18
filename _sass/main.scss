@@ -321,9 +321,6 @@ article {
     display: inline-block;
   }
 }
-.page-navigation {
-  margin: 20px auto 0 auto;
-}
 .comments {
   margin: 35px auto 0 auto;
 }
@@ -453,6 +450,7 @@ article, section, .footer, .comments {
 }
 
 .page-navigation {
+  margin: 32px auto 0 auto;
   text-align: center;
   font-size: 1.0rem;
   a {
