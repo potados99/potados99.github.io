@@ -1,5 +1,6 @@
 ---
-title: "[Blog] GitHub Issue로 댓글 달기"
+title: "GitHub Issue로 댓글 달기"
+summary: "GitHub 블로그에 댓글 플러그인을 달아 보았습니다."
 date: 2020-07-01 01:41:31 +0900
 categories:
    - dev
