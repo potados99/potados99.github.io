@@ -358,7 +358,6 @@ section {
       }
       span {
         display: inline-block;
-        letter-spacing: 1px;
         text-transform: uppercase;
       }
       a:hover {
@@ -417,9 +416,10 @@ list-item {
     color: #586069;
   }
   .post-date {
+    letter-spacing: 0.75px;
     font-size: 15px;
     color: #586069;
-    float: right;
+    float: top;
   }
 }
 
@@ -433,24 +433,18 @@ article {
     line-height: 1.4em;
     text-align: center;
   }
+  .post-date {
+    letter-spacing: 0.75px;
+    font-size: 15px;
+    color: #586069;
+    float: top;
+  }
   .body {
     font-size: 18px;
     line-height: 1.8;
   }
   time {
     font-size: 15px;
-  }
-}
-
-section {
-  .year-first {
-    padding-bottom: 12px;
-    border: 0px;
-  }
-
-  .year {
-    padding: 12px 0;
-    border: 0px;
   }
 }
 

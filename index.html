@@ -7,25 +7,15 @@ title: "감자도스 블로그"
 
 	{% for post in site.posts %}
 
-		{% unless post.next %}
-			<h3 class="code year-first">{{ post.date | date: '%Y' }}</h3>
-		{% else %}
-			{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-			{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-			{% if year != nyear %}
-				<h3 class="code year">{{ post.date | date: '%Y' }}</h3>
-			{% endif %}
-		{% endunless %}
-
 		<ul>
 			<li>
 				<list-item>
 
 					<a href="{{ post.url }}">
 
-						<div class="post-date code">
+						<div class="post-date">
 							<span class="date-text" data-date="{{ post.date | date_to_xmlschema }}">
-								{{ post.date | date: "%m/%d" }}
+								{{ post.date | date: "%Y년 %-m월 %-d일" }}
 							</span>
 						</div>
 
@@ -57,7 +47,7 @@ title: "감자도스 블로그"
 			const diff = (currentDate.getTime() - createDate.getTime()) / (1000 * 86400);
 
 			if (diff < {{ site.new_badge_period | default: 7 }}) {
-				dateText.innerText = 'N ' + dateText.innerText;
+				dateText.innerText = '새 글! ' + dateText.innerText;
 			}
 		}
 	</script>
