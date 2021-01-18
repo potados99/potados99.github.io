@@ -8,12 +8,12 @@ title: "감자도스 블로그"
 	{% for post in site.posts %}
 
 		{% unless post.next %}
-			<h2 class="code">{{ post.date | date: '%Y' }}</h2>
+			<h3 class="code year">{{ post.date | date: '%Y' }}</h3>
 		{% else %}
 			{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
 			{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
 			{% if year != nyear %}
-				<h2 class="code">{{ post.date | date: '%Y' }}</h2>
+				<h3 class="code year">{{ post.date | date: '%Y' }}</h3>
 			{% endif %}
 		{% endunless %}
 

@@ -449,6 +449,13 @@ article {
   }
 }
 
+section {
+  .year {
+    padding: 12px 0;
+    border: 0px;
+  }
+}
+
 article, section, .footer, .comments {
   max-width: 750px;
 }
