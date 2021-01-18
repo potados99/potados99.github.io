@@ -434,6 +434,13 @@ list-item {
   }
 }
 
+.title {
+  padding-top: 0;
+  margin-top: 0;
+  border: none;
+  line-height: 1.4em;
+}
+
 article {
   .title {
     font-size: 28px;
@@ -453,6 +460,6 @@ article {
   }
 }
 
-article, section, .footer {
+article, section, .footer, .comments {
   max-width: 750px;
 }
