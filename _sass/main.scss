@@ -305,14 +305,12 @@ article {
 .block {
   display: block;
 }
-.page-navigation,
 .comments,
 .footer {
   text-align: center;
   margin: 0 auto;
   font-size: 0.8rem;
 }
-.page-navigation,
 .comments {
   a {
     display: inline-block;
@@ -452,4 +450,16 @@ article, section, .footer, .comments {
   background: #eaecef;
   height: 1px;
   margin: 1em 0;
+}
+
+.page-navigation {
+  text-align: center;
+  font-size: 1.0rem;
+  a {
+    color: #0366d6;
+    border: 1px solid #0366d6;
+    border-radius: 5px;
+    padding: 6px;
+    margin: 0 4px;
+  }
 }
