@@ -27,6 +27,9 @@ fi
 echo -n "Title: "
 read title
 
+echo -n "Summary: "
+read summary
+
 echo -n "Categories (space separated): "
 read categories
 
@@ -38,6 +41,7 @@ categories=$(echo $categories | sed "s/[ ]*\([^ ]*\)[ ]*/   - \1;/g" | sed "s/.$
 
 content=$(cat $infile |
 sed "s/__title__/$title/" |
+sed "s/__summary__/$summary/" |
 sed "s/__date_time__/$date_time/" |
 sed "s/__categories__/$categories/" |
 tr ';' '\n')
