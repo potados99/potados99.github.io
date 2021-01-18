@@ -1,5 +1,6 @@
 ---
-title: "[취미] 전동킥보드 2개월 사용 후기"
+title: "전동킥보드 2개월 사용 후기"
+summary: "서있기만 해도 배경이 이동합니다. WOW!"
 date: 2020-11-23 13:29:29 +0900
 categories:
    - electronics

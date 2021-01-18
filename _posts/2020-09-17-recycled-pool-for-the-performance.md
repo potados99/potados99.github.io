@@ -1,5 +1,6 @@
 ---
-title: "[Android] 중첩된 RecyclerView 퍼포먼스 개선하기"
+title: "중첩된 RecyclerView 퍼포먼스 개선하기"
+summary: "ViewHolder 재활용을 통해 퍼포먼스 개선을 이끌어내보기."
 date: 2020-09-17 08:30:58 +0900
 categories:
    - dev

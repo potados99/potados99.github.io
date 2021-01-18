@@ -1,5 +1,6 @@
 ---
-title: "[Android] ViewPager2 좋다."
+title: "ViewPager2 좋다."
+summary: "ViewPager2 간단하게 둘러보았습니다."
 date: 2020-09-14 22:01:51 +0900
 categories:
    - dev

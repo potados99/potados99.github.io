@@ -1,5 +1,6 @@
 ---
-title: "[Android] onCreateView 깔끔하게 만들기"
+title: "매일 반복되는 onCreateView, 어떻게 안 될까요"
+summary: "onCreateView 코드 간단하게 만들어보기."
 date: 2020-09-30 10:19:25 +0900
 categories:
    - dev

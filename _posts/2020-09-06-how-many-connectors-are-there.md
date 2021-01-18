@@ -1,5 +1,6 @@
 ---
-title: "[뻘짓] 배민커넥트 얼마나 많이 할까"
+title: "배민커넥트 얼마나 많이 할까"
+summary: "그냥 표가 그려보고 싶었어요."
 date: 2020-09-06 03:36:23 +0900
 categories:
    - dev
@@ -81,9 +82,9 @@ UI를 짜기에 앞서 먼저 데이터를 수집하고 저장하는 방법에 �
 
 ### 도메인
 
-도메인이 예뻐야 쓸 때에도 기분이 좋다. 이미 가지고 있는 `potados.net` 도메인에 붙이기로 하였다. 서브도메인은 `bc`로 하였다. 배민커넥트를 줄여서 bc.
+도메인이 예뻐야 쓸 때에도 기분이 좋다. 이미 가지고 있는 `potados.com` 도메인에 붙이기로 하였다. 서브도메인은 `bc`로 하였다. 배민커넥트를 줄여서 bc.
 
-[bc.potados.net](http://bc.potados.net)에서 볼 수 있다.
+[bc.potados.com](http://bc.potados.com)에서 볼 수 있다.
 
 > 도메인 관리는 [freenom](https://www.freenom.com/en/index.html?lang=en)이라는 곳에서 하고 있는데, 별로다. 혹여나 유로 도메인을 구매하시고자 한다면 [GoDaddy](https://kr.godaddy.com)가 3천배 낫다. 깔끔한 한글에 웹사이트도 빠르고 DNS 업데이트는 더 빠르다. 가격도 비슷하다.
 

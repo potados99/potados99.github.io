@@ -1,5 +1,6 @@
 ---
-title: "[MlKit] 휴대폰이 글자에 눈을 뜨다니"
+title: "휴대폰이 글자에 눈을 뜨다니! feat. MlKit"
+summary: "이렇게 가볍고 빠른 온-디바이스 텍스트 인식이?"
 date: 2020-12-27 11:46:58 +0900
 categories:
    - dev
