@@ -82,7 +82,7 @@ remoteConfig.setDefaultsAsync(R.xml.remote_config_defaults)
 
 기본값은 XML 리소스를 사용해도 되고, `Map<String, Object>` 타입의 `키-값` 쌍을 넘겨 주어도 됩니다. XML 파일은 아래처럼 생겼습니다.
 
-~~~XML
+~~~xml
 <?xml version="1.0" encoding="utf-8"?>
 <defaultsMap>
     <entry>

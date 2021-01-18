@@ -21,8 +21,8 @@ new_badge_period:   7
 google_analytics:   UA-154995965-1
 
 # Site Build
-highlighter:        rouge
 markdown:           kramdown
+highlighter:        rouge
 kramdown:
     input:          GFM
 sass:
