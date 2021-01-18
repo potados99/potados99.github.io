@@ -19,14 +19,8 @@ layout: default
 
 <div class="page-navigation">
 
-	{% if page.next.url %}
-    <a class="next" href="{{ page.next.url }}" title="다음 글: {{ page.next.title }}">다음 글</a>
-  {% endif %}
-
-	<a class="home" href="/" title="목록으로 돌아가기">목록</a>
-
-  {% if page.previous.url %}
-    <a class="prev" href="{{ page.previous.url }}" title="이전 글: {{ page.previous.title }}">이전 글</a>
-  {% endif %}
+	<div class="page-navigation">
+		<a class="home" href="/" title="목록으로 돌아가기">&larr; 목록으로 돌아가기</a>
+	</div>
 
 </div>
