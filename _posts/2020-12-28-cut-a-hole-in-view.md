@@ -1,6 +1,6 @@
 ---
 title: "구멍 뚫린 뷰 만들기"
-summary: "페인트를 캔버스에.. 썼다 지운다..."
+summary: "썼다 지운다...널 PorterDuff.Mode.CLEAR해"
 date: 2020-12-28 10:41:15 +0900
 categories:
    - dev
