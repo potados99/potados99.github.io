@@ -9,10 +9,6 @@ html {
   height: 100%;
 }
 body {
-  padding: 20px;
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.5;
   word-wrap: break-word;
   font-weight: normal;
   font-style: normal;
@@ -250,17 +246,9 @@ iframe {
   height: 1px;
   margin: 2em 0;
 }
+
 article {
-  max-width: 600px;
   margin: 0 auto;
-  h1.title {
-    padding-top: 0;
-    margin-top: 0;
-    border: none;
-    line-height: 1.4em;
-    text-align: center;
-    font-size: 1.4em;
-  }
   .center {
     text-align: center;
     margin: 0 auto;
@@ -331,7 +319,6 @@ article {
 .comments,
 .footer {
   text-align: center;
-  max-width: 600px;
   margin: 0 auto;
   font-size: 0.8rem;
 }
@@ -366,10 +353,8 @@ ul {
 }
 
 section {
-  max-width: 500px;
   margin: 0 auto 50px auto;
   ul {
-    font-size: 15px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -385,23 +370,8 @@ section {
         letter-spacing: 1px;
         text-transform: uppercase;
       }
-      .title {
-        max-width: 100%;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        white-space: nowrap !important;
-        word-wrap: normal !important;
-      }
-      .post-date {
-        color: #586069!important;
-        float: right;
-        margin: 0 0 0 20px;
-      }
-      @media (min-width: 992px) {
-        a:hover {
-          color: #0366d6!important;
-          text-decoration: underline;
-        }
+      a:hover {
+        text-decoration: underline;
       }
     }
   }
@@ -437,4 +407,51 @@ section {
   100% {
     -webkit-transform: none;
   }
+}
+
+body {
+  padding: 15px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+list-item {
+  .title {
+    font-size: 19px;
+    font-weight: bold;
+  }
+  .summary {
+    font-size: 15px;
+    color: #586069;
+  }
+  .post-date {
+    font-size: 15px;
+    color: #586069;
+    float: right;
+    margin: 0 0 0 20px;
+  }
+}
+
+article {
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 0;
+    margin-top: 0;
+    border: none;
+    line-height: 1.4em;
+    text-align: center;
+  }
+  .body {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  time {
+    font-size: 15px;
+  }
+}
+
+article, section, .footer {
+  max-width: 750px;
 }
