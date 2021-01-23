@@ -209,7 +209,7 @@ void loop() {
 
 즉, 서버는 `Engine.IO` v3을 사용하는 요청을 기본으로 막아놓고 있었기 때문에 아두이노의 `EIO=3` 연결 요청이 실패한 것이었습니다.
 
-그렇다면 아두이노 쪽에서 왜 그런 파라미터가 붙어서 날아가는지 보니 arduinoWebSockets 라이브러리의 [`SocketIOclient.h` 49번째 줄](https://github.com/Links2004/arduinoWebSockets/blob/900d81e5345fe2dbe74fd175749c80e2bbda2f00/src/SocketIOclient.h#L49)에 이유가 있었습니다.
+그렇다면 아두이노 쪽에서 왜 그런 파라미터가 붙어서 날아가는 걸까요. arduinoWebSockets 라이브러리의 [`SocketIOclient.h` 49번째 줄](https://github.com/Links2004/arduinoWebSockets/blob/900d81e5345fe2dbe74fd175749c80e2bbda2f00/src/SocketIOclient.h#L49)에 이유가 있었습니다.
 
 ~~~c++
 void begin(const char * host, uint16_t port, const char * url = "/socket.io/?EIO=3", const char * protocol = "arduino");
