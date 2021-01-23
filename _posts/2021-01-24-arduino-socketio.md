@@ -33,7 +33,7 @@ categories:
 
 웹 소켓은 TCP를 기반으로 양방향 연결을 만들어 주는 프로토콜입니다. 보통 이런 식으로 씁니다.
 
-~~~javascript
+~~~html
 <script>
   const socket = new WebSocket("ws://도메인/경로");
 
@@ -211,7 +211,7 @@ void loop() {
 
 그렇다면 아두이노 쪽에서 왜 그런 파라미터가 붙어서 날아가는지 보니 arduinoWebSockets 라이브러리의 [`SocketIOclient.h` 49번째 줄](https://github.com/Links2004/arduinoWebSockets/blob/900d81e5345fe2dbe74fd175749c80e2bbda2f00/src/SocketIOclient.h#L49)에 이유가 있었습니다.
 
-~~~
+~~~c++
 void begin(const char * host, uint16_t port, const char * url = "/socket.io/?EIO=3", const char * protocol = "arduino");
 ~~~
 
@@ -311,7 +311,15 @@ void SocketIOclient::loop(void) {
 }
 ~~~
 
+**해결!**
 
+이제 몇 시간을 놓아 두어도 연결이 잘 유지됩니다.
+
+## 마치며
+
+라이브러리 소스를 보면서 배워가는게 많습니다.
+
+다른 무엇보다 문서와 소스가 제일 정확하다는 걸 느꼈습니다. 구글링 전에 문서부터 봐야겠습니다.
 
 ## 참고
 
