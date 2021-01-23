@@ -263,7 +263,7 @@ void SocketIOclient::loop(void) {
 #define EIO_HEARTBEAT_INTERVAL 20000
 ~~~
 
-연결이 끊어지는 주기와 일치했습니다. `WebSocketsClient::sendTXT(eIOtype_PING)` 호출이 의심되었습니다. 해당 호출 직전에 `Serial.println()` 호출을 두어 연결 끊김과 ping의 발생 시각을 관찰하였습니다.
+연결이 끊어지는 주기와 일치했습니다. `WebSocketsClient::sendTXT(eIOtype_PING)` 호출이 의심되었습니다. 해당 호출 직전에 `Serial.println()` 호출을 두어 연결 끊김과 `PING`의 전송 시각을 관찰하였습니다.
 
 ![arduino-socket-keep-disconnecting.png](/assets/images/arduino-socket-keep-disconnecting.png)
 
