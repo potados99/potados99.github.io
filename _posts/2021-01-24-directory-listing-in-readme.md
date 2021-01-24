@@ -234,7 +234,7 @@ Git이 지원하는 hook은 `pre-commit`, `pre-push`, `post-update` 등이 있�
 
 > `pre-commit.sample`은 파일 이름에 아스키가 아닌 문자가 들어있을 경우에 커밋을 중단하는 스크립트입니다.
 
-여기에 `pre-commit`이라는 파일을 만들어 준 뒤, `chmode +x pre-commit` 명령으로 실행 권한을 줍니다.
+여기에 `pre-commit`이라는 파일을 만들어 준 뒤, `chmod +x pre-commit` 명령으로 실행 권한을 줍니다.
 
 그리고 내용을 채워 줍니다.
 
