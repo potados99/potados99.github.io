@@ -95,7 +95,7 @@ tree -tf --noreport -I '*~' --charset ascii $1
 
 혹시나 싶어 GNU sed가 설치된 GNU/Linux 환경으로 가서 스크립트를 실행해 봅니다. 잘 됩니다.
 
-BSD sed와 GNU sed 모두 [POSIX sed 규격](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sed.html)은 준수합니다. 그런데 문제가 생겼다는 것은, 위 스크립트의 `sed` 식에 GNU 확장을 사용하는 비표준 코드가 있었다는 뜻이 됩니다.
+BSD sed와 GNU sed 모두 [POSIX sed 규격](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sed.html)은 준수합니다. 그런데 GNU sed에서만 돌아갔다는 것은, 위 스크립트의 `sed` 식에 GNU 확장을 사용하는 비표준 코드가 있었다는 뜻이 됩니다.
 
 [잘 정리된 글](https://riptutorial.com/sed/topic/9436/bsd-macos-sed-vs--gnu-sed-vs--the-posix-sed-specification)을 주욱 훑으며 찾아 봅니다.
 
