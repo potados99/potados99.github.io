@@ -110,7 +110,7 @@ BSD sed와 GNU sed 모두 [POSIX sed 규격](http://pubs.opengroup.org/onlinepub
 
 고민 끝에 후자를 골랐습니다. 왜냐하면요,
 
-- GNU를 개인적인 선호합니다(?)
+- GNU를 개인적으로 선호합니다(?)
 - POSIX sed 표준은 기능이 너무 적습니다.
 - 앞으로도 BSD sed를 사용하면 고통받을 것 같았습니다.
 
