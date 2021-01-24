@@ -24,7 +24,7 @@ categories:
 
 > 이런 식으로 말이죠.
 
-README.md는 매우 정적인 파일입니다. HTML을 일부 지원하긴 하지만 자바스크립트를 끼워넣을 수는 없습니다. 결국 일일이 직접 업데이트해야 한다는 결론에 도달합니다.
+`README.md`는 매우 정적인 파일입니다. HTML을 일부 지원하긴 하지만 자바스크립트를 끼워넣을 수는 없습니다. 결국 일일이 직접 업데이트해야 한다는 결론에 도달합니다.
 
 더 나은 방법은 없을까요, 구글을 뒤져봅니다.
 
@@ -101,7 +101,7 @@ BSD sed와 GNU sed 모두 [POSIX sed 규격](http://pubs.opengroup.org/onlinepub
 
 > Caveat: do not assume that \\|, \\+ and \\? are supported: While GNU sed supports them (unless --posix is used), BSD sed does not - these features are not POSIX-compliant.
 
-아... *공백이 하나 이상 있음*을 표현하기 위해 ` \+`를 사용했는데, 이게 표준에서 벗어나는 부분이었습니다.
+아... *공백이 하나 이상 있음*을 표현하기 위해 ` \\+`를 사용했는데, 이게 표준에서 벗어나는 부분이었습니다.
 
 그러면 이제 두 가지 선택지가 주어집니다.
 
