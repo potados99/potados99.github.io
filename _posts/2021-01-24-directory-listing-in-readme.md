@@ -1,6 +1,6 @@
 ---
 title: "README.md에 소스 트리 보여주기 feat. tree & gsed"
-summary: "저장소의 소스 트리를 실시간으로 README.md에 보여주기!"
+summary: "저장소의 소스 트리를 실시간으로 README.md에 표시해 보았습니다."
 date: 2021-01-24 19:33:10 +0900
 categories:
    - dev
