@@ -103,7 +103,7 @@ Cross-origin 요청을 허용할 지 말지는 **그 요청을 받는 서버가 
 
 ## Preflight
 
-사실 `CORS`에는 위의 access control 외에도 preflight라는 것이 있습니다. 요청을 보내기 전에 먼저 이 요청이 안전한 것인지 서버에 물어보는 절차입니다.
+사실 `CORS`에는 위의 access-control 외에도 preflight라는 것이 있습니다. 요청을 보내기 전에 먼저 이 요청이 안전한 것인지 서버에 물어보는 절차입니다.
 
 아래는 preflight 없이 직접 요청을 보내는 예시입니다.
 
