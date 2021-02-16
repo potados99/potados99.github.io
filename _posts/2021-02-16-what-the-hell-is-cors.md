@@ -141,7 +141,7 @@ Preflight는 *간단한* 요청에 대해서는 일어나지 않습니다. 간�
 
 ![fail-on-preflight.png](/assets/images/fail-on-preflight.png)
 
-> Preflight가 언급됩니다.
+> Preflight가 언급됩니다. 본 요청 이전 preflight 단계에서 실패한 경우입니다.
 
 ## 인증 정보를 포함한 요청
 
