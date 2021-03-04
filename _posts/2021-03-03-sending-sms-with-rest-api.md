@@ -87,7 +87,7 @@ def get_signature(key, msg):
     return hmac.new(key.encode(), msg.encode(), hashlib.sha256).hexdigest()
 ~~~
 
-API key와 API secret, 두 개의 문자열이 필요합니다. 여기서 `HMAC`이라는 단어가 등장합니다.
+`API key`와 `API secret`, 두 개의 문자열이 필요합니다. 여기서 `HMAC`이라는 단어가 등장합니다.
 
 ## HMAC
 
