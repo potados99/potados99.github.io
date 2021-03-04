@@ -48,7 +48,7 @@ categories:
 
 아무튼 코드는 이렇게 생겼습니다.
 
-~~~Python
+~~~python
 ...
 
 payload = {
@@ -71,7 +71,7 @@ requests.post(
 
 API를 호출하기 위한 인증 정보는 헤더에 담깁니다. `get_headers` 함수를 보겠습니다.
 
-~~~Python
+~~~python
 def get_headers(api_key, api_secret):
     date = get_iso_datetime()
     salt = unique_id()
