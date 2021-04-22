@@ -142,7 +142,7 @@ categories:
 
 EasyEDA로 최종 거버 파일 생성까지 끝나면 [JLCPCB](https://jlcpcb.com/)에서 PCB를, [LCSC](https://lcsc.com/)에서 부품들을 주문할 수 있습니다.
 
-바로 주문 넣고 기다립니다. JLCPCB에서 주문하면 보드가 2$, 배송비가 9$ 정도로 배보다 배꼽이 더 크긴 하지만 국내에서 이 가격은 상상도 할 수 없으므로 어쩔 수 없이 주문합니다. LCSC에서는 JLCPCB에서 주문한 PCB와 묶음배송은 할 수 없지만 15$짜리 배송비 쿠폰을 주니 조금 저렴하게 주문할 수 있습니다.
+바로 주문 넣고 기다립니다. JLCPCB에서 주문하면 보드가 $2, 배송비가 $9 정도로 배보다 배꼽이 더 크긴 하지만 국내에서 이 가격은 상상도 할 수 없으므로 어쩔 수 없이 주문합니다. LCSC에서는 JLCPCB에서 주문한 PCB와 묶음배송은 할 수 없지만 $15짜리 배송비 쿠폰을 주니 조금 저렴하게 주문할 수 있습니다.
 
 ## 실장과 납땜
 
@@ -195,7 +195,7 @@ output:
 
 ## 마치며
 
-알고봤더니 이것과 정확히 똑같은 기능을 하는 물건이 알리익스프레스에서 7$ 선에서 [판매중](https://www.aliexpress.com/item/1005001670745785.html?spm=a2g0o.productlist.0.0.64e97168kFy1vw&algo_pvid=e9b71f1d-73bf-424a-873d-0c4b18f0dc3b&algo_expid=e9b71f1d-73bf-424a-873d-0c4b18f0dc3b-0&btsid=0b0a556616191172241503727e066b&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_)이었습니다. 하하.. 그래도 직접 만들었다는 것에 의미를 둡니다...
+알고봤더니 이것과 정확히 똑같은 기능을 하는 물건이 알리익스프레스에서 $7 선에서 [판매중](https://www.aliexpress.com/item/1005001670745785.html?spm=a2g0o.productlist.0.0.64e97168kFy1vw&algo_pvid=e9b71f1d-73bf-424a-873d-0c4b18f0dc3b&algo_expid=e9b71f1d-73bf-424a-873d-0c4b18f0dc3b-0&btsid=0b0a556616191172241503727e066b&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_)이었습니다. 하하.. 그래도 직접 만들었다는 것에 의미를 둡니다...
 
 ## 참고한 글
 
