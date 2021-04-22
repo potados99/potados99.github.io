@@ -7,7 +7,7 @@ categories:
    - electronics
 ---
 
-![led-dimmer-demo.webp](/assets/images/led-dimmer-demo.mp4)
+![led-dimmer-demo.mp4](/assets/images/led-dimmer-demo.mp4)
 
 > 완성된 모습
 
@@ -189,7 +189,7 @@ output:
 
 `esphome dimming-light.yaml run`으로 플래싱을 진행하고 테스트해 봅니다.
 
-![led-dimmer-demo.webp](/assets/images/led-dimmer-demo.mp4)
+![led-dimmer-demo.mp4](/assets/images/led-dimmer-demo.mp4)
 
 잘 작동합니다.
 
