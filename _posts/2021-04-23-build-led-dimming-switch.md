@@ -187,7 +187,17 @@ output:
 ...
 ~~~
 
-`esphome dimming-light.yaml run`으로 플래싱을 진행하고 테스트해 봅니다.
+`esphome dimming-light.yaml run`으로 플래싱을 진행합니다.
+
+## 테스트
+
+플래싱까지 마쳤으면 ESP-01을 보드에 장착한 뒤 LED 스트립에 연결해 줍니다.
+
+![led-dimmer-installed.jpeg](/assets/images/led-dimmer-installed.jpeg)
+
+> 기존 선로와 LED 사이에 끼워 넣어 줍니다.
+
+가장 설레는 순간입니다. 기대한 대로 움직이는지 보겠습니다.
 
 ![led-dimmer-demo.mp4](/assets/images/led-dimmer-demo.mp4)
 
