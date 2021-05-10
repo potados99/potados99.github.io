@@ -54,7 +54,7 @@ categories:
 
 **ESP8266**
 
-- 중국의 Espriff 사에서 만든 MCU입니다.
+- 중국의 Espressif 사에서 만든 MCU입니다.
 
 - 플래시 메모리와 SRAM은 넘치게 충분하고 Wi-Fi 연결까지 지원하는데 가격이 몇 천원 안 합니다!
 
