@@ -59,7 +59,7 @@ categories:
 
 엔트리 포인트 `index.ts`는 이렇게 생겼습니다:
 
-```Typescript
+```typescript
 import Runner from './lib/actor/Runner';
 
 new Runner().run().catch((e) => console.error(e));
@@ -67,7 +67,7 @@ new Runner().run().catch((e) => console.error(e));
 
 `Runner`는 이렇게 생긴 메인 루프를 돕니다:
 
-```Typescript
+```typescript
 // 생략
 while (true) {
   await worker.tick();
@@ -79,7 +79,7 @@ while (true) {
 
 `Worker`는 대략 이런 일을 합니다:
 
-```Typescript
+```typescript
 // 생략
 const detector = new Detector(prev, current);
 if (detector.hasNoChanges) {
