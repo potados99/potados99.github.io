@@ -113,8 +113,6 @@ await Employee.findOne({name: '그사람'}, {relations: ['company']});
 await Employee.findOne({where: {name: '그사람'}, relations: ['company']});
 ```
 
-![이마탁](https://opgg-com-image.akamaized.net/attach/images/20190711130352.369554.jpeg)
-
 이걸 유연하다 해야 할 지, 아니면 흐물흐물하다 해야 할 지 모르겠습니다만, 최소한 쓸 때에는 편했던 것 같습니다. 아무튼 대대로 엄숙히 내려오던 `BaseEntity`의 족보에 끼어들어 메소드 호출을 잘 가로채려면 오버로드를 모두 지원해야 합니다.
 
 일단 오버로드 선언을 모두 써준 다음에 구현체를 작성하기 시작합니다.
@@ -132,6 +130,8 @@ export default class BaseBetterEntity extends BaseEntity {
 ```
 
 ### 으악: 문제를 마주함
+
+![이마탁](https://opgg-com-image.akamaized.net/attach/images/20190711130352.369554.jpeg)
 
 그런데 다시 고뇌의 시간이 찾아옵니다. 문제가 두 개가 있는데요, 일단 `find` 메소드 내에서 `this.relations`와 같은 접근이 안 됩니다. 왜냐하면 `this`라는 이름의 파라미터가 있기 때문입니다. 자식 클래스가 오버라이드한 `relations`에 접근할 수 있어야 이 모든게 작동하는지라, 꼭 해결해야 합니다.
 
