@@ -1,6 +1,6 @@
 ---
 title: "TypeORM 마개조했습니다."
-summary: "BaseEntity는 자식의 자식 세대를 거쳐 더욱 강해졌습니다..."
+summary: "조상님이 진화했습니다. BaseEntity 업그레이드!"
 date: 2022-02-25 09:03:54 +0900
 categories:
    - dev
