@@ -438,6 +438,55 @@ article {
   }
 }
 
+/* 큰화면에서는 폰트 2px씩 크게~! */
+@media (min-width: 700px) {
+    body {
+      padding: 18px;
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    list-item {
+      .title {
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 1.5;
+      }
+      .summary {
+        font-size: 16px;
+        color: #586069;
+      }
+      .post-date {
+        letter-spacing: 0.75px;
+        font-size: 16px;
+        color: #586069;
+        float: top;
+      }
+    }
+
+    article {
+      .title {
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 1.5;
+      }
+      .post-date {
+        letter-spacing: 0.75px;
+        font-size: 16px;
+        color: #586069;
+        float: top;
+      }
+      .body {
+        font-size: 18px;
+        line-height: 1.8;
+      }
+      time {
+        font-size: 16px;
+      }
+    }
+}
+
 article, section, .footer, .comments {
   max-width: 700px;
 }
