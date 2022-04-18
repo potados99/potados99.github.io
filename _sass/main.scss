@@ -393,7 +393,7 @@ section {
 }
 
 body {
-  padding: 15px;
+  padding: 16px;
   margin: 0;
   font-size: 16px;
   line-height: 1.8;
@@ -401,17 +401,17 @@ body {
 
 list-item {
   .title {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: bold;
     line-height: 1.5;
   }
   .summary {
-    font-size: 15px;
+    font-size: 14px;
     color: #586069;
   }
   .post-date {
     letter-spacing: 0.75px;
-    font-size: 15px;
+    font-size: 14px;
     color: #586069;
     float: top;
   }
@@ -419,22 +419,22 @@ list-item {
 
 article {
   .title {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: bold;
     line-height: 1.5;
   }
   .post-date {
     letter-spacing: 0.75px;
-    font-size: 15px;
+    font-size: 14px;
     color: #586069;
     float: top;
   }
   .body {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.8;
   }
   time {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
