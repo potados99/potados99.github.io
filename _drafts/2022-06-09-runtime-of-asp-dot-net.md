@@ -25,7 +25,7 @@ IIS 위에서 굴러가는 ASP.NET 애플리케이션이 요청을 받아 처리
 7. Worker 프로세스가 요청을 처리하고 HTTP.sys에게 결과를 돌려줍니다.
 8. 사용자가 응답을 받습니다.
 
-￼
+![Svchost exe.png](/assets/images/Svchost_exe.png)
 
 많은 친구들이 등장합니다. 하나씩 살펴보겠습니다.
 
