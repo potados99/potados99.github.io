@@ -23,9 +23,9 @@ print(my_num) # 23
 # 변화가 없다!
 ```
 
-숫자(int) 타입의 변수는 C나 Java의 원시 타입처럼 pass-by-value로 전달되는 듯 보입니다. 하지만 Python에서는 모든 것이 객체이며, `int` 객체 또한 pass-object-reference-by-value로 전달됩니다.
+숫자(`int`) 타입의 변수는 C나 Java의 원시 타입처럼 pass-by-value로 전달되는 듯 보입니다. 하지만 Python에서는 모든 것이 객체이며, `int` 객체 또한 pass-object-reference-by-value로 전달됩니다.
 
-> 이 부분에서 웹상에 "mutable 타입에 대해서는 pass-by-reference, immutable 타입에 대해서는 pass-by-value다"라고 잘못 설명하는 글이 많습니다. 다 틀렸습니다. 가변성과 관계 없이 Python에서는 모두 pass-object-reference-by-value(오브젝트의 레퍼런스를 값으로 전달)입니다.
+> 이 부분에서 웹상에 "*mutable 타입에 대해서는 pass-by-reference, immutable 타입에 대해서는 pass-by-value*"라고 잘못 설명하는 글이 많습니다. 다 틀렸습니다. 가변성과 관계 없이 Python에서는 모두 pass-object-reference-by-value(오브젝트의 레퍼런스를 값으로 전달)입니다.
 
 아니 그러면 레퍼런스로 전달되는데 왜 밖에서 정의한 값이 안 바뀌냐구요?
 
