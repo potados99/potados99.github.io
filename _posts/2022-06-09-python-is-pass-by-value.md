@@ -49,6 +49,6 @@ Mutable 객체는 내부의 값을 바꾸는 방법을 제공합니다. `list`�
 
 ## References
 
-- [Is Java "pass-by-reference" or "pass-by-value"? - Stack Overflow](https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value)
+- [Is Java "pass-by-reference" or "pass-by-value"?](https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value)
 
-- [Python Parameters - Pass-By-Value or Pass-By-Reference? | testingReflections.com](https://web.archive.org/web/20120615042202/http://testingreflections.com/node/view/5126)
+- [Python Parameters - Pass-By-Value or Pass-By-Reference?](https://web.archive.org/web/20120615042202/http://testingreflections.com/node/view/5126)
