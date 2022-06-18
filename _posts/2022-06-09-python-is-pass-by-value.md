@@ -1,7 +1,7 @@
 ---
 title: "Python은 pass-by-value입니다"
 summary: "함수를 호출할 때, 객체의 레퍼런스를 값으로 넘겨줍니다."
-date: 2022-06-09 23:02:24 +0900
+date: 2022-06-09 23:02:25 +0900
 categories:
    - dev
 ---
