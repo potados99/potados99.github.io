@@ -7,6 +7,8 @@ title: "감자도스 블로그"
 
 안녕하세요. 아름다움을 추구하는 개발자입니다.
 
+눈 앞의 벽들을 극복하려 오늘도 애쓰고 있습니다.
+
 감자를 좋아합니다.
 
 ## 연락처
@@ -15,8 +17,3 @@ title: "감자도스 블로그"
 - **GitHub**: [potados99](https://github.com/potados99)
 - **Instagram**: [ix_potados](https://www.instagram.com/ix_potados/)
 - **카카오톡 오픈채팅**: [감자도스](https://open.kakao.com/o/sqE5M3Rc)
-
-## 기타
-
-- [로고에 사용된 감자 삽화](https://www.vexels.com/png-svg/preview/185272/potato-vegetable-flat)
-- 이미지는 원본 주소가 출처입니다.
