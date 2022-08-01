@@ -75,30 +75,30 @@ create table routine_logs
 로그를 찍는 구문은 매우 짧고 명확하여 개발자의 정신적 부담을 덜어주어야 하므로, 로그 테이블에 새 줄을 추가하는 일은 별도의 프로시저에서 진행하도록 합니다.
 
 ```sql
-create procedure log(IN $level varchar(255), IN $tag varchar(255), IN $message longtext)
+create procedure log(IN p_level varchar(255), IN p_tag varchar(255), IN p_message longtext)
 main:
 begin
-    # 로그가 비활성화되어 있으면 건너뜁니다.
+    -- 로그가 비활성화되어 있으면 건너뜁니다.
     if @log_enabled is not null and @log_enabled = false then
         leave main;
     end if;
 
-    # 로그 테이블에 로그를 쌓습니다.
+    -- 로그 테이블에 로그를 쌓습니다.
     insert into routine_logs
     set timestamp = current_timestamp,
-        level     = $level,
-        tag       = $tag,
-        message   = $message;
+        level     = p_level,
+        tag       = p_tag,
+        message   = p_message;
 end;
 ```
 
 그리고 로그 레벨별로 alias 프로시저를 만들어 줍니다.
 
 ```sql
-create procedure log_debug(IN $tag varchar(255), IN $message longtext)
+create procedure log_debug(IN p_tag varchar(255), IN p_message longtext)
 main:
 begin
-    call log('DEBUG', $tag, $message);
+    call log('DEBUG', p_tag, p_message);
 end;
 ```
 
