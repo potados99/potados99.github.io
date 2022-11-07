@@ -63,7 +63,7 @@ const pv = PV({
   time: 10
 })
 
-pv.on('info', (info) => {
+pv.on('info', (info) => {
   console.log(info);
   /*
   {
