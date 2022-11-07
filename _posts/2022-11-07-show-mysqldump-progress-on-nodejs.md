@@ -38,8 +38,8 @@ import { spawn } from "child_process";
 const child = spawn('mysqldump', ["-upotados", "-p1234", "cafeteria"]);
 
 child.stdout.on("data", (data) => {
-	// 출력 청크가 여기에 나와요
-	console.log(data);
+  // 출력 청크가 여기에 나와요
+  console.log(data);
 });
 
 ```
