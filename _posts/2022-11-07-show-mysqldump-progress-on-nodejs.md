@@ -4,6 +4,7 @@ summary: "파이프라인과 스트림"
 date: 2022-11-07 23:16:21 +0900
 categories:
    - dev
+   - nodejs
 ---
 
 ## 들어가며
