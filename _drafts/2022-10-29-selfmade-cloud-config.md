@@ -303,8 +303,8 @@ function decrypt(text, password) {
 
 이제 이 html 파일을 가장 접근하기 쉬운 형태로 배포해야 합니다. html은 브라우저가 바로 읽고 실행(?)할 수 있는 파일이라는 특징을 살려 웹에다가 띄우기로 했습니다. 아까 만든 [public 저장소](https://github.com/dhsol-company/static)에 [GitHub Pages](https://dhsol-company.github.io/static/editor.html)로 띄웠습니다.
 
-## 클라이언트 쪽 라이브러리를 만들어 보자
+## 클라이언트 라이브러리를 만들어 보자
 
 이제 에디터로 작성하여 정적 호스팅중인 파일을 가져다가 복호화하고 파싱해서 예쁜 객체로 만들어 주는 라이브러리를 작성해야 합니다.
 
-### 
+###
