@@ -56,10 +56,10 @@ import PV from 'pv';
 
 const child = spawn('mysqldump', ["-upotados", "-p1234", "cafeteria"]);
 
-const pv = PV({
-  size: 1024 * 1024 * 7.5/* ... */,
-  name: 'dump'/* ... */,
-  time: 10/* ... */
+const pv = PV({
+  size: 1024 * 1024 * 7.5,
+  name: 'dump',
+  time: 10
 })
 
 pv.on('info', (info) => {
