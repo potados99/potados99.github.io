@@ -229,6 +229,6 @@ export default class CommandRunner {
 끝!
 
 ## References
-- [# [Execute a command line binary with Node.js](https://stackoverflow.com/questions/20643470/execute-a-command-line-binary-with-node-js)](https://stackoverflow.com/questions/20643470/execute-a-command-line-binary-with-node-js)
+- [Execute a command line binary with Node.js](https://stackoverflow.com/questions/20643470/execute-a-command-line-binary-with-node-js)
 - [pv - npm](https://www.npmjs.com/package/pv)
-- [# progress-stream - npm](https://www.npmjs.com/package/progress-stream)
+- [progress-stream - npm](https://www.npmjs.com/package/progress-stream)
