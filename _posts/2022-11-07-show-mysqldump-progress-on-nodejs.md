@@ -54,7 +54,7 @@ child.stdout.on("data", (data) => {
 ```typescript
 import PV from 'pv';
 
-const child = /* ... */;
+const child = spawn('mysqldump', ["-upotados", "-p1234", "cafeteria"]);
 
 const pv = PV({
   size: /* ... */,
@@ -111,7 +111,7 @@ module.exports = function (opts) {
 
 주어진 명령을 실행하면서 진행 상황을 보여주고 결과를 파일로도 저장하는 `CommandRunner`를 만들었습니다. 이렇게 사용합니다:
 
-```Typescript
+```typescript
 new CommandRunner("mysqldump", ["-upotados", "-p1234", "cafeteria"])  
   .setOutputFile("dump.sql")  
   .setProgressMax(1024 * 1024 * 7.5 /*대략 7.5MB*/)  
@@ -123,7 +123,7 @@ new CommandRunner("mysqldump", ["-upotados", "-p1234", "cafeteria"])
 
 구현은 다음과 같습니다:
 
-```Typescript
+```typescript
 import { spawn } from "child_process";
 import { Stream } from "stream";
 import fs, { WriteStream } from "fs";
