@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 summary: 에 대한 짧은 이야기
 date: '2022-08-24 22:51:00 +0900'
 categories:
