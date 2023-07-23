@@ -19,7 +19,7 @@ categories:
 - `main`에 뭐가 들어가든, 이미 출시된 릴리즈는 영향을 받지 않는다.
 - 과도한 브랜칭으로 인한 merge 지옥을 피할 수 있다.
 
-![merge-hell](https://storage.googleapis.com/xebia-blog/1/2010/09/git-merge-hell.png)
+![merge-hell](https://i.imgur.com/Tl102fo.png)
 
 > Merge 지옥([출처](https://xebia.com/blog/git-workflow/git-merge-hell))
 

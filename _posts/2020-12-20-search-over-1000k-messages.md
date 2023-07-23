@@ -18,7 +18,7 @@ categories:
 
 이 작업을 대신 해주는 봇 `pinee`를 만들기로 했다.
 
-![origin-of-name-of-pinee.png](/assets/images/origin-of-name-of-pinee.png)
+![origin-of-name-of-pinee.png](https://i.imgur.com/WadzO63.png)
 
 ## pinee가 하는 일
 
@@ -56,7 +56,7 @@ categories:
 
 다행히 방법이 있었다.
 
-![pin-add-message.png](/assets/images/pin-add-message.png)
+![pin-add-message.png](https://i.imgur.com/rfjWPsj.png)
 
 메시지가 고정되면, 시스템이 이를 알려주는 메시지를 보낸다. 해당 메시지에는 **고정된 메시지에 대한 레퍼런스**가 있다. 아래와 같은 형태이다.
 
@@ -80,7 +80,7 @@ categories:
 
 ## 성능 이슈
 
-![heroku-high-ram.png](/assets/images/heroku-high-ram.png)
+![heroku-high-ram.png](https://i.imgur.com/5VSHGAe.png)
 
 > 메모리 사용량 920MB 초과...? 🤨
 
@@ -144,7 +144,7 @@ categories:
 
 ## 결과
 
-![heroku-memory-stable.png](/assets/images/heroku-memory-stable.png)
+![heroku-memory-stable.png](https://i.imgur.com/FUKKesf.png)
 
 > 커서가 있는 부분이 개선 이후.
 
@@ -152,7 +152,7 @@ categories:
 
 [*RedisToGo*](https://elements.heroku.com/addons/redistogo)가 제공하는 *Redis* instance도 전체 무료 제공 용량 5MB 중 6%~8%만 차지하며 안정적으로 돌아갔다.
 
-![redis-stable.png](/assets/images/redis-stable.png)
+![redis-stable.png](https://i.imgur.com/o46zSpU.png)
 
 ## 마치며
 

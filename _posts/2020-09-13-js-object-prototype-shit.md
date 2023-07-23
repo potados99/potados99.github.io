@@ -55,7 +55,7 @@ import HapiGood from '@hapi/good';
 
 `master` 브랜치의 최신 버전은 아주 잘 돌아간다. 현재 개발중인 브랜치는 `master`에서 왔고, 지금은 문제가 있어도 예전 어느 시점에는 잘 실행되었다.
 
-![back-to-the-past-git.png](/assets/images/back-to-the-past-git.png)
+![back-to-the-past-git.png](https://i.imgur.com/hU7Agao.png)
 
 > Git 커밋 목록
 

@@ -46,7 +46,7 @@ goto everyday_task;
 
 그러던 프로젝트가 이제 드디어 끝을 바라보고 있다. 외부 전산망 담당 업체에서 이쪽으로 웹훅만 쏴주면 된다. 요청은 넣어놨는데 아직 답이 없다.
 
-![병목 현상](http://static.news.zumst.com/images/2/2019/04/22/1a1cae8aadac4cc68b5a181fc386060f.jpg)
+![병목 현상](https://i.imgur.com/pQmfbpV.jpg)
 
 > 사람이 병목이다. 엄청 간단한건데 결재받고 요청넣고 답변 기다리고.. 윽!
 

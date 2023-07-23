@@ -36,7 +36,7 @@ window.onload = function() {
 
 다른 출처란, `프로토콜`, `호스트`, `포트` 중 하나라도 다른 것입니다. 예를 들어 `https://www.google.com`와 `https://www.apple.com`은 `프로토콜`과 `포트`는 같은데 `호스트`가 다릅니다.
 
-![from-google-to-apple.png](/assets/images/from-google-to-apple.png)
+![from-google-to-apple.png](https://i.imgur.com/WEvF266.png)
 
 > 구글에서 애플로 요청을 보냅니다. 역시 안 됩니다.
 
@@ -44,13 +44,13 @@ window.onload = function() {
 
 더 많은 예시를 보겠습니다. `https://www.example.com`에서 다른 URL로 요청을 보낼 때 `프로토콜`, `호스트`, `포트`에 따른 성공/실패 여부를 살펴보죠.
 
-![same-origin-rule.png](/assets/images/same-origin-rule.png)
+![same-origin-rule.png](https://i.imgur.com/1sfK4XC.png)
 
 > 처음 세 개는 same-origin이라 성공, 그 다음 다섯 개는 cross-origin이라 실패입니다. [출처 위키백과](https://ko.wikipedia.org/wiki/동일-출처_정책)
 
 네, 그러니까 결국 자바스크립트로 요청을 하려면, **같은 프로토콜, 같은 호스트, 같은 포트**로 요청을 보내야 합니다.
 
-![if not...](http://pds20.egloos.com/pds/201108/13/10/b0051210_4e4689aa66180.jpg)
+![if not...](https://i.imgur.com/Grddj8q.jpg)
 
 만약 그렇게 못하면... **브라우저가 막습니다.** 응답이 오긴 하는데 그걸 코드 상에서 접근하지 못하게 브라우저가 막아섭니다.
 
@@ -113,7 +113,7 @@ Cross-origin 요청을 허용할 지 말지는 **그 요청을 받는 서버가 
 
 그리고 아래는 preflight를 동반하는 요청 예시입니다.
 
-![not-simple](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/preflight_correct.png)
+![not-simple](https://i.imgur.com/HtT7qwF.png)
 
 > OPTIONS 메소드로 preflight 요청을 보낸 뒤, 응답이 성공적이면 실제 요청을 보냅니다.
 
@@ -139,7 +139,7 @@ Preflight는 *간단한* 요청에 대해서는 일어나지 않습니다. 간�
 
 만약 *복잡한* cross-origin 요청이 실패한 경우, 콘솔에는 *간단한* 요청이 실패했을 때와 조금 다른 메시지가 출력됩니다.
 
-![fail-on-preflight.png](/assets/images/fail-on-preflight.png)
+![fail-on-preflight.png](https://i.imgur.com/DR1hebH.png)
 
 > Preflight가 언급됩니다. 본 요청 이전 preflight 단계에서 실패한 경우입니다.
 

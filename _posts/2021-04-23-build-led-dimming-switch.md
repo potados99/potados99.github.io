@@ -24,7 +24,7 @@ categories:
 
 기존 시스템이 어떻게 생겼는지 보겠습니다.
 
-![led-dimmer-before.png](/assets/images/led-dimmer-before.png)
+![led-dimmer-before.png](https://i.imgur.com/Bp0W1Yy.png)
 
 빵판 위에 올라간 마이크로컨트롤러가 **외부로부터 5v 전원을 공급받아** 12v 출력을 조절하는 구성입니다. 이 상태에서는 책상 위에 12v 어댑터 뿐만 아니라 5v 어댑터도 있어야 하고, 빵판과 지저분한 점퍼 케이블까지 있어야 합니다.
 

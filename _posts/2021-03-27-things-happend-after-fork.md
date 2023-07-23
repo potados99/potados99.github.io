@@ -12,7 +12,7 @@ categories:
 
 ## fork()
 
-![man-fork.png](/assets/images/man-fork.png)
+![man-fork.png](https://i.imgur.com/s89hfBJ.png)
 
 `fork()`는 새 프로세스를 만드는 시스템 호출입니다. 새로 생성된 프로세스(=자식 프로세스)는 몇 가지를 제외하고는 호출자 프로세스(=부모 프로세스)와 동일합니다.
 
@@ -232,7 +232,7 @@ hahaha
 
 그림으로 나타내면 아래와 같습니다.
 
-![two-processes-same-shell.png](/assets/images/two-processes-same-shell.png)
+![two-processes-same-shell.png](https://i.imgur.com/InWkqiD.png)
 
 대강 `stdout`만 나타내어 보았습니다. 자식 프로세스는 부모의 file descriptor 테이블을 복사해 가져오고, 각각 descriptor는 부모가 가리키는 것과 같은 파일을 가리킵니다.
 
@@ -296,7 +296,7 @@ Pipe는 프로세스 입장에서는 파일 또는 표준 스트림과 같습니
 
 아래는 간단하게 나타낸 프로세스간 pipe 통신입니다.
 
-![pipe-between-parent-and-child.png](/assets/images/pipe-between-parent-and-child.png)
+![pipe-between-parent-and-child.png](https://i.imgur.com/QmOzfNM.png)
 
 Pipe는 각 프로세스가 아닌 커널에 의해 관리됩니다. 위의 예제를 실행한 뒤 열려있는 file descriptor 목록을 보면 아래와 같습니다.
 

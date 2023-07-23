@@ -44,7 +44,7 @@ dependencies {
 
 카메라라서 *하드웨어 다루기 힘들지 않을까 호달달* 했는데 다행히 구글의 고오오급 개발자들께서 [CameraX](https://developer.android.com/training/camerax?hl=ko)라는걸 만들어 주셨다.
 
-![camerax-beta-notion.png](/assets/images/camerax-beta-notion.png)
+![camerax-beta-notion.png](https://i.imgur.com/abGnnnU.png)
 
 > 베타라고 한다. 나는 알파여도 갖다 쓸거다!!
 

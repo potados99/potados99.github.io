@@ -6,7 +6,7 @@ categories:
    - dev
 ---
 
-![readme-source-tree.png](/assets/images/readme-source-tree.png)
+![readme-source-tree.png](https://i.imgur.com/HU8sxT3.png)
 
 > 완성된 모습
 
@@ -14,13 +14,13 @@ categories:
 
 백준에서 문제를 하나 풀어보려던 참이었습니다. 코드는 어디에다가 보관할 지 고민하다가, 예전에 알고리즘 문제 풀이를 넣어 두던 [저장소](https://github.com/potados99/problem-solving)를 발견하였습니다.
 
-![boj-solved-problems.png](/assets/images/boj-solved-problems.png)
+![boj-solved-problems.png](https://i.imgur.com/CoyOiAS.png)
 
 > 1년도 더 되었군요...
 
 당시 README.md가 텅 비어있었습니다. 해당 저장소에는 백준 온라인 저지(boj) 디렉토리 밑에 문제 번호를 이름으로 하는 소스 파일들이 들어 있었는데요, **이 목록을 README.md에 표시하고 싶다**는 생각이 들었습니다.
 
-![problem-solving-tree-in-terminal.png](/assets/images/problem-solving-tree-in-terminal.png)
+![problem-solving-tree-in-terminal.png](https://i.imgur.com/cD3UnEw.png)
 
 > 이런 식으로 말이죠.
 
@@ -30,13 +30,13 @@ categories:
 
 ## `tree` 응용하기
 
-![google-search-list-directory-in-readme.png](/assets/images/google-search-list-directory-in-readme.png)
+![google-search-list-directory-in-readme.png](https://i.imgur.com/q995Xrr.png)
 
 > 972만개를 검색하는 데에 1초도 안 걸렸습니다. 역시 구글 대단해요.
 
 빛으로 가득한 스택 오버플로가 제일 먼저 나옵니다. 맨 위에 있는 [질문](https://stackoverflow.com/questions/23989232/is-there-a-way-to-represent-a-directory-tree-in-a-github-readme-md)을 봅니다.
 
-![so-answer-list-directory-in-readme.png](/assets/images/so-answer-list-directory-in-readme.png)
+![so-answer-list-directory-in-readme.png](https://i.imgur.com/KthQY1u.png)
 
 > 단호하네요.
 
@@ -230,7 +230,7 @@ Git이 지원하는 hook은 `pre-commit`, `pre-push`, `post-update` 등이 있�
 
 프로젝트의 `./git/hooks` 디렉토리에 가보면 아래와 같은 샘플들이 준비되어 있습니다.
 
-![git-hook-samples.png](/assets/images/git-hook-samples.png)
+![git-hook-samples.png](https://i.imgur.com/h6hmBrm.png)
 
 > `pre-commit.sample`은 파일 이름에 아스키가 아닌 문자가 들어있을 경우에 커밋을 중단하는 스크립트입니다.
 

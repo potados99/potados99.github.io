@@ -6,7 +6,7 @@ categories:
    - electronics
 ---
 
-![es4-for-49-days.jpeg](/assets/images/es4-for-49-days.jpeg)
+![es4-for-49-days.jpeg](https://i.imgur.com/bmBQSCq.jpg)
 
 > 기기와 연결된 앱 화면
 
@@ -15,7 +15,7 @@ categories:
 
 ##  외관
 
-![es4.jpg](/assets/images/es4.jpg)
+![es4.jpg](https://i.imgur.com/iZfrexA.jpg)
 
 > 상품 사진
 
@@ -65,7 +65,7 @@ categories:
 
 ## 킥보드는 이동 수단이 될 수 있을까?
 
-![es4-on-the-road.JPG](/assets/images/es4-on-the-road.JPG)
+![es4-on-the-road.JPG](https://i.imgur.com/rLa9gCC.jpg)
 
 > 이면도로에서만 살살 달리는게 모두에게 이롭다.
 

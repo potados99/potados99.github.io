@@ -10,7 +10,7 @@ categories:
 
 변경 사항이 생기면 바로 업데이트를 만들고 빌드한 다음 배포를 해야 하죠. 귀찮습니다. 귀찮을 뿐만 아니라, 이렇게 모든 변화에 업데이트로 대응하기만 하면 서비스를 섬세하게 운영할 수가 없게 됩니다.
 
-![곤-란](https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/6O5QHOBUZRRO7OE5HNVHBZA5A4.png)
+![곤-란](https://i.imgur.com/lof2uip.png)
 
 > 몹시 곤란합니다.
 
@@ -24,7 +24,7 @@ categories:
 
 Firebase는 구글이 굴리고 있는 모바일 앱 운영 플랫폼입니다. `Crashlytics`를 써보셨다면 익숙하실 겁니다. 여기에 `RemoteConfig`라는 서비스가 있습니다.
 
-![remote config](https://firebase.google.com/docs/remote-config/images/param-precedence.png)
+![remote config](https://i.imgur.com/yen0zqU.png)
 
 > 조건부 설정도 지원한대요.
 
@@ -32,7 +32,7 @@ Firebase는 구글이 굴리고 있는 모바일 앱 운영 플랫폼입니다. 
 
 이걸 쓰기 위해 우리가 해야 할 일은 두 가지입니다. 하나는 [Firebase 콘솔](https://console.firebase.google.com)을 열고 작업중인 프로젝트에 들어가 `RemoteConfig`에다가 적절한 값을 넣어주는 것, 또 다른 하나는 모바일 앱 쪽에서 API를 잘 써주는 것입니다.
 
-![remote-config-console.png](/assets/images/remote-config-console.png)
+![remote-config-console.png](https://i.imgur.com/KkCl4eQ.png)
 
 > Firebase 콘솔은 이렇게 생겼습니다.
 
@@ -127,7 +127,7 @@ remoteConfig.fetchAndActivate()
 
 　
 
-![군침이싹](https://mblogthumb-phinf.pstatic.net/MjAyMDA4MjhfMjAw/MDAxNTk4NjIyNzAzMTY2.4OMKwJR76tS20oeIwYTKWt18EeLhUkRzN0GG_cD8Mdgg.DuP-r3tHSyMPjZjlDdOItSVa9jhMj0KSh4vBPfzHg0sg.JPEG.chance_pol/1598622702162.jpg?type=w800)
+![군침이싹](https://i.imgur.com/gi6c2Kc.jpg)
 
 > 히히 될까요?
 
