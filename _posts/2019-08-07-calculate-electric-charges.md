@@ -9,7 +9,7 @@ tags:
     - summer
     - electricity
 ---
-![](/assets/images/math-board.jpg)
+![](https://i.imgur.com/r7i8Y6C.jpg)
 > 이미지 출처: [여기](https://www.rd.com/culture/math-lessons-real-life/)
 
 작년만큼은 아니어도 올해도 아주 덥다. 낮 기온이 30도 아래로 내려가는 것을 보기가 어렵다.
@@ -70,7 +70,7 @@ tags:
 
 누진요금도 이와 같이 나타낼 수 있다.
 
-![charge](/assets/images/charge-function.gif)
+![charge](https://i.imgur.com/WgJ4nJW.gif)
 
 사용량에 따른 단위 전기요금을 charge(x)라고 할 때, charge(x)의 정적분을 구해보자.
 
@@ -230,7 +230,7 @@ return 0;
 
 실행해보면 아래와 같다.
 
-![demo](/assets/images/elec-calc-demo.png)
+![demo](https://i.imgur.com/fR35WG7.png)
 
 > 450kWh 쓰면 69,816원. 실제 요금과는 다를 수 있다.
 

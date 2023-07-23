@@ -93,7 +93,7 @@ Node 12에서 ES module의 사용은 **실험적으로 지원된다.** ~~소심�
 
 찾아보니 `--es-module-specifier-resolution=node` 옵션도 주어야 한단다.
 
-![f](/assets/images/bullshit.gif)
+![f](https://i.imgur.com/ZNKT2jl.gif)
 
 > 어 ? 2020년에 어? 2015년 기술좀 쓰겠다는데 어? 아직도 지원을....
 
@@ -203,7 +203,7 @@ IDE의 지원 덕분에 금방 바꿀 수 있었고, 생각보다 그렇게 혐�
 
 심지어 파일 내용 전체가 `console.log('hi');`인 `.js`파일도 실행을 거부한다.
 
-![wtf](/assets/images/wtf.jpg)
+![wtf](https://i.imgur.com/v4MY5ki.jpg)
 
 > 얘가 반항을 하나..? 뭘 잘못 건드렸나..? 재설치를 해야 하나....?
 

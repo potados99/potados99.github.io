@@ -22,7 +22,7 @@ tags:
 ## 문제 파악
 
 문제를 열자 마자 뜬금없이 이상한 주사위판 같은게 튀어나온다.
-![wtf is this](/assets/images/dice_map.png)
+![wtf is this](https://i.imgur.com/6flZ6kH.png)
 
 말이 있고, 주사위를 던져 나온 수 만큼 말을 이동시킨다. 말은 총 네 개가 있고, 주사위를 던져서 나온 수 10개가 미리 주어진다.
 
@@ -103,7 +103,7 @@ struct map {
 
 ### 플레이어 만들기
 
-![트로이 목마](/assets/images/trojan_horse.jpg)
+![트로이 목마](https://i.imgur.com/5OjlVpX.jpg)
 
 문제에서는 말이라 써있지만 **플레이어** 라는 단어가 더 편했다.
 
@@ -267,7 +267,7 @@ void move(context *c, int player_index, int how_many) {
 Segmentation fault (core dumped)
 ~~~
 
-![wtf](/assets/images/wtf.jpg)
+![wtf](https://i.imgur.com/eLfysXy.jpg)
 > WTF
 
 Xcode에서는 잘만 실행되던 것이 쉘에서 직접 실행하니까 바로 뻗는 것이다. 혹시나 싶어 Xcode에서 컴파일한 바이너리를 직접 `./바이너리`로 실행해보니 역시나 뻗는 것이다.
@@ -277,7 +277,7 @@ Xcode에서는 잘만 실행되던 것이 쉘에서 직접 실행하니까 바�
 not in executable format: File format not recognized
 ~~~
 
-![bullshit](/assets/images/bullshit.gif)
+![bullshit](https://i.imgur.com/steO0kN.gif)
 > gdb가 개소리를 한다...
 
 이것 가지고 씨름하기 싫어서 코드를 유심히 살펴보다가 문제를 찾았다.
@@ -412,7 +412,7 @@ void do_on_pick(context *c, int *selected) {
 
 결국 해결했다.
 
-![정답](/assets/images/17825_assign.png)
+![정답](https://i.imgur.com/GmpA5SS.png)
 
 ## 후기
 

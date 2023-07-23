@@ -16,7 +16,7 @@ categories:
 
 5월 중순이 되어서야 발등에 불이 떨어졌다.
 
-![ss-pressure.jpeg](/assets/images/ss-pressure.jpeg)
+![ss-pressure.jpeg](https://i.imgur.com/D8mk7Z6.jpg)
 
 > 5월 13일.    
 나의 놀고먹는 방학생활(?)을 끝내버리신 교수님의 카톡.
@@ -41,7 +41,7 @@ categories:
 
 보여지는 것에 집중해야 했다. 도메인이고 뭐고 다 때려치우고 UI부터 만들기 시작했다. 일단 탭 네비게이션을 만들었다.
 
-![preshoes-tab-navigation.jpeg](/assets/images/preshoes-tab-navigation.jpeg)
+![preshoes-tab-navigation.jpeg](https://i.imgur.com/lrZhtdD.jpg)
 
 > 방학 동안에 열심히 만들어 놓은 [라이브러리](https://github.com/potados99/android-essentials)를 가져다 썼다.
 
@@ -63,11 +63,11 @@ UI와 뷰모델을 이을 때에는 [Android Jetpack](https://www.google.com/acl
 
 > 5월 15일
 
-![rainy-day.jpeg](/assets/images/rainy-day.jpeg)
+![rainy-day.jpeg](https://i.imgur.com/oR7nxHA.jpg)
 
 비가 오는 날이었다. 이 날은 코딩은 쉬었다. 이때까지만 해도 여유가 있었다.
 
-![hot-myeon.jpeg](/assets/images/hot-myeon.jpeg)
+![hot-myeon.jpeg](https://i.imgur.com/Hq4jOII.jpg)
 
 > 저녁으로 먹은 불닭볶음면. 나는 맵찔이지만 매운게 좋다.
 
@@ -79,7 +79,7 @@ UI와 뷰모델을 이을 때에는 [Android Jetpack](https://www.google.com/acl
 
 커스텀 뷰는 처음인지라 상당히 낯설었는데, 프래그먼트에 `inflater`로 레이아웃 씌우고 이거저거 하는 것과 별반 다르지 않았다.
 
-![preshoes-first-foot.gif](/assets/images/preshoes-first-foot.gif)
+![preshoes-first-foot.gif](https://i.imgur.com/Ek0OaU9.gif)
 
 > 지금 보면 정말 허접하다.
 
@@ -149,19 +149,19 @@ HSV 색 공간에 대한 이야기는 예전에 모니터 캘리브레이션 할
 
 이제 하드웨어가 슬슬 준비되어야 하는데, 하드웨어 담당 팀원은 프로토타입을 만들려면 멀어 보였다.
 
-![sensor-very-first.jpeg](/assets/images/sensor-very-first.jpeg)
+![sensor-very-first.jpeg](https://i.imgur.com/OBDKURe.jpg)
 
 > 일정상 80%는 완성되어 있어야 했다.
 
 날씨는 좋았다.
 
-![weather-good.jpeg](/assets/images/weather-good.jpeg)
+![weather-good.jpeg](https://i.imgur.com/ugwDeI1.jpg)
 
 > 우리 학교가 노을이 참 예쁘다.
 
 모여서 코딩하다가 지하철 역까지 뛰어서 막차 타고 집에 갔다.
 
-![last-train.jpeg](/assets/images/last-train.jpeg)
+![last-train.jpeg](https://i.imgur.com/NE2cZgl.jpg)
 > 지하철역은 저-멀리에. 막차까지 남은 시간은 10분.
 
 ### D-22
@@ -172,7 +172,7 @@ HSV 색 공간에 대한 이야기는 예전에 모니터 캘리브레이션 할
 
 족저압 검사 화면을 구현하기 시작했다. 검사(diagnosis) 탭을 누르면 가능한 검사 목록이 나오고, 하나를 선택하면 검사 화면으로 넘어간다. 이때 이 넘어가는 transition에 애니메이션을 적용하였다.
 
-![preshoes-diagnosis-done.jpeg](/assets/images/preshoes-diagnosis-done.jpeg)
+![preshoes-diagnosis-done.jpeg]()
 
 > 휴게실에서 완성했다. 리모델링된 휴게실 참 좋다. 학비는 이런 데에 써야지 ㅎ
 

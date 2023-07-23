@@ -11,7 +11,7 @@ tags:
    - post
 ---
 
-![new-script](/assets/images/new-script.gif)
+![new-script](https://i.imgur.com/5ybulRQ.gif)
 
 ## 들어가며
 

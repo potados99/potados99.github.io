@@ -122,7 +122,7 @@ if __name__ == "__main__":
 
 전광판 폰트는 이렇게 생겼다.
 
-![display](https://upload.acmicpc.net/6078e13a-f26f-4d8f-bf15-912959dffb05/-/preview/)
+![display](https://i.imgur.com/yLX3OKP.png)
 
 그렇다. 노가다를 해야 한다.
 
@@ -271,11 +271,11 @@ def print(self, nums: list):
 
 처음에는 모든 순열의 경우를 구한 다음 정렬해서 주어진 순열의 다음 것을 찾으려고 했다.
 
-![wow...](/assets/images/16159-fails.png)
+![wow...](https://i.imgur.com/nKwiOj4.png)
 
 그런데 그건 **O(n!)** 아니던가...
 
-![wtf...](/assets/images/wtf.jpg)
+![wtf...](https://i.imgur.com/CkXJPe1.jpg)
 > 사실 새벽이라 정신없었다..
 
 아무튼 다음 순열은 주어진 순열만 가지고도 구할 수 있다. 인간이 쓰는 방법을 그대로 모방해보자.

@@ -43,7 +43,7 @@ categories:
 
 6월 10일이 발표회니까, 딱 두 달 하고도 하루 남았다. 가슴에 손을 얹고 말하자면, 그 기간 안에 애초에 목표한 품질의 서비스를 출시하는 것은 **불가능하다**. 그냥 앱 하나만 만들어도 한 달에 수정하고 조금씩 고치면 두 달은 금방이다. 아, 때려치고싶다.
 
-![](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8e5a7a9d-c8e1-43c8-961f-5be3c0606d28/dczhypt-e32e0275-fec0-4ed8-af1b-3ff9a275e078.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhlNWE3YTlkLWM4ZTEtNDNjOC05NjFmLTViZTNjMDYwNmQyOFwvZGN6aHlwdC1lMzJlMDI3NS1mZWMwLTRlZDgtYWYxYi0zZmY5YTI3NWUwNzgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.GABdvO8RZrL51_OfiJm73Et0-c4d2PwBdRVokwpSJbg)
+![](https://i.imgur.com/qZUmw4G.png)
 > 현실은 실망스럽다.
 
 # 방학같다
