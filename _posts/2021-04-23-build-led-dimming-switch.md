@@ -7,7 +7,7 @@ categories:
    - electronics
 ---
 
-![led-dimmer-demo.mp4](/assets/images/led-dimmer-demo.mp4)
+![led-dimmer-demo.mp4](https://i.imgur.com/WanNLgw.mp4)
 
 > 완성된 모습
 
@@ -199,7 +199,7 @@ output:
 
 가장 설레는 순간입니다. 기대한 대로 움직이는지 보겠습니다.
 
-![led-dimmer-demo.mp4](/assets/images/led-dimmer-demo.mp4)
+![led-dimmer-demo.mp4](https://i.imgur.com/WanNLgw.mp4)
 
 잘 작동합니다.
 
