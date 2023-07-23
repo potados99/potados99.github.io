@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5aa1351e1b9eff23",
+        "id": "268dab3bb45f12f8",
         "type": "tabs",
         "children": [
           {
-            "id": "b99a2b3ed53b2435",
+            "id": "9bd041e88abbe7cc",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -58,6 +58,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "eb28410f2678a2ed",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -128,6 +136,28 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8cd5e7089f21eb56",
-  "lastOpenFiles": []
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "workspaces:Manage workspace layouts": false
+    }
+  },
+  "active": "9bd041e88abbe7cc",
+  "lastOpenFiles": [
+    "_drafts/2023-04-18-edit-github-blog-on-web.md",
+    "templates/header.md.md",
+    "_posts/2018-3-18-first-post.md",
+    "assets/album/r3-25.jpeg",
+    "assets/album/r12-13.jpeg",
+    "assets/images/12v-led-domming-switch-from-ali-chip-replaced.jpg",
+    "templates",
+    "assets/images/IMG_0368.JPG",
+    "_drafts/2022-10-19-c-sharp-implicit-operator.md",
+    "_drafts/2022-10-29-selfmade-cloud-config.md"
+  ]
 }
