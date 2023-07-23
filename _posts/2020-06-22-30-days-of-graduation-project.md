@@ -172,7 +172,7 @@ HSV 색 공간에 대한 이야기는 예전에 모니터 캘리브레이션 할
 
 족저압 검사 화면을 구현하기 시작했다. 검사(diagnosis) 탭을 누르면 가능한 검사 목록이 나오고, 하나를 선택하면 검사 화면으로 넘어간다. 이때 이 넘어가는 transition에 애니메이션을 적용하였다.
 
-![preshoes-diagnosis-done.jpeg]()
+![preshoes-diagnosis-done.jpeg](/assets/images/preshoes-diagnosis-done.jpeg)
 
 > 휴게실에서 완성했다. 리모델링된 휴게실 참 좋다. 학비는 이런 데에 써야지 ㅎ
 
