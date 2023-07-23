@@ -107,7 +107,7 @@ Cross-origin 요청을 허용할 지 말지는 **그 요청을 받는 서버가 
 
 아래는 preflight 없이 직접 요청을 보내는 예시입니다.
 
-![simple](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/simple-req-updated.png)
+![simple](https://i.imgur.com/xTZ1wrd.png)
 
 > 바로 실제 요청을 보내고 그 응답을 받습니다.
 
@@ -151,7 +151,7 @@ Cross-origin 요청에 인증 정보(쿠키)를 담아 보내는 경우에는 �
 
 인증 정보를 같이 보내는 요청은 응답에 `Access-Control-Allow-Credentials: true` 헤더가 들어 있어야 성사됩니다. 만약 그렇지 않으면 **브라우저가 막습니다!**
 
-![withCredentials](https://mdn.mozillademos.org/files/17213/cred-req-updated.png)
+![withCredentials](https://i.imgur.com/WHkSm04.png)
 
 > 쿠키를 포함하는 간단한 GET 요청 예시
 
