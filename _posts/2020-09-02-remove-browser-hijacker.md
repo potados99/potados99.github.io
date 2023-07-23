@@ -56,11 +56,11 @@ $ rm -rf /var/root/.PublicCharacterSearch/
 
 모든 조치를 끝냈다고 생각했는데, 웹페이지로 연결에 자꾸 실패하였다. 네트워크는 살아있는데 이상하다 싶어 크롬을 열어 보았다.
 
-![chrome-for-the-win.png](/assets/images/chrome-for-the-win.png)
+![chrome-for-the-win.png](https://i.imgur.com/opNjfgk.png)
 
 사파리는 불친절한 편이었다. 크롬은 `ERR_PROXY_CONNECTION_FAILED`라고 친절하게 알려준다.
 
-![proxy-setting.png](/assets/images/proxy-setting.png)
+![proxy-setting.png](https://i.imgur.com/YeGJBTz.png)
 
 설정으로 따라가보니 설정한 적도 없는 이상한 프록시가 연결되어 있었다.
 

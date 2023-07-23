@@ -29,11 +29,11 @@ tags:
 
 하지만 여름과 겨울(7~8월과 12월~2월)에는 한단계 더 추가된 4단계 누진 요금이 적용된다.
 
-![전기요금 그래프](/assets/images/elec-charge.png)
+![전기요금 그래프](https://i.imgur.com/d4rZy29.png)
 
 > 쓰면 쓸수록 팍팍 올라가는 구조다. 마지막 단계에서는 처음과 7배 차이가 난다.
 
-![전기요금 그래프 적분](/assets/images/elec-charge-integral.png)
+![전기요금 그래프 적분](https://i.imgur.com/unGLleR.png)
 > 적분해보면 실제 요금을 알 수 있다. 400kWh 쓰면 56,052월, 800kWh 쓰면 168,131원.
 
 

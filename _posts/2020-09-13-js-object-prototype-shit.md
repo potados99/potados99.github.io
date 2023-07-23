@@ -12,7 +12,7 @@ categories:
 
 다섯 커밋 정도 불태운 후였을까, 유닛 테스트만 돌리다가 `npm run`을 하려니 실행이 안 되는 문제가 발생하였다.
 
-![no-info-error-message.png](/assets/images/no-info-error-message.png)
+![no-info-error-message.png](https://i.imgur.com/lgFezpr.png)
 
 > **TypeError: this.$_terms[key].slice is not a function** 란다. 이렇게 도움 안되는 에러 메시지가 또 있을까?
 
@@ -46,7 +46,7 @@ import HapiGood from '@hapi/good';
 
 브랜치를 push한 다음 GitHub으로 가서 master와 비교해 보았다.
 
-![dependencies-updated.png](/assets/images/dependencies-updated.png)
+![dependencies-updated.png](https://i.imgur.com/VkjstBs.png)
 > package.json 변경 사항
 
 의존성 버전을 업데이트한 것이 눈에 띄었다. 혹시나 싶어 예전 버전의 `package.json`을 가져와 `cheerio`(새로 설치)만 추가하고 `npm install && npm start` 해보았다. 또 안됐다.

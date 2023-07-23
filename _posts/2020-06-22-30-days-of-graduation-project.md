@@ -172,7 +172,7 @@ HSV 색 공간에 대한 이야기는 예전에 모니터 캘리브레이션 할
 
 족저압 검사 화면을 구현하기 시작했다. 검사(diagnosis) 탭을 누르면 가능한 검사 목록이 나오고, 하나를 선택하면 검사 화면으로 넘어간다. 이때 이 넘어가는 transition에 애니메이션을 적용하였다.
 
-![preshoes-diagnosis-done.jpeg](/assets/images/preshoes-diagnosis-done.jpeg)
+![preshoes-diagnosis-done.jpeg](https://i.imgur.com/jaIg34I.jpg)
 
 > 휴게실에서 완성했다. 리모델링된 휴게실 참 좋다. 학비는 이런 데에 써야지 ㅎ
 
@@ -180,7 +180,7 @@ HSV 색 공간에 대한 이야기는 예전에 모니터 캘리브레이션 할
 
 코루틴은 스레드와 다르게 **매우 저렴하다**. 하지만 스레드에 민감한 `Realm`같은 녀석과 함께 사용하면 대참사가 일어날 수도 있다 (후술한다...)
 
-![restroom.jpeg](/assets/images/restroom.jpeg)
+![restroom.jpeg](https://i.imgur.com/NFqsbjD.jpg)
 
 > 정보기술대학교 휴게실 풍경
 
@@ -216,7 +216,7 @@ HSV 색 공간에 대한 이야기는 예전에 모니터 캘리브레이션 할
 
 하드웨어 담당자는 그토록 호언장담하던 완성 데드라인도 맞추지 못한 채 삽으로 흙이나 퍼나르고 있었다. 밤까지는 데모 영상을 제출해야 하는데, 납땜 연기 몇번 마시더니 그대로 두통을 호소하며 뻗어버렸다. 어쩔 수 없이 눈속임을 사용할 수 밖에 없었다.
 
-![commit-fake-data.png](/assets/images/commit-fake-data.png)
+![commit-fake-data.png](https://i.imgur.com/U0uB2RP.png)
 
 > 커밋 메시지: "Generating fake data."
 
@@ -266,7 +266,7 @@ private val phaseToSectionWeights = arrayOf(
 
 그리고 막차를 놓친 나는 택시를 타고 집에 갔다.
 
-![last-train-bye.jpeg](/assets/images/last-train-bye.jpeg)
+![last-train-bye.jpeg](https://i.imgur.com/c5TVzD3.jpg)
 
 > 지출 1만 5천원
 
@@ -278,7 +278,7 @@ private val phaseToSectionWeights = arrayOf(
 
 코딩에서 벗어나 잠시 행복한 하루를 보냈다.
 
-![rose.jpeg](/assets/images/rose.jpeg)
+![rose.jpeg](https://i.imgur.com/3FDU5HK.jpg)
 
 ### D-18
 
@@ -320,7 +320,7 @@ private val phaseToSectionWeights = arrayOf(
 
 **본의 아니게 구술 발표를 하게 되었다.**
 
-![pr-for-me-q.jpeg](/assets/images/pr-for-me-q.jpeg)
+![pr-for-me-q.jpeg](https://i.imgur.com/hTnNXtx.jpg)
 
 > 아...ㅎㅎ
 
@@ -336,13 +336,13 @@ private val phaseToSectionWeights = arrayOf(
 
 이날 신발 센서 모듈 절반이 완성되었다며(절반은 작동하지 않는다 함) 팀원이 사진을 보내 왔다.
 
-![preshoes-shoe-very-first.jpeg](/assets/images/preshoes-shoe-very-first.jpeg)
+![preshoes-shoe-very-first.jpeg](https://i.imgur.com/DnxCkh9.jpg)
 
 > 이때부터 매우 불길한 예감이 들었다.
 
 그래도 날씨는 좋았다.
 
-![campus-clouds.jpeg](/assets/images/campus-clouds.jpeg)
+![campus-clouds.jpeg](https://i.imgur.com/iPUhDui.jpg)
 
 > 오후 4시 29분.
 
@@ -378,7 +378,7 @@ private val phaseToSectionWeights = arrayOf(
 
 이 날은 카카오 바이크를 탔다 :)
 
-![go-to-work-by-bike.jpeg](/assets/images/go-to-work-by-bike.jpeg)
+![go-to-work-by-bike.jpeg](https://i.imgur.com/2OYL73B.jpg)
 
 > 그리고 지하주차장에 주차해서 정지를 먹었다.
 
@@ -400,7 +400,7 @@ private val phaseToSectionWeights = arrayOf(
 
 그리고 하드웨어는 결국 완성되지 않았다. 센서마다 물리적 특성도 다르고 입력값이 상당히 불안정했다.
 
-![preshoes-shoe-fail.jpeg](/assets/images/preshoes-shoe-fail.jpeg)
+![preshoes-shoe-fail.jpeg](https://i.imgur.com/k0wyGiA.jpg)
 
 > 프로토타입의 프로토타입
 
@@ -410,7 +410,7 @@ private val phaseToSectionWeights = arrayOf(
 
 최종 발표 영상 제출 마감이 9일 남은 시점에서 하드웨어가 이 모양이었다.
 
-![preshoes-shoe-epic-fail.gif](/assets/images/preshoes-shoe-epic-fail.gif)
+![preshoes-shoe-epic-fail.gif](https://i.imgur.com/ZKZmcfC.gif)
 
 > 망했음을 직감했다.
 
@@ -430,7 +430,7 @@ private val phaseToSectionWeights = arrayOf(
 
 회로는 아래처럼 브릿지 보드를 사용하여 제작할 계획을 세웠다.
 
-![preshoes-circuit.jpeg](/assets/images/preshoes-circuit.jpeg)
+![preshoes-circuit.jpeg](https://i.imgur.com/7734jHi.jpg)
 
 ### D-10
 
@@ -440,15 +440,15 @@ private val phaseToSectionWeights = arrayOf(
 
 압력 센서와 브릿지 보드를 집에서 택배로 수령하고, 디바이스마트에서 구매한 부품은 마침 근처라 방문수령하였다.
 
-![preshoes-materials.jpeg](/assets/images/preshoes-materials.jpeg)
+![preshoes-materials.jpeg](https://i.imgur.com/kAk7zey.jpg)
 
 > 디바이스마트가 집 앞에 있다.
 
 압력 센서를 MCU와 연결하는 데에 필수인 pull-down 브릿지 보드 3개를 연장하여 12채널 브릿지 보드를 제작하였다.
 
-![bridge-board-in-progress.jpeg](/assets/images/bridge-board-in-progress.jpeg)
+![bridge-board-in-progress.jpeg](https://i.imgur.com/vk1PbtZ.jpg)
 
-![bridge-board.jpeg](/assets/images/bridge-board.jpeg)
+![bridge-board.jpeg](https://i.imgur.com/C8AC2Jl.jpg)
 
 > 직접 만든 12채널 브릿지 보드. 정성스런 50포인트 납땜.
 
@@ -460,13 +460,13 @@ private val phaseToSectionWeights = arrayOf(
 
 나머지 한 쪽 브릿지 보드도 제작을 마쳤다.
 
-![bridge-board-both.jpeg](/assets/images/bridge-board-both.jpeg)
+![bridge-board-both.jpeg](https://i.imgur.com/BR8f8zp.jpg)
 
 > 케이블도 만들었다. 소켓은 몰렉스 5264.
 
 그리고 바로 센서 패널(깔창 부분) 제작에 착수했다.
 
-![preshoes-new-prototype.jpeg](/assets/images/preshoes-new-prototype.jpeg)
+![preshoes-new-prototype.jpeg](https://i.imgur.com/ZXzdynV.jpg)
 
 > 아름답지는 않다.
 
@@ -490,7 +490,7 @@ private val phaseToSectionWeights = arrayOf(
 
 레이저 커터에게 작업을 지시해야 하니, 도면을 일러스트레이터로 옮겨서 `.dxf` 포맷으로 export했다.
 
-![preshoes-wire-preview.png](/assets/images/preshoes-wire-preview.png)
+![preshoes-wire-preview.png](https://i.imgur.com/olfs5Cg.png)
 
 > 3D 미리보기
 
@@ -498,25 +498,25 @@ private val phaseToSectionWeights = arrayOf(
 
 레이저 커터에 재료를 넣고 도면을 업로드하여 가공을 시작하였는데, **구리 테이프가 잘리지 않았다.** 이게 무슨 일인가 싶어 같은 위치에 종이를 두었더니 잘 잘렸다. 금속은 아무리 얇아도 자를 수 없는 모양이었다.
 
-![preshoes-laser-fail.jpeg](/assets/images/preshoes-laser-fail.jpeg)
+![preshoes-laser-fail.jpeg](https://i.imgur.com/Al8viQE.jpg)
 
 > 구리 테이프에는 흠집조차 나지 않았다.
 
 결국 가내수공업을 택했다.
 
-![preshoes-wire-hand-1.jpeg](/assets/images/preshoes-wire-hand-1.jpeg)
+![preshoes-wire-hand-1.jpeg](https://i.imgur.com/CxxWtmy.jpg)
 
 > 구리 테이프에 도면을 붙여 가위로 수동 가공(...)
 
 여기서 팀워크가 빛을 발휘했다. 아주 빠른 시간 안에 모든 배선을 가공해 내었다.
 
-![preshoes-wire-hand-2.jpeg](/assets/images/preshoes-wire-hand-2.jpeg)
+![preshoes-wire-hand-2.jpeg](https://i.imgur.com/simSxIj.jpg)
 
 > 가공 후 딱풀로 붙였다.
 
 자정이 지나기 전에 한쪽을 완성했다.
 
-![preshoes-one-done.jpeg](/assets/images/preshoes-one-done.jpeg)
+![preshoes-one-done.jpeg](https://i.imgur.com/2ngqKkJ.jpg)
 
 > 센서와 구리테이프는 얇은 배선과 납으로 연결했다.
 
@@ -528,17 +528,17 @@ private val phaseToSectionWeights = arrayOf(
 
 이미 한 쪽을 만들어 놓은 터라 레퍼런스와 노하우를 모두 보유하고 있었다. 덕분에 다른 한 쪽은 훨씬 깔끔하게 만들 수 있었다.
 
-![preshoes-so-clean.jpeg](/assets/images/preshoes-so-clean.jpeg)
+![preshoes-so-clean.jpeg](https://i.imgur.com/RnSn2zi.jpg)
 
 > 깔끔한 순간접착제 마감
 
-![preshoes-drying.jpeg](/assets/images/preshoes-drying.jpeg)
+![preshoes-drying.jpeg](https://i.imgur.com/AV8BpjC.jpg)
 
 > 말리는 중.
 
 그렇게 다 완성하고 아침 8시에 학교를 나왔다.
 
-![going-home-morning.jpeg](/assets/images/going-home-morning.jpeg)
+![going-home-morning.jpeg](https://i.imgur.com/82EtnLX.jpg)
 
 > 안개가 가득 꼈다.
 
@@ -548,19 +548,19 @@ private val phaseToSectionWeights = arrayOf(
 
 마감 작업을 시작했다. 신발 속에 들어가서도 파손되면 안 되며, 적당히 유연해야 했다. 팀원의 아이디어를 차용하여 절연테이프로 센서 패널을 마감하였다.
 
-![preshoes-finishing.jpeg](/assets/images/preshoes-finishing.jpeg)
+![preshoes-finishing.jpeg](https://i.imgur.com/IJvXFyh.jpg)
 
 > 폭이 아주 넓은 전기테이프가 있었으면 하는 바람이었다.
 
 그렇게 하나의 세트가 완성되었다.
 
-![preshoes-single-set.jpeg](/assets/images/preshoes-single-set.jpeg)
+![preshoes-single-set.jpeg](https://i.imgur.com/ezMqfF9.jpg)
 
 > 왼쪽부터 배터리, MCU 보드, 블루투스 모듈, 브릿지 보드, 센서 패널.
 
 나머지 한 쪽도 완성한 후 테스트를 진행하였다.
 
-![preshoes-works.gif](/assets/images/preshoes-works.gif)
+![preshoes-works.gif](https://i.imgur.com/z3Cuzhs.gif)
 
 **기대한 만큼 잘 작동하였다.**
 
@@ -574,7 +574,7 @@ private val phaseToSectionWeights = arrayOf(
 
 > 6월 8일
 
-![preshoes-look.png](/assets/images/preshoes-look.png)
+![preshoes-look.png](https://i.imgur.com/JqqRgs7.png)
 
 > 정보대 앞
 
@@ -631,7 +631,7 @@ IdeaBoom에 올라간 작품에 좋아요가 몇 개나 달리는지 구경했�
 
 밖에 나가 보니 공대 앞에 장미가 만개하였다.
 
-![roses-in-campus.jpeg](/assets/images/roses-in-campus.jpeg)
+![roses-in-campus.jpeg](https://i.imgur.com/WwLFJmc.jpg)
 
 ## 마치며
 

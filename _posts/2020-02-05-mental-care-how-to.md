@@ -31,7 +31,7 @@ categories:
 
 ## 무채색 인생
 
-![내향과 외향](/assets/images/introvert-extrovert.png)
+![내향과 외향](https://i.imgur.com/6HPxMoA.png)
 [이미지 출처](https://twitter.com/COM_0107/status/645933131803955200)
 
 마음이 도화지라면 최근 겪은 감정들은 물감이 되어 그 위에 칠해진다.

@@ -14,7 +14,7 @@ GitHub의 이슈 기능을 댓글로 활용할 수 있는 위젯이 있다.
 
 바로 [utterances](https://utteranc.es/?installation_id=10166801&setup_action=install)다.
 
-![utterances.png](/assets/images/utterances.png)
+![utterances.png](https://i.imgur.com/uRIX6Dm.png)
 
 이슈 남기듯이 댓글을 달 수 있다.
 
