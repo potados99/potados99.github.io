@@ -307,4 +307,306 @@ function decrypt(text, password) {
 
 이제 에디터로 작성하여 정적 호스팅중인 파일을 가져다가 복호화하고 파싱해서 예쁜 객체로 만들어 주는 라이브러리를 작성해야 합니다.
 
-###
+### API부터 설계
+
+라이브러리를 작성하기 전에 먼저 어떻게 사용될 것인지를 생각해 보았습니다. 기존 데스크탑 앱에서 큰 수정 없이 이 라이브러리를 가져다 쓸 수 있어야 합니다.
+
+이 라이브러리를 적용하는 데에 시간과 에너지가 또 쓰이면 안 되기 떄문에 정말 간단하게 설계합니다. 코드가 여러 군데에 분산되지 않도록 하고 비동기 코드도 안 씁니다. 또한 훗날 새로운 기능이 추가되어도 호환성을 유지할 수 있도록 최대한 현재 프로퍼티 정의에 변화가 적게 설계합니다.
+
+```csharp
+using CloudConfig;
+
+namespace Console
+{
+    internal static class Program
+    {
+        public static void Main(string[] args)
+        {
+            var ulsan = RmsConfig
+                .Initialize()
+                .GetConfig(ConfigClient.POP_UL_FOLDING) // 현재 POP 프로그램 정보
+                .DataSources
+                .FilterOneBySchema("rms_ulsan");
+                
+            System.Console.Out.WriteLine($"Host: {ulsan.Host}");
+            System.Console.Out.WriteLine($"Port: {ulsan.Port}");
+            System.Console.Out.WriteLine($"Username: {ulsan.Username}");
+            System.Console.Out.WriteLine($"Password: {ulsan.Password}");
+            System.Console.Out.WriteLine($"Schema: {ulsan.Schema}");
+        }
+    }
+}
+```
+
+어디서든 DLL만 참조 추가하여 하나의 expression으로 설정에 접근할 수 있도록 틀을 잡았습니다.
+
+### 웹에서 암호화, C#으로 복호화
+
+위에서 웹 에디터를 만들면서 `CryptoJS`를 통해 평문을 암호화하는 코드를 작성하였습니다. 이제 이렇게 암호화된 텍스트를 다시 복호화해야 합니다. 이번에는 C#에서 말이죠!
+
+```csharp
+
+using System;
+using System.IO;
+using System.Security.Cryptography;
+using System.Text;
+using CloudConfig.Exceptions;
+
+namespace CloudConfig.Utils
+{
+    /// <summary>
+    ///     암호화된 스트링을 복호화하는 일을 담당하는 클래스입니다.
+    /// </summary>
+    /// <remarks>
+    ///     AES-256-CBC로 암호화된 설정 파일의 내용을 복호화할 때에 사용합니다.
+    /// </remarks>
+    internal class Decrypter
+    {
+        private readonly string _encrypted;
+        private readonly string _iv;
+        private readonly string _password;
+
+        public Decrypter(string encrypted, string password, string iv)
+        {
+            _encrypted = encrypted;
+            _password = password;
+            _iv = iv;
+        }
+
+        /// <summary>
+        ///     주어진 스트링을 복호화합니다.
+        /// </summary>
+        /// <remarks>
+        ///     AES-256-CBC로 암호화된 설정 파일의 내용을 복호화할 때에 사용하면 좋습니다.
+        /// </remarks>
+        /// <returns>복호화된 평문 스트링</returns>
+        public string Decrypt()
+        {
+            try
+            {
+                return DecryptDataWithAes(_encrypted, _password, _iv);
+            }
+            catch (Exception e)
+            {
+                throw new CloudConfigException("주어진 텍스트를 복호화하는 중에 문제가 생겼습니다.", e);
+            }
+        }
+
+        private string DecryptDataWithAes(string encrypted, string password, string iv)
+        {
+            using (var aesAlgorithm = Aes.Create())
+            {
+                aesAlgorithm.KeySize = 256;
+                aesAlgorithm.BlockSize = 128;
+                aesAlgorithm.Key = Encoding.UTF8.GetBytes(password.PadLeft(32, ' '));
+                aesAlgorithm.IV = Encoding.UTF8.GetBytes(iv.PadLeft(16, ' '));
+                aesAlgorithm.Mode = CipherMode.CBC;
+                aesAlgorithm.Padding = PaddingMode.PKCS7;
+
+                var decryptor = aesAlgorithm.CreateDecryptor();
+                var cipher = Convert.FromBase64String(encrypted);
+
+                using (var ms = new MemoryStream(cipher))
+                {
+                    using (var cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (var sr = new StreamReader(cs))
+                        {
+                            return sr.ReadToEnd();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+```
+
+위 코드는 완성된 복호화 유틸리티 클래스, `Decrypter`의 전문입니다. 암호화할 때와 복호화할 때에 key, iv, mode, padding이 모두 같아야 합니다. key와 iv는 길이가 짧을 경우 좌측을 빈 스트링으로 채워 주었습니다.
+
+### 복호화 키는 [Credential Manager](https://support.microsoft.com/en-us/windows/accessing-credential-manager-1b5c916a-6a16-889f-8581-fc16e8165ac0)에서
+
+원격 설정을 가져오는 이 라이브러리는 별도의 DLL로 배포됩니다. 이 DLL에 복호화 키가 스트링 리터럴로 들어 있으면 몹시 문제일 것입니다(!). 따라서 소스 코드를 포함한 바이너리 일체에는 키가 없습니다. 그러면 어디에서 가져오나? Windows가 제공하는 [Credential Manager](https://support.microsoft.com/en-us/windows/accessing-credential-manager-1b5c916a-6a16-889f-8581-fc16e8165ac0)에서 받아옵니다.
+
+Credential Manager에는 비밀번호를 포함한 인증 정보를 넣어 두기에 적합한 장소입니다. ~~일단 어디 레지스트리에 박아두는 것보다는 훨씬 낫습니다.~~사용자가 웹에 저장한 암호도 여기에 저장됩니다. 
+
+이 Credential Manager를 C#에서 쓰기 편하게 잘 포장해준 [NuGet 패키지](https://www.nuget.org/packages/Meziantou.Framework.Win32.CredentialManager/)가 있습니다. 이걸 사용해보겠습니다.
+
+```csharp
+
+using System;
+using CloudConfig.Exceptions;
+using CloudConfig.Model.Configuration;
+using CloudConfig.Utils;
+using Meziantou.Framework.Win32;
+
+namespace CloudConfig.Model.Storage
+{
+    /// <summary>
+    ///     원격 설정 저장소를 나타냅니다.
+    ///     사용 가능한지 여부는 직접 가져와 보아야 알 수 있습니다.
+    /// </summary>
+    internal class RemoteConfigStorage : IConfigStorage
+    {
+        private readonly Cache<ConfigHolder> _cache = new Cache<ConfigHolder>(3600);
+		
+        private readonly string _iv;
+        private readonly string _name;
+        private readonly string _password;
+        private readonly string _url;
+		
+        public RemoteConfigStorage(string name, string url, string password, string iv)
+        {
+            _name = name;
+            _url = url;
+				
+            if (password == null)
+            {
+	            // 인자로 넘어온 정보가 없으면 CredentialManager를 참조합니다.
+                var credential = CredentialManager.ReadCredential("CloudConfig") ??
+                                 throw new CloudConfigException("Windows 자격 증명에 CloudConfig가 없습니다.");
+                                 
+                _password = credential.Password;
+            }
+            else
+            {
+                _password = password;
+            }
+            
+            _iv = iv;
+        }
+    }
+    
+	// 생략...
+}
+
+```
+
+인증 정보를 가져오는 것은 이렇게 마무리됩니다. 
+
+> 인증 정보를 집어 넣으려면 대상 머신에서 [cmdkey](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmdkey) 명령을 사용합니다.
+
+### 여러 개의 원격 저장소
+
+원격 저장소는 기본적으로 항상 클라이언트의 요청에 응답해야 합니다. 그러나 클라이언트가 알고 있는 원격 저장소의 주소가 바뀌거나 서버의 상태에 문제가 생기는 일이 발생할 수도 있습니다. 따라서 여러 개의 원격 저장소 중 살아있는 것들을 찾아 그 중 가장 우선순위가 높은 곳에 연결해야 합니다.
+
+```csharp
+using System.Linq;
+using CloudConfig.Exceptions;
+
+namespace CloudConfig.Model.Storage
+{
+    /// <summary>
+    ///     여러 개의 <see cref="IConfigStorage" />를 나타냅니다.
+    /// </summary>
+    internal class ConfigStorages
+    {
+        private readonly IConfigStorage[] _storages;
+
+        public ConfigStorages(params IConfigStorage[] storages)
+        {
+            _storages = storages;
+        }
+
+        public bool AreAllAvailable()
+        {
+            return _storages.All(r => r.IsAvailable());
+        }
+
+        public IConfigStorage GetFirstAvailableOne()
+        {
+            return _storages.FirstOrDefault(r => r.IsAvailable()) ??
+                   throw new CloudConfigException($"설정 저장소 {_storages.Length}곳 모두 사용 불가능합니다.");
+        }
+    }
+}
+```
+
+여러 개의 원격 저장소(`IConfigStorage`)가 주어지면, 그들 중 사용 가능한 가장 첫 번째 것이 선택됩니다. 저장소가 사용 가능한지는 실제로 요청을 보내 응답을 받아보아야 알 수 있습니다. 따라서 라이브러리는 우선 순위에 따라 지정된 순서대로 가장 먼저 성공하는 원격지가 발견될 때까지 설정을 받아와 복호화까지 가능한 상태인지 확인합니다.
+
+### 배포 파이프라인도 간단하게
+
+이 라이브러리는 외부의 개발팀에게 전달되어야 합니다. 따라서 소스 코드의 수정을 마친 순간부터는 빌드를 하고 메일을 쓰고 파일을 첨부하는 기나긴 과정이 따라옵니다. 그런데 이것도 개발로 크게 단축시킬 수 있는 문제입니다.
+
+코드가 GitHub에 푸시되는 순간부터 바로 빌드와 테스트가 일어나 그 결과물이 새로운 릴리즈로 생성되도록 Workflow를 작성하였습니다.
+
+```yaml
+
+name: Build and Release
+
+# v*.*.* 형태의 태그가 푸시되면 실행되어
+# 프로젝트 빌드 및 릴리즈를 생성하는 워크플로우입니다.
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.1.1
+
+      - name: Restore Packages
+        run: nuget restore CloudConfig.sln
+
+      - name: Build CloudConfig Project
+        run: msbuild.exe CloudConfig.sln /t:CloudConfig:Rebuild /p:Platform="Any CPU" /p:Configuration="Release" /p:OutputPath="_build"
+
+      - name: Merge DLLs Into One
+        run: packages\ILMerge.Tools.2.14.1208\tools\ILMerge.exe /wildcards /out:CloudConfig.dll CloudConfig\_build\*.dll
+
+      - name: Build Changelog
+        id: Changelog
+        run: .github/workflows/build-changelog.sh
+        shell: bash
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          body_path: CHANGELOG.txt
+          files: CloudConfig.dll
+
+```
+
+MSBuild를 사용하여 솔루션을 빌드하고, 깔끔한 전달을 위해 ILMerge로 하나의 DLL로 합칩니다. 그리고는 커밋 메시지로부터 change log를 만들어 릴리즈를 달아줍니다.
+
+```bash
+#!/bin/bash -l
+
+# 현재 이전 태그 이후로 현재 태그까지의 커밋을 모아
+# 이번 릴리즈의 changelog를 만드는 스크립트입니다.
+# changelog는 스크립트를 실행한 디렉토리의 
+# CHANGELOG.txt 파일에 기록됩니다.
+
+prev_tag=$(git tag --sort version:refname | tail -n 2 | head -n 1)
+current_tag=$(git tag --sort version:refname | tail -n 1)
+
+if [ "$prev_tag" ]; then
+  changelog=$(git log --oneline --no-decorate $prev_tag..HEAD)
+else
+  changelog=$(git log --oneline --no-decorate)
+fi
+
+output="CHANGELOG.txt"
+
+echo -e "## 📂 [DLL 다운로드](https://github.com/dhsol-company/cloud-config/releases/download/${current_tag}/CloudConfig.dll)" >> ${output}
+echo -e "클릭하시면 다운로드로 이어집니다." >> ${output}
+echo -e "## 📝 변경 내역" >> ${output}
+echo -e "${changelog}" >> ${output}
+```
+
+## 마치며
+
+어떤 문제를 마주할 때 마다 *이런 게 있으면 좋겠다* 싶은 생각으로 시작하였던 것들이 어느새 쌓이고 쌓여 인터널 프로덕트라고 부를 만한 것이 되어가고 있습니다. 하하

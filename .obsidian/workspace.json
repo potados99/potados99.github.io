@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "268dab3bb45f12f8",
+        "id": "2e0b9cca10365865",
         "type": "tabs",
         "children": [
           {
-            "id": "9bd041e88abbe7cc",
+            "id": "2410a456209794b5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "_drafts/2023-07-24-obsidian-for-github-blog.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -73,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.5
+    "width": 395.5
   },
   "right": {
     "id": "44a623bbc3dfc78b",
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_drafts/2023-07-24-obsidian-for-github-blog.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "_drafts/2023-07-24-obsidian-for-github-blog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "_drafts/2023-07-24-obsidian-for-github-blog.md"
+              }
             }
           }
         ]
@@ -147,17 +155,33 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "9bd041e88abbe7cc",
+  "active": "2410a456209794b5",
   "lastOpenFiles": [
+    "_drafts/2022-11-12-poor-mans-mysql-snapshot-and-backup.md",
+    "_drafts/2023-07-24-obsidian-for-github-blog.md",
     "_drafts/2023-04-18-edit-github-blog-on-web.md",
+    "_posts/2019-11-12-coap-light-2.md",
+    "_posts/2022-10-29-selfmade-cloud-config.md",
+    "_posts/2022-10-19-c-sharp-implicit-operator.md",
+    "_posts/2021-01-15-flexible-mobile-app-configuration.md",
+    "_posts/2021-01-05-happy-coding-life.md",
+    "assets/images/abs-x.png",
+    "assets/images/jetpack-hero.png",
+    "_posts/sedzQhpDj",
+    "_posts/sedyCGTUA",
+    "_posts/sedCCMYQO",
+    "_posts/sedEYjsoc",
+    "_posts/sedDY0kzN",
+    "_posts/sedsvixIp",
+    "_posts/sed1js0UB",
+    "_posts/sedKEW12b",
+    "_posts/sedv7XVVZ",
+    "_posts/sedSliYJP",
     "templates/header.md.md",
     "_posts/2018-3-18-first-post.md",
     "assets/album/r3-25.jpeg",
     "assets/album/r12-13.jpeg",
     "assets/images/12v-led-domming-switch-from-ali-chip-replaced.jpg",
-    "templates",
-    "assets/images/IMG_0368.JPG",
-    "_drafts/2022-10-19-c-sharp-implicit-operator.md",
-    "_drafts/2022-10-29-selfmade-cloud-config.md"
+    "assets/images/IMG_0368.JPG"
   ]
 }
