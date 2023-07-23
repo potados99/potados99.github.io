@@ -72,7 +72,7 @@ categories:
 
 다행히 이런 생각을 가진 사람들이 [ESPHome](https://esphome.io)이라는 물건을 만들어 놓았습니다. 무려 yaml 파일에 설정만 써 놓으면 펌웨어 생성부터 플래싱과 업데이트까지 도와줍니다(!).
 
-![](https://esphome.io/_images/logo-text.svg)
+![](https://i.imgur.com/qhYgbbP.png)
 
 > 짜지 마세요. 라이브러리 갖다쓰세요.
 

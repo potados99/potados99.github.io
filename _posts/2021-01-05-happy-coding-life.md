@@ -14,7 +14,7 @@ categories:
 
 팀원이 iOS 개발자분을 제외하면 나 뿐이라 뇌내 디자이너, 뇌내 서버개발자, 뇌내 데브옵스, 뇌내 테스터, 뇌내 프로젝트 매니저가 활약해 주었다. 물론 하나의 코어(신체)를 공유하기 때문에 병렬(parallel)로 활동하지는 못하고 동시에(concurrent)만 진행했다.
 
-![software development team](https://miro.medium.com/max/2760/1*SmBWZFn25RMpfC1le4DFmw.jpeg)
+![software development team](https://i.imgur.com/CuIXldl.jpg)
 
 > 협업 비용은 줄지만 나만의 틀에 갇히게 될 수 있다는 치명적인 단점이 있다! 다만 어쩔 수 없었다. 팀원이 대부분 도망가서...
 
@@ -38,7 +38,7 @@ goto everyday_task;
 
 써놓고 보니 [스크럼](https://ko.wikipedia.org/wiki/스크럼_(애자일_개발_프로세스)) 같기도 하다. 제일 큰 목표는 마음 속 깊은 곳에다가 적어놓고, 스프린트 백 로그는 이슈에다가 적어놓고, 열심히 스프린트 뛰는거다 (이렇게 하는게 맞나..?).
 
-![스크럼](https://upload.wikimedia.org/wikipedia/commons/5/58/Scrum_process.svg)
+![스크럼](https://i.imgur.com/Wyl92Yk.png)
 
 > 할 일을 정하고 대략 4주의 기간 동안 목표를 수행한다. 매일 간단한 진행 상황 공유를 한다. 뇌내 팀이기 때문에 모든 것은 자동으로 공유된다.
 
@@ -54,7 +54,7 @@ goto everyday_task;
 
 그래서 vim을 제대로 배워보기로 했다.
 
-![vim-vs-emacs](https://cmd.com/wp-content/uploads/2020/04/vim-emacs.gif)
+![vim-vs-emacs](https://i.imgur.com/2K28gUq.jpg)
 
 > 나는 vim을 선택헀다.
 

@@ -235,7 +235,7 @@ void begin(const char * host, uint16_t port, const char * url = "/socket.io/?EIO
 
 머리를 굴리기 시작했습니다.
 
-![전자두뇌!](https://mblogthumb-phinf.pstatic.net/MjAyMDAzMTJfMTEx/MDAxNTgzOTkzMDI3MjA5.a1WDJUSvZyVcP4l059gOgqmKNlu54MgNEWUSLHZesRgg.J7Rm3Kl5rL-jgg5J-5PH16jXNbTi5y9OyZEIMoYLK50g.PNG.doa_kagi/무도_정준하_전자두뇌.PNG?type=w800)
+![전자두뇌!](https://i.imgur.com/2ctc4uk.png)
 
 > 두뇌 풀가동!
 
@@ -275,7 +275,7 @@ void SocketIOclient::loop(void) {
 
 다시 머리를 굴려보았습니다.
 
-![전자두뇌2](https://byline.network/wp-content/uploads/2018/08/전자두뇌-1280x720.jpg)
+![전자두뇌2](https://i.imgur.com/P5ZklmZ.jpg)
 
 > 지금 자면 몇 시에 일어나지...
 

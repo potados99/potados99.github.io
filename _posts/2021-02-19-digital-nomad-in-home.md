@@ -27,7 +27,7 @@ categories:
 
 이사도 지겹고, 이곳에는 정착하려나 싶었는데 두 달만에 방을 빼앗겨 버렸습니다. 하수관 역류로 방이 침수되어 버린 겁니다. 오후에 늘어지게 낮잠을 자다가 이불이 물에 잠겨 깼습니다. 물이 1cm 가까이 고여 하마터면 책상 뒤의 멀티탭이 물에 잠겨 자다가 즉사할 뻔 했습니다. 급하게 빗자루와 걸레로 물을 빼내고 바닥을 박박 닦았으나(샤워한 물 같았습니다...) 며칠이 지나도 냄새가 사라지지 않았습니다.
 
-![흑..](https://mblogthumb-phinf.pstatic.net/MjAxODAzMjNfMTkz/MDAxNTIxNzg0NzQ1NDc2.QLDgppspei_a0UQnsOwewc2ejV3lpd4PCWSnuFGTJUwg.ytQBafcJmknTQnEHGP_LIVxkNWkommBGae1pJSI9ivog.JPEG.audery2177/ㄴㄴㄴ.jpg?type=w800)
+![흑..](https://i.imgur.com/CXSzZzc.jpg)
 > 다시는 나무로 된 마루 안 쓸겁니다.
 
 결국 참지 못하고 일을 벌였습니다. 가구를 다 뺀 뒤 마루를 뜯어냈습니다. 물에 불은 나무 마루를 뜯어 내니 썩은 물 냄새가 코를 습격했습니다. 곰팡이도 있었습니다. 그 모습에 충격을 받아 노트북과 휴대전화, 충전기만 들고 거실로 도망나와 생활하고 있습니다.

@@ -291,7 +291,7 @@ object RemoteConfigWrapper {
 
 이렇게 하면 앱 라이프 사이클 중 언제든 **최소한 기본값에는 접근**할 수 있습니다.
 
-![히히](https://cdn.clien.net/web/api/file/F01/5686362/17f7f580ec711.jpg?thumb=true)
+![히히](https://i.imgur.com/PEysqqV.jpg)
 
 > 축하합니다.
 　
@@ -344,10 +344,6 @@ object RemoteConfigWrapper {
 | `false` | `true`로 변경 | 이 시점에서 최신으로 업데이트 또는 신규 설치 | 업데이트/설치 후 처음 실행에는 서버 설정이 반영되지 않습니다. |
 
 무려 8가지 중 5가지 경우에서 바람직하지 않은 동작이 발생합니다.
-
-![안돼 ㅜ](https://lh3.googleusercontent.com/proxy/LVFiysRLf1DFKdHgesuQ6ByoDzoMq4LULy_Qk182ZI7XdFqCmsXAPyngpIuDeq3OE9DyhmkFr-M0ZpVD-hOodrCH6u5AqBkPf3vf5WC4D_dIxOx-uVHoZD1xwO8MMSuEE755GbqPhwTuAuuTWcaqFbCkByIFjoJb2DamPJDe_AEmrZ7JBo3BQxKSNCSa9VAFb8rkeZErX12_FbmsjwafioMnUroHiD1n_4B-H2AGCi8srQvUD0B5T2CBWQc9UWmAnPzD4PV4R0gtcZlGBPskNP_rzuuwiIv_bXB5qkFbbh02)
-
-> 있을 수가 없는 일이라구요!
 
 이렇게 놔둘 수는 없죠. 서버 설정을 실시간으로 반영하기 위해 눈물을 머금고 **스플래시 화면에서 설정 로딩을 기다리도록 합니다.**
 
