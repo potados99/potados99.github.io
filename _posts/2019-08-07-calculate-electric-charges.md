@@ -65,7 +65,7 @@ tags:
 
 대표적인 예시로 f(x) = abs(x)가 있다.
 
-![절댓값 x](/assets/images/abs-x.svg)
+![절댓값 x](/assets/images/abs-x.png)
 > 너무 뾰족해서 미분이 안된다.
 
 누진요금도 이와 같이 나타낼 수 있다.

@@ -35,7 +35,7 @@ Navigation은 들어만 보았는데 이게 무엇인지는 방금 알았다.
 
 2018년에 Google I/O에서 발표되었다.
 
-![jetpack-hero](/assets/images/jetpack-hero.svg)
+![jetpack-hero](/assets/images/jetpack-hero.png)
 
 [Android Jetpack](https://developer.android.com/jetpack?hl=ko)이 뭐냐면,
 
