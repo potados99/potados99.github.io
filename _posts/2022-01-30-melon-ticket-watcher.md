@@ -20,7 +20,7 @@ categories:
 
 회차 정보를 알려주는 API와, 회차별 좌석 정보를 알려주는 API가 있어 각각 회차(`Schedule`)와 좌석(`Seat`)으로 모델링 하였습니다.
 
-![melon-ticket-watcher-entity.png](/assets/images/melon-ticket-watcher-entity.png)
+![melon-ticket-watcher-entity.png](https://i.imgur.com/Zu1V8z5.png)
 
 **회차**는 해당 회차 공연일 및 시간, 그리고 식별자와 해당 회차 좌석 정보를 포함합니다. **좌석**은 어느 한 좌석의 식별자와 위치, 그리고 예매 가능 여부를 나타냅니다.
 
@@ -35,7 +35,7 @@ categories:
 
 생각보다 많습니다. 이럴 때에는 [자기가 맡은 일만 잘 처리하는 클래스를 만들어 작업을 전담시키는 것](https://ko.wikipedia.org/wiki/단일_책임_원칙)이 좋습니다.
 
-![melon-ticket-watcher-actors.png](/assets/images/melon-ticket-watcher-actors.png)
+![melon-ticket-watcher-actors.png](https://i.imgur.com/kShHhQ0.png)
 
 - 외부에서 데이터를 가져오는 `Fetcher`,
 - 그걸 해석해서 도메인 엔티티로 바꿔 주는 `Parser`,
@@ -49,7 +49,7 @@ categories:
 
 `Runner`는 메인 루프를 돌면서 `Worker`에게 일을 시키고, `Worker`는 일을 시킬 때마다 **가져오기-비교하기-알리기**를 실행합니다.
 
-![melon-ticket-watcher-main-loop.png](/assets/images/melon-ticket-watcher-main-loop.png)
+![melon-ticket-watcher-main-loop.png](https://i.imgur.com/3RL5yiR.png)
 
 `Worker`가 일을 하는 하나의 사이클에서 `Repository`, `Detector`, `Notifier`가 차례로 사용됩니다. 이들 사이에서는 위에서 정의한 모델인 `Schedule`과 `Seat`이 오고 갑니다.
 

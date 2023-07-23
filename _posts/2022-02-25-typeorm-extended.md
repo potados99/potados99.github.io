@@ -14,7 +14,7 @@ Node + Typescript로 API 서버를 짜다 보면은 ORM으로 TypeORM만한 것�
 
 그치만 JVM 위에서 JPA 구현체인 Hibernate을 사용하다 온 입장에서 조오금 불편한 점이 있습니다. 타입 애너테이션을 매번 붙여주어야 한다는건 차치하고서라도, 일단 lazy loading이 없어요.
 
-![난그렇게살아왔는데](https://dispatch.cdnser.be/cms-content/uploads/2021/11/30/1827c44f-59b5-4f0f-bef8-c8b4834c9c64.png)
+![난그렇게살아왔는데](https://i.imgur.com/MGgEdPl.png)
 
 > 하지만 실망하지는 말아요. 자바스크립트는 그저 다른 방법으로 살아왔을 뿐..
 
@@ -99,7 +99,7 @@ export default class BaseBetterEntity extends BaseEntity {
 
 그런데 잠깐! 여기서 골때림 포인트가 발생합니다.
 
-![typeorm-find-overloads.png](/assets/images/typeorm-find-overloads.png)
+![typeorm-find-overloads.png](https://i.imgur.com/8olDz8w.png)
 
 오버로드가 기본 두세개씩은 있습니다. 이게 왜냐면 사용을 편하게 하기 위함입니다. TypeORM으로 엔티티를 찾을 때 정말 다양한 방법으로 인자를 구성할 수 있습니다.
 
@@ -131,7 +131,7 @@ export default class BaseBetterEntity extends BaseEntity {
 
 ### 으악: 문제를 마주함
 
-![이마탁](https://opgg-com-image.akamaized.net/attach/images/20190711130352.369554.jpeg)
+![이마탁](https://i.imgur.com/HYftzW7.jpg)
 
 그런데 다시 고뇌의 시간이 찾아옵니다. 문제가 두 개가 있는데요, 일단 `find` 메소드 내에서 `this.relations`와 같은 접근이 안 됩니다. 왜냐하면 `this`라는 이름의 파라미터가 있기 때문입니다. 자식 클래스가 오버라이드한 `relations`에 접근할 수 있어야 이 모든게 작동하는지라, 꼭 해결해야 합니다.
 
@@ -141,7 +141,7 @@ export default class BaseBetterEntity extends BaseEntity {
 
 ### 휴: 해결책이 떠오름
 
-![](https://blog.kakaocdn.net/dn/b3RVUi/btq1V2btZff/qNXR8mYYkZKg7Pku1zFYhk/img.jpg)
+![](https://i.imgur.com/HFHBlT5.jpg)
 
 > 글과 무관합니다. 그냥 이 짤이 써보고 싶었어요 ㅎㅎ
 

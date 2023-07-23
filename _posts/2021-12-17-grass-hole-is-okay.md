@@ -22,6 +22,6 @@ git filter-branch --commit-filter 'if [ z$1 = z`git rev-parse $3^{tree}` ]; then
 
 다시 돌아온 잔디밭을 보니 빈 칸 덕분에 contrast가 좀 살아나는 것 같습니다. 아주 입체적이에요. ㅋㅋㅋ
 
-![github-grass-without-empty-commits.png](/assets/images/github-grass-without-empty-commits.png)
+![github-grass-without-empty-commits.png](https://i.imgur.com/Atw7Kfh.png)
 
 > 저기 유난히 발광하는 부분을 보니 [한창 힘들 때](https://blog.potados.com/writings/being-a-paid-worker)가 생각나네요. ㅠ

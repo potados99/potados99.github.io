@@ -117,7 +117,7 @@ function App() {
 
 일단 안드로이드에서 느립니다. **매우 느려요.**
 
-![rn-ios-android-performance-google.png](/assets/images/rn-ios-android-performance-google.png)
+![rn-ios-android-performance-google.png](https://i.imgur.com/rNBnwEX.png)
 > 구글에 각각  `react native android sl`, `react native ios sl`로 검색어를 입력했을 때에 나오는 자동완성.
 빨간 밑줄은 인 앱 퍼포먼스 저하와 관련 있는 키워드입니다.
 
@@ -162,7 +162,7 @@ React Native에서 기본으로 제공하는 `TouchableNativeFeedback`이나 `To
 
 React Native가 제공하는 기본 컴포넌트를 사용하면 보통 어지간한 네이티브 뷰 조작은 알아서 잘 해줍니다. 그런데 세세한 부분으로 들어가면, 플랫폼별 속성을 일일이 지정해 주어야 합니다. 잠시 예시를 보겠습니다.
 
-![IMG_5791.jpg](/assets/images/IMG_5791.jpg)
+![IMG_5791.jpg](https://i.imgur.com/j3H0Zvx.jpg)
 > 카페테리아 앱에 있는, 옆으로 넘기는 식단 뷰입니다.
 
 옆으로 넘길 수 있는 카드 뷰를 만들고 있었습니다. 스냅 효과가 필요하고, 카드끼리는 떨어져 있지만 옆의 카드가 조금씩 삐져나와 보여야 합니다. 그리고 카드는 화면 가운데에 위치해야 합니다.

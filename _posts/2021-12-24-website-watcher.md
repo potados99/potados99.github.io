@@ -8,7 +8,7 @@ categories:
 
 요즘 공연을 보러 자주 다닙니다. 이번 달에만 벌써 3번 다녀왔는데요, 크리스마스에 [카페 언플러그드](https://linktr.ee/cafe.unplugged)에서 열리는 [이제](https://namu.wiki/w/이제(가수))님 공연도 벌써 내일입니다. ~~덕질 영업중~~ 그리고 또 비교적 최근에 푹 빠진 가수로 [데이먼스 이어](https://namu.wiki/w/데이먼스%20이어?from=데이먼스이어)님이 있는데요, 애플뮤직이 추천해준 노래로 입덕했다가 전곡 돌려놓는 중입니다.
 
-![damons-year-setting-fires.png](/assets/images/damons-year-setting-fires.png)
+![damons-year-setting-fires.png](https://i.imgur.com/d8NvrWv.png)
 
 > 연말 단독 공연!
 
@@ -102,7 +102,7 @@ while True:
 
 배포도 귀찮아서 그냥 집에 있는 라즈베리파이 서버에 `pm2`로 간단하게 띄워 놓았습니다. 정말 믿음직하게 자리가 빠질 때마다 알림이 잘 도착했습니다.
 
-![watcher-notification-sms.jpeg](/assets/images/watcher-notification-sms.jpeg)
+![watcher-notification-sms.jpeg](https://i.imgur.com/lSituNt.jpg)
 
 알림이 올 때마다 신속하게 반응한 결과 간신히 취소표 하나를 잡을 수 있었습니다 ㅠㅠ 1시간 투자 치고는 나름 큰 정신적 행복을 얻었습니다.
 
@@ -127,13 +127,13 @@ while True:
 
 **1. 슬랙 워크스페이스 만들기**
 
-![slack-new-workspace.png](/assets/images/slack-new-workspace.png)
+![slack-new-workspace.png](https://i.imgur.com/6uUBVPA.png)
 
 개인용 워크스페이스를 하나 만들었습니다.
 
 **2. 봇(앱) 만들기**
 
-![slack-new-app.png](/assets/images/slack-new-app.png)
+![slack-new-app.png](https://i.imgur.com/P9hx5uo.png)
 
 앱도 하나 만들었습니다.
 
@@ -141,7 +141,7 @@ while True:
 
 앱 설정에서 **Activate Incoming Webhooks**를 활성화해주고 Webhook URL을 가져옵니다.
 
-![slack-bot-webhook.png](/assets/images/slack-bot-webhook.png)
+![slack-bot-webhook.png](https://i.imgur.com/JWXLYdu.png)
 
 이제 저 URL로 `POST` 요청을 쏘기만 하면 슬랙 앱으로 알림이 옵니다.
 
@@ -182,7 +182,7 @@ slack_bot.send("적절한 메시지...")
 
 확실히 알림이 빨라져서 편합니다. 그리고 SMS의 경우 건당 20원씩 빠져나가니까 알림이 계속 올 때에 심적 압박이 조금 있었는데, 이제 해방입니다.
 
-![watcher-notification-slack.jpeg](/assets/images/watcher-notification-slack.jpeg)
+![watcher-notification-slack.jpeg](https://i.imgur.com/yAKrNAc.jpg)
 
 > 메시지 내용도 조금 자세하게 꾸며 보았습니다.
 

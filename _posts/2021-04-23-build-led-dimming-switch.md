@@ -30,7 +30,7 @@ categories:
 
 그림에서 동그라미 친 부분을 보겠습니다. 동그라미 부분을 하나의 모듈이라고 가정한다면 외부와 연결되는 부분은 12v 입력, 12v 출력, 그리고 5v 입력으로 총 세 곳입니다. 그런데 5v 입력이 꼭 필요할까요? 아래 그림을 보겠습니다.
 
-![led-dimmer-abstract.png](/assets/images/led-dimmer-abstract.png)
+![led-dimmer-abstract.png](https://i.imgur.com/8kivRbI.png)
 
 위에서 5v 입력 부분을 제거하고 내용물을 추상화한 그림입니다. 기존 12v 선로 중간에 부착하는 흔한 스위치의 모양을 띱니다. 상자 안에서는 마이크로컨트롤러가 5v를 필요로 합니다. 이는 입력으로 들어오는 12v를 병렬로 끌어와 전압을 낮추어 공급함으로써 해결할 수 있습니다. 실현 가능성은 충분하니 만들어 보겠습니다.
 
@@ -52,13 +52,13 @@ categories:
 
 구글에 `dc 12v to 3.3v`라고 물어봅니다. `LM1117`이나 `AM1117` 같은 [LDO(Low-dropout regulator)](https://www.rohm.co.kr/electronics-basics/dc-dc-converters/dcdc_what8)를 쓰라고 합니다. 정말 괜찮은지 알아보기 위해 [LM1117의 데이터시트](https://www.ti.com/lit/ds/symlink/lm1117.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&DCM=yes&ref_url=https%3A%2F%2Fkr.mouser.com%2F&distId=26)를 봅니다.
 
-![lm1117-datasheet.png](/assets/images/lm1117-datasheet.png)
+![lm1117-datasheet.png](https://i.imgur.com/99po4B6.png)
 
 빨간 밑줄 친 부분만 일단 보겠습니다. 입력 최대 15v, 출력전류 최대 800mA를 감당한다고 합니다.
 
 조금 더 자세히 보니, 최대는 20v이지만 아무튼 권장은 15v까지인 것 같습니다.
 
-![lm1117-datasheet-max-ratings.png](/assets/images/lm1117-datasheet-max-ratings.png)
+![lm1117-datasheet-max-ratings.png](https://i.imgur.com/5FwLl29.png)
 
 > Maximum Input Voltage가 20v라고 합니다.
 
@@ -74,7 +74,7 @@ categories:
 
 사실 선형 레귤레이터를 사용해서 2년 전에 같은 시도를 했습니다. 작동은 했는데 회로에 붙은 레귤레이터 부분이 **미.치.도.록.** 뜨거웠습니다.
 
-![led-dimmer-2019.JPG](/assets/images/led-dimmer-2019.JPG)
+![led-dimmer-2019.JPG](https://i.imgur.com/Rbwnqq2.jpg)
 
 > 그때 만든 보드~~실패작~~입니다.
 
@@ -82,7 +82,7 @@ categories:
 
 [스택 오버플로에서 찾은 답변](https://electronics.stackexchange.com/a/384478)에서 도움을 얻어 데이터시트를 보니, 제가 사용한(SOT223) LM1117은 1W당 61.6°C의 온도 상승을 동반한다고 합니다. 열로 낭비되는 에너지가 1.74W이니 발열은 대략 **107.2°C**인 것입니다.
 
-![lm1117-datasheet-thermal-ratings.png](/assets/images/lm1117-datasheet-thermal-ratings.png)
+![lm1117-datasheet-thermal-ratings.png](https://i.imgur.com/tlpRrC7.png)
 
 100도가 넘는 온도를 정상 작동 온도라고 보기는 어렵죠. 선형 레귤레이터는 포기합니다.
 
@@ -90,7 +90,7 @@ categories:
 
 한참을 검색하다가, [스위칭 레귤레이터](https://www.rohm.co.kr/electronics-basics/dc-dc-converters/dcdc_what5)라는 것을 발견했습니다.
 
-![stepdown-module-from-google.jpeg](/assets/images/stepdown-module-from-google.jpeg)
+![stepdown-module-from-google.jpeg](https://i.imgur.com/qiPdzre.jpg)
 
 아주 익숙하게 생겼습니다. 코일이 달려 있고, 커다란 커패시터가 두 개 달려있습니다. 보통 휴대전화 보조배터리 충방전모듈에서 많이 보입니다. 사용 예시로 보나 부품 크기로 보나(?) 우리의 상황에서 선형 레귤레이터보다는 훨씬 나아 보입니다.
 
@@ -98,7 +98,7 @@ categories:
 
 선형 레귤레이터는 전원 입력과 출력 양단에 자그마한 커패시터를 하나만 달아주면 되었습니다. 반면 스위칭 레귤레이터는 기본 회로가 조금 복잡하게 생겼습니다.
 
-![lm2596-typical-application.png](/assets/images/lm2596-typical-application.png)
+![lm2596-typical-application.png](https://i.imgur.com/Wsa2KNI.png)
 > [LM2596 데이터시트](https://www.ti.com/lit/ds/symlink/lm2596.pdf?ts=1619058211278&ref_url=https%253A%252F%252Fwww.google.com%252F)
 
 아... 핀이 5개나 있습니다. 우리에겐 아주 사치스럽게도 `ON/OFF` 핀도 달려 있습니다. 회로를 보면 여느 강압회로와 같이 입출력 부분에 커패시터가 하나씩 달려 있습니다. 그리고 출력이 쇼트키 다이오드를 통해 그라운드와 연결되고는 인덕터를 거쳐 나가면서 피드백 핀으로도 들어갑니다. 왜 이렇게 생겨야만 하는지는 [이 글](https://techweb.rohm.co.kr/knowledge/dcdc/dcdc_sr/dcdc_sr01/696)이 친절하게 알려주었습니다.
@@ -115,7 +115,7 @@ categories:
 
 아래는 [IRL540NPbF의 데이터시트](https://www.infineon.com/dgdl/irl540npbf.pdf?fileId=5546d462533600a40153565fc2a62567)입니다.
 
-![irl540-vgs.png](/assets/images/irl540-vgs.png)
+![irl540-vgs.png](https://i.imgur.com/LmYnswl.png)
 
 > 이름이 예뻐서 골랐어요.
 
@@ -126,15 +126,15 @@ categories:
 
 이제 회로를 그리는 일만 남았습니다. [EasyEDA](https://easyeda.com)라는 툴을 사용했습니다. [Altium](https://www.altium.com)같은 것은 좀 부담스럽고, 마침 EasyEDA는 PCB와 부품 주문까지 한 번에 되는 점이 편해서 선택했습니다.
 
-![dimming-switch-sheet1.png](/assets/images/dimming-switch-sheet1.png)
+![dimming-switch-sheet1.png](https://i.imgur.com/niNdcjb.png)
 
 요대로 그려 주었습니다.
 
-![dimming-switch-pcb.png](/assets/images/dimming-switch-pcb.png)
+![dimming-switch-pcb.png](https://i.imgur.com/Zcz88dT.png)
 
 그리고 바로 아트웍으로 넘어가 적당한 배치를 잡아주고 라우팅까지 마쳤습니다.
 
-![dimming-switch-preview.png](/assets/images/dimming-switch-preview.png)
+![dimming-switch-preview.png](https://i.imgur.com/A5YwUbB.png)
 
 미리보기를 통해 본 모습입니다.
 
@@ -148,15 +148,15 @@ EasyEDA로 최종 거버 파일 생성까지 끝나면 [JLCPCB](https://jlcpcb.c
 
 약 2주 정도 기다리면 물건을 받아볼 수 있습니다. 부품들을 다 꺼내어 나열해 봅니다.
 
-![led-dimmer-before-assembly.jpeg](/assets/images/led-dimmer-before-assembly.jpeg)
+![led-dimmer-before-assembly.jpeg](https://i.imgur.com/sPOKKL0.jpg)
 
 사진에는 빠졌지만 아주 작은 다이오드가 하나 더 있습니다.
 
-![led-dimmer-before-start.jpeg](/assets/images/led-dimmer-before-start.jpeg)
+![led-dimmer-before-start.jpeg](https://i.imgur.com/lEoqQjJ.jpg)
 
 납땜 장비를 모두 꺼내어 본격적으로 작업을 시작합니다. 표면 실장은 처음이라 조금 어려웠습니다. 손이 생각보다 많이 떨린다는 것을 깨달았을 정도로 부품들이 아주 작고 잘 미끄러졌습니다. 다행히 핀셋과 테이프, 그리고 새로 산 인두의 도움을 받아 무사히 마쳤습니다.
 
-![led-dimmer-assembled.jpeg](/assets/images/led-dimmer-assembled.jpeg)
+![led-dimmer-assembled.jpeg](https://i.imgur.com/za02W2e.jpg)
 
 완성된 모습입니다. ESP-01 모듈도 장착한 상태입니다.
 
@@ -193,7 +193,7 @@ output:
 
 플래싱까지 마쳤으면 ESP-01을 보드에 장착한 뒤 LED 스트립에 연결해 줍니다.
 
-![led-dimmer-installed.jpeg](/assets/images/led-dimmer-installed.jpeg)
+![led-dimmer-installed.jpeg](https://i.imgur.com/0rBazap.jpg)
 
 > 기존 선로와 LED 사이에 끼워 넣어 줍니다.
 
