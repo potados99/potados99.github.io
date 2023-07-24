@@ -1,0 +1,182 @@
+{
+  "main": {
+    "id": "515cef204a94a8c9",
+    "type": "split",
+    "children": [
+      {
+        "id": "21bc75794af2d9c8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aabb6d89d3480172",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2023-07-24-obsidian-for-github-blog.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f83a04b38fb96e40",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "7c3c7f571ccca646",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "8686b14d5e12d6c9",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "1c3ddd51dafa2d4d",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "10f34a73072cf4ed",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "85b7fd5864e58779",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "3f1c07937702ce2d",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "_posts/2023-07-24-obsidian-for-github-blog.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "4d66479d04b28125",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "_posts/2023-07-24-obsidian-for-github-blog.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "186ceb2f8fe39e7f",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "_posts/2023-07-24-obsidian-for-github-blog.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "workspaces:Manage workspace layouts": false
+    }
+  },
+  "active": "7c3c7f571ccca646",
+  "lastOpenFiles": [
+    "_posts/2018-3-18-first-post.md",
+    "_posts/2019-07-10-locale-setup.md",
+    "_drafts/2022-11-12-poor-mans-mysql-snapshot-and-backup.md",
+    "_drafts/2023-04-18-edit-github-blog-on-web.md",
+    "_posts/2023-07-24-obsidian-for-github-blog.md",
+    "_posts/2021-02-19-digital-nomad-in-home.md",
+    "_posts/2019-07-12-fragment-replace.md",
+    "_posts/2021-02-16-what-the-hell-is-cors.md",
+    "_posts/2021-03-03-sending-sms-with-rest-api.md",
+    "_posts/2020-09-06-how-many-connectors-are-there.md",
+    "_posts/2020-06-22-30-days-of-graduation-project.md",
+    "_includes/google-analytics.html",
+    "_posts/2022-01-30-melon-ticket-watcher.md",
+    "_posts/2019-08-07-calculate-electric-charges.md",
+    "_posts/2020-07-01-comments-powered-by-utterances.md",
+    "_posts/2019-11-12-coap-light-2.md",
+    "_posts/2020-09-17-recycled-pool-for-the-performance.md",
+    "_posts/2021-01-05-happy-coding-life.md",
+    "_posts/2022-10-29-selfmade-cloud-config.md",
+    "_posts/2022-10-19-c-sharp-implicit-operator.md",
+    "_posts/2020-12-20-search-over-1000k-messages.md",
+    "_posts/2020-12-28-cut-a-hole-in-view.md",
+    "_posts/2021-12-17-grass-hole-is-okay.md",
+    "_posts/2020-12-04-github-release-automation.md",
+    "_archives/2020-07-05-tdd-for-embeded-c.md",
+    "_posts/2021-05-09-hey-siri-turn-off-the-light.md",
+    "commit-n-days-before",
+    "_layouts/default.html",
+    "_posts/2020-08-05-month-of-bmconnect.md",
+    "_layouts/compress.html",
+    "new",
+    "the-plain.gemspec",
+    "Gemfile",
+    "_includes/head.html",
+    "_includes/footer.html",
+    "_sass/main.scss",
+    "assets/album/r26-19.jpeg",
+    "assets/album/r20-33.jpeg",
+    "assets/album/r20-1.jpeg",
+    "assets/album/r3-25.jpeg",
+    "assets/album/r28-39.jpeg",
+    "assets/album/r12-13.jpeg",
+    "assets/album/r28-22.jpeg",
+    "assets/album/r15-17.jpeg"
+  ]
+}
