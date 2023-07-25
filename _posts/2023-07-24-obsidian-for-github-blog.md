@@ -3,7 +3,7 @@ date: "2023-07-24 01:05:52 +0900"
 title: Obsidian으로 마크다운 글 써서 GitHub 블로그에 올리기
 summary: GitHub 블로그 글쓰기 너무 귀찮아요 티스토리로 갈까요 그냥
 categories:
-  - writing
+  - writings
 ---
 
 ## 글쓰기가 영 귀찮습니다
