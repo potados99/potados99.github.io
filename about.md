@@ -13,7 +13,7 @@ title: "감자도스 블로그"
 
 ## 연락처
 
-- **Email**: <potados99@gmail.com>
+- **Email**: <song@potados.com>
 - **GitHub**: [potados99](https://github.com/potados99)
 - **Instagram**: [ix_potados](https://www.instagram.com/ix_potados/)
 - **카카오톡 오픈채팅**: [감자도스](https://open.kakao.com/o/sqE5M3Rc)
