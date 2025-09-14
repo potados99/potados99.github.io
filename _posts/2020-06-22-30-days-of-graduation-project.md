@@ -276,10 +276,6 @@ private val phaseToSectionWeights = arrayOf(
 
 금요일에는 원래 약속이 있다. 그 약속을 일요일로 옮겼다.
 
-코딩에서 벗어나 잠시 행복한 하루를 보냈다.
-
-![rose.jpeg](https://i.imgur.com/3FDU5HK.jpg)
-
 ### D-18
 
 > 5월 25일
