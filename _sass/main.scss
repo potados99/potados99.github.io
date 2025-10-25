@@ -545,11 +545,16 @@ article, section, .footer, .comments {
   max-width: 700px;
 }
 
-.divider,
-.item-divider {
+.divider {
   height: 1px;
   margin: 1em 0;
   background: var(--border-secondary);
+}
+
+.item-divider {
+  height: 1px;
+  margin: 1em 0;
+  background: transparent;
 }
 
 .page-navigation {
