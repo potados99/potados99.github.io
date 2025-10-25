@@ -120,6 +120,7 @@ React와 Babel이 준비되었다면 다음과 같이 스크립트 태그를 열
 
 가장 먼저 `TextField`와 `TextArea` 컴포넌트를 만들어줍니다. 전자는 비밀번호 필드를, 후자는 평문과 암호문 텍스트 영역을 만드는 데에 사용할 것입니다.
 
+{% raw %}
 ```js
 function TextField({value, onChange}) {
     return <div>
@@ -136,6 +137,7 @@ function TextArea({value, onChange}) {
     </div>
 }
 ```
+{% endraw %}
 
 이제 `App`은 이렇게 나옵니다:
 
@@ -208,6 +210,7 @@ function decrypt(text, password) {
 
 이제 에디터 쪽은 끝입니다. 전체 코드는 아래와 같습니다:
 
+{% raw %}
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -298,6 +301,7 @@ function decrypt(text, password) {
 </body>
 </html>
 ```
+{% endraw %}
 
 ### 배포
 

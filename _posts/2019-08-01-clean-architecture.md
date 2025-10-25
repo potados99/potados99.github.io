@@ -3,7 +3,7 @@ title: "[Kotlin Android] Clean Architecture 도입하기"
 date: 2019-08-01 18:31:38 +0900
 excerpt: "이제 콩가루 코드는 그만 짜자. 안드로이드에 클린 아키텍처 도입한 후기"
 header:
-    overlay_image: /assets/images/source-codes.jpg
+    overlay_image: /assets/images/yZ8aB1C.jpg
 categories:
     - dev
 tags:

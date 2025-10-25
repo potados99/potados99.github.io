@@ -4,7 +4,7 @@ date: 2019-07-10 22:00:17 +0900
 last_modified_at: 2019-07-12 04:39:00 +0900
 excerpt: "타입 써주면 알아서 collection에 차곡차곡 담겨서 나오도록 만들기."
 header:
-    overlay_image: /assets/images/kotlin-android.png
+    overlay_image: /assets/images/tU6vW7X.png
 categories:
     - dev
 tags:

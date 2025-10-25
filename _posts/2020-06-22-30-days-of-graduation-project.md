@@ -93,7 +93,7 @@ UI와 뷰모델을 이을 때에는 [Android Jetpack](https://www.google.com/acl
 
 내부적으로 중요한 디자인 결정을 내렸는데, **툴바를 각 프래그먼트 아닌 부모 액티비티에 정의했다.** 원래 툴바는 각 화면 레이아웃의 일부로써, 매 화면마다 따로 정의하는 것이 맞다. 다만 이 앱에서는 모든 화면에서 모두 동일한 툴바를 사용할 것이었기에 (일반적으로는 바람직하지 않은) 편법을 사용한 것이다.
 
-<img src="/assets/images/preshoes-first-home.jpeg" width="50%">
+<img src="/assets/images/Y7z8A9b.jpeg" width="50%">
 
 > iOS의 시계 앱을 많이 참고했다.
 
@@ -105,7 +105,7 @@ UI와 뷰모델을 이을 때에는 [Android Jetpack](https://www.google.com/acl
 
 구글을 한참 뒤져 영감을 많이많이 얻었다. 앱 컨셉을 피트니스쪽이 아닌 테크와 의료, 조금 전문적인 방향으로 선회하면서 어둡고 있어보이는(?) 테마를 선택했다.
 
-<img src="/assets/images/preshoes-home-done.jpeg" width="50%">
+<img src="/assets/images/C1d2E3f.jpeg" width="50%">
 
 > 기적적으로 적절한 발 모양 이미지를 얻었다.
 
@@ -123,7 +123,7 @@ UI와 뷰모델을 이을 때에는 [Android Jetpack](https://www.google.com/acl
 
 이걸 도와주는 라이브러리가 있나 해서 찾아 보니 [AndroidHeatMap](https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2FHeartlandSoftware%2FAndroidHeatMap&psig=AOvVaw1rQoW_2X78mDDJ0fKbrkRt&ust=1592919292337000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCJj6vPbEleoCFQAAAAAdAAAAABAD)이라는게 있었다.
 
-<img src="/assets/images/preshoes-first-heatmap.gif" width="50%">
+<img src="/assets/images/U4v5W6X.gif" width="50%">
 
 > AndroidHeatMap 적용 완료.
 
@@ -192,7 +192,7 @@ HSV 색 공간에 대한 이야기는 예전에 모니터 캘리브레이션 할
 
 홈 화면과 진단 화면에 이어 보고서 화면을 만들었다.
 
-<img src="/assets/images/preshoes-reports-first.jpeg" width="50%">
+<img src="/assets/images/K7l8M9n.jpeg" width="50%">
 
 > 당연히 데이터는 모두 뻥이다.
 
@@ -222,7 +222,7 @@ HSV 색 공간에 대한 이야기는 예전에 모니터 캘리브레이션 할
 
 발을 세로로 4등분한 다음에 각 섹션별로 걸음 phase마다 가해지는 압력을 손으로 하나 하나 기입해가며 *자연스러워 보이는* 가짜 데이터 생성기를 만들었다.
 
-<img src="/assets/images/preshoes-fake-data-gen.gif" width="50%">
+<img src="/assets/images/T1m2N3O.gif" width="50%">
 
 > 아는 상태로 보면 조금 부자연스럽다.
 
@@ -414,13 +414,13 @@ private val phaseToSectionWeights = arrayOf(
 
 일단 도면을 그렸다.
 
-<img src="/assets/images/preshoes-shoe-new-sketch.jpeg" width="70%">
+<img src="/assets/images/O1p2Q3r.jpeg" width="70%">
 
 > 종이에 볼펜
 
 그리고 디지털로 옮겼다.
 
-<img src="/assets/images/preshoes-numbered.png" width="70%">
+<img src="/assets/images/G4h5I6j.png" width="70%">
 
 > Graphics
 
@@ -480,7 +480,7 @@ private val phaseToSectionWeights = arrayOf(
 
 혹시나 학교 4호관에 새로 생긴 Maker space에 장비가 있나 싶어 홈페이지를 찾아가 보았다. 비닐 커터는 없었지만 레이저 커터가 두 대나 있었다. 레이저 커터에 대해 알아 보니, 얇은 재료는 물론, 어느 정도 두꺼운 재료도 깔끔하게 잘라내는 도구였다. 바로 예약을 하고 도면을 그렸다.
 
-<img src="/assets/images/preshoes-wire.png" width="70%">
+<img src="/assets/images/S4t5U6v.png" width="70%">
 
 > 맥의 Graphics 앱 사용, 앱스토어에 있다.
 
