@@ -15,5 +15,5 @@ title: "감자도스 블로그"
 
 - **Email**: <song@potados.com>
 - **GitHub**: [potados99](https://github.com/potados99)
-- **Instagram**: [ix_potados](https://www.instagram.com/ix_potados/)
+- **Instagram**: [song.potados](https://www.instagram.com/song.potados/)
 - **카카오톡 오픈채팅**: [감자도스](https://open.kakao.com/o/sqE5M3Rc)
