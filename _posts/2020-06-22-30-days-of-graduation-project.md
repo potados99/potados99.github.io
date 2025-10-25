@@ -16,7 +16,7 @@ categories:
 
 5월 중순이 되어서야 발등에 불이 떨어졌다.
 
-![ss-pressure.jpeg](https://i.imgur.com/D8mk7Z6.jpg)
+![ss-pressure.jpeg](/assets/images/D8mk7Z6.jpg)
 
 > 5월 13일.    
 나의 놀고먹는 방학생활(?)을 끝내버리신 교수님의 카톡.
@@ -41,7 +41,7 @@ categories:
 
 보여지는 것에 집중해야 했다. 도메인이고 뭐고 다 때려치우고 UI부터 만들기 시작했다. 일단 탭 네비게이션을 만들었다.
 
-![preshoes-tab-navigation.jpeg](https://i.imgur.com/lrZhtdD.jpg)
+![preshoes-tab-navigation.jpeg](/assets/images/lrZhtdD.jpg)
 
 > 방학 동안에 열심히 만들어 놓은 [라이브러리](https://github.com/potados99/android-essentials)를 가져다 썼다.
 
@@ -63,11 +63,11 @@ UI와 뷰모델을 이을 때에는 [Android Jetpack](https://www.google.com/acl
 
 > 5월 15일
 
-![rainy-day.jpeg](https://i.imgur.com/oR7nxHA.jpg)
+![rainy-day.jpeg](/assets/images/oR7nxHA.jpg)
 
 비가 오는 날이었다. 이 날은 코딩은 쉬었다. 이때까지만 해도 여유가 있었다.
 
-![hot-myeon.jpeg](https://i.imgur.com/Hq4jOII.jpg)
+![hot-myeon.jpeg](/assets/images/Hq4jOII.jpg)
 
 > 저녁으로 먹은 불닭볶음면. 나는 맵찔이지만 매운게 좋다.
 
@@ -79,7 +79,7 @@ UI와 뷰모델을 이을 때에는 [Android Jetpack](https://www.google.com/acl
 
 커스텀 뷰는 처음인지라 상당히 낯설었는데, 프래그먼트에 `inflater`로 레이아웃 씌우고 이거저거 하는 것과 별반 다르지 않았다.
 
-![preshoes-first-foot.gif](https://i.imgur.com/Ek0OaU9.gif)
+![preshoes-first-foot.gif](/assets/images/Ek0OaU9.gif)
 
 > 지금 보면 정말 허접하다.
 
@@ -149,19 +149,19 @@ HSV 색 공간에 대한 이야기는 예전에 모니터 캘리브레이션 할
 
 이제 하드웨어가 슬슬 준비되어야 하는데, 하드웨어 담당 팀원은 프로토타입을 만들려면 멀어 보였다.
 
-![sensor-very-first.jpeg](https://i.imgur.com/OBDKURe.jpg)
+![sensor-very-first.jpeg](/assets/images/OBDKURe.jpg)
 
 > 일정상 80%는 완성되어 있어야 했다.
 
 날씨는 좋았다.
 
-![weather-good.jpeg](https://i.imgur.com/ugwDeI1.jpg)
+![weather-good.jpeg](/assets/images/ugwDeI1.jpg)
 
 > 우리 학교가 노을이 참 예쁘다.
 
 모여서 코딩하다가 지하철 역까지 뛰어서 막차 타고 집에 갔다.
 
-![last-train.jpeg](https://i.imgur.com/NE2cZgl.jpg)
+![last-train.jpeg](/assets/images/NE2cZgl.jpg)
 > 지하철역은 저-멀리에. 막차까지 남은 시간은 10분.
 
 ### D-22
@@ -172,7 +172,7 @@ HSV 색 공간에 대한 이야기는 예전에 모니터 캘리브레이션 할
 
 족저압 검사 화면을 구현하기 시작했다. 검사(diagnosis) 탭을 누르면 가능한 검사 목록이 나오고, 하나를 선택하면 검사 화면으로 넘어간다. 이때 이 넘어가는 transition에 애니메이션을 적용하였다.
 
-![preshoes-diagnosis-done.jpeg](https://i.imgur.com/jaIg34I.jpg)
+![preshoes-diagnosis-done.jpeg](/assets/images/jaIg34I.jpg)
 
 > 휴게실에서 완성했다. 리모델링된 휴게실 참 좋다. 학비는 이런 데에 써야지 ㅎ
 
@@ -180,7 +180,7 @@ HSV 색 공간에 대한 이야기는 예전에 모니터 캘리브레이션 할
 
 코루틴은 스레드와 다르게 **매우 저렴하다**. 하지만 스레드에 민감한 `Realm`같은 녀석과 함께 사용하면 대참사가 일어날 수도 있다 (후술한다...)
 
-![restroom.jpeg](https://i.imgur.com/NFqsbjD.jpg)
+![restroom.jpeg](/assets/images/NFqsbjD.jpg)
 
 > 정보기술대학교 휴게실 풍경
 
@@ -216,7 +216,7 @@ HSV 색 공간에 대한 이야기는 예전에 모니터 캘리브레이션 할
 
 하드웨어 담당자는 그토록 호언장담하던 완성 데드라인도 맞추지 못한 채 삽으로 흙이나 퍼나르고 있었다. 밤까지는 데모 영상을 제출해야 하는데, 납땜 연기 몇번 마시더니 그대로 두통을 호소하며 뻗어버렸다. 어쩔 수 없이 눈속임을 사용할 수 밖에 없었다.
 
-![commit-fake-data.png](https://i.imgur.com/U0uB2RP.png)
+![commit-fake-data.png](/assets/images/U0uB2RP.png)
 
 > 커밋 메시지: "Generating fake data."
 
@@ -266,7 +266,7 @@ private val phaseToSectionWeights = arrayOf(
 
 그리고 막차를 놓친 나는 택시를 타고 집에 갔다.
 
-![last-train-bye.jpeg](https://i.imgur.com/c5TVzD3.jpg)
+![last-train-bye.jpeg](/assets/images/c5TVzD3.jpg)
 
 > 지출 1만 5천원
 
@@ -316,7 +316,7 @@ private val phaseToSectionWeights = arrayOf(
 
 **본의 아니게 구술 발표를 하게 되었다.**
 
-![pr-for-me-q.jpeg](https://i.imgur.com/hTnNXtx.jpg)
+![pr-for-me-q.jpeg](/assets/images/hTnNXtx.jpg)
 
 > 아...ㅎㅎ
 
@@ -332,13 +332,13 @@ private val phaseToSectionWeights = arrayOf(
 
 이날 신발 센서 모듈 절반이 완성되었다며(절반은 작동하지 않는다 함) 팀원이 사진을 보내 왔다.
 
-![preshoes-shoe-very-first.jpeg](https://i.imgur.com/DnxCkh9.jpg)
+![preshoes-shoe-very-first.jpeg](/assets/images/DnxCkh9.jpg)
 
 > 이때부터 매우 불길한 예감이 들었다.
 
 그래도 날씨는 좋았다.
 
-![campus-clouds.jpeg](https://i.imgur.com/iPUhDui.jpg)
+![campus-clouds.jpeg](/assets/images/iPUhDui.jpg)
 
 > 오후 4시 29분.
 
@@ -374,7 +374,7 @@ private val phaseToSectionWeights = arrayOf(
 
 이 날은 카카오 바이크를 탔다 :)
 
-![go-to-work-by-bike.jpeg](https://i.imgur.com/2OYL73B.jpg)
+![go-to-work-by-bike.jpeg](/assets/images/2OYL73B.jpg)
 
 > 그리고 지하주차장에 주차해서 정지를 먹었다.
 
@@ -396,7 +396,7 @@ private val phaseToSectionWeights = arrayOf(
 
 그리고 하드웨어는 결국 완성되지 않았다. 센서마다 물리적 특성도 다르고 입력값이 상당히 불안정했다.
 
-![preshoes-shoe-fail.jpeg](https://i.imgur.com/k0wyGiA.jpg)
+![preshoes-shoe-fail.jpeg](/assets/images/k0wyGiA.jpg)
 
 > 프로토타입의 프로토타입
 
@@ -406,7 +406,7 @@ private val phaseToSectionWeights = arrayOf(
 
 최종 발표 영상 제출 마감이 9일 남은 시점에서 하드웨어가 이 모양이었다.
 
-![preshoes-shoe-epic-fail.gif](https://i.imgur.com/ZKZmcfC.gif)
+![preshoes-shoe-epic-fail.gif](/assets/images/ZKZmcfC.gif)
 
 > 망했음을 직감했다.
 
@@ -426,7 +426,7 @@ private val phaseToSectionWeights = arrayOf(
 
 회로는 아래처럼 브릿지 보드를 사용하여 제작할 계획을 세웠다.
 
-![preshoes-circuit.jpeg](https://i.imgur.com/7734jHi.jpg)
+![preshoes-circuit.jpeg](/assets/images/7734jHi.jpg)
 
 ### D-10
 
@@ -436,15 +436,15 @@ private val phaseToSectionWeights = arrayOf(
 
 압력 센서와 브릿지 보드를 집에서 택배로 수령하고, 디바이스마트에서 구매한 부품은 마침 근처라 방문수령하였다.
 
-![preshoes-materials.jpeg](https://i.imgur.com/kAk7zey.jpg)
+![preshoes-materials.jpeg](/assets/images/kAk7zey.jpg)
 
 > 디바이스마트가 집 앞에 있다.
 
 압력 센서를 MCU와 연결하는 데에 필수인 pull-down 브릿지 보드 3개를 연장하여 12채널 브릿지 보드를 제작하였다.
 
-![bridge-board-in-progress.jpeg](https://i.imgur.com/vk1PbtZ.jpg)
+![bridge-board-in-progress.jpeg](/assets/images/vk1PbtZ.jpg)
 
-![bridge-board.jpeg](https://i.imgur.com/C8AC2Jl.jpg)
+![bridge-board.jpeg](/assets/images/C8AC2Jl.jpg)
 
 > 직접 만든 12채널 브릿지 보드. 정성스런 50포인트 납땜.
 
@@ -456,13 +456,13 @@ private val phaseToSectionWeights = arrayOf(
 
 나머지 한 쪽 브릿지 보드도 제작을 마쳤다.
 
-![bridge-board-both.jpeg](https://i.imgur.com/BR8f8zp.jpg)
+![bridge-board-both.jpeg](/assets/images/BR8f8zp.jpg)
 
 > 케이블도 만들었다. 소켓은 몰렉스 5264.
 
 그리고 바로 센서 패널(깔창 부분) 제작에 착수했다.
 
-![preshoes-new-prototype.jpeg](https://i.imgur.com/ZXzdynV.jpg)
+![preshoes-new-prototype.jpeg](/assets/images/ZXzdynV.jpg)
 
 > 아름답지는 않다.
 
@@ -486,7 +486,7 @@ private val phaseToSectionWeights = arrayOf(
 
 레이저 커터에게 작업을 지시해야 하니, 도면을 일러스트레이터로 옮겨서 `.dxf` 포맷으로 export했다.
 
-![preshoes-wire-preview.png](https://i.imgur.com/olfs5Cg.png)
+![preshoes-wire-preview.png](/assets/images/olfs5Cg.png)
 
 > 3D 미리보기
 
@@ -494,25 +494,25 @@ private val phaseToSectionWeights = arrayOf(
 
 레이저 커터에 재료를 넣고 도면을 업로드하여 가공을 시작하였는데, **구리 테이프가 잘리지 않았다.** 이게 무슨 일인가 싶어 같은 위치에 종이를 두었더니 잘 잘렸다. 금속은 아무리 얇아도 자를 수 없는 모양이었다.
 
-![preshoes-laser-fail.jpeg](https://i.imgur.com/Al8viQE.jpg)
+![preshoes-laser-fail.jpeg](/assets/images/Al8viQE.jpg)
 
 > 구리 테이프에는 흠집조차 나지 않았다.
 
 결국 가내수공업을 택했다.
 
-![preshoes-wire-hand-1.jpeg](https://i.imgur.com/CxxWtmy.jpg)
+![preshoes-wire-hand-1.jpeg](/assets/images/CxxWtmy.jpg)
 
 > 구리 테이프에 도면을 붙여 가위로 수동 가공(...)
 
 여기서 팀워크가 빛을 발휘했다. 아주 빠른 시간 안에 모든 배선을 가공해 내었다.
 
-![preshoes-wire-hand-2.jpeg](https://i.imgur.com/simSxIj.jpg)
+![preshoes-wire-hand-2.jpeg](/assets/images/simSxIj.jpg)
 
 > 가공 후 딱풀로 붙였다.
 
 자정이 지나기 전에 한쪽을 완성했다.
 
-![preshoes-one-done.jpeg](https://i.imgur.com/2ngqKkJ.jpg)
+![preshoes-one-done.jpeg](/assets/images/2ngqKkJ.jpg)
 
 > 센서와 구리테이프는 얇은 배선과 납으로 연결했다.
 
@@ -524,17 +524,17 @@ private val phaseToSectionWeights = arrayOf(
 
 이미 한 쪽을 만들어 놓은 터라 레퍼런스와 노하우를 모두 보유하고 있었다. 덕분에 다른 한 쪽은 훨씬 깔끔하게 만들 수 있었다.
 
-![preshoes-so-clean.jpeg](https://i.imgur.com/RnSn2zi.jpg)
+![preshoes-so-clean.jpeg](/assets/images/RnSn2zi.jpg)
 
 > 깔끔한 순간접착제 마감
 
-![preshoes-drying.jpeg](https://i.imgur.com/AV8BpjC.jpg)
+![preshoes-drying.jpeg](/assets/images/AV8BpjC.jpg)
 
 > 말리는 중.
 
 그렇게 다 완성하고 아침 8시에 학교를 나왔다.
 
-![going-home-morning.jpeg](https://i.imgur.com/82EtnLX.jpg)
+![going-home-morning.jpeg](/assets/images/82EtnLX.jpg)
 
 > 안개가 가득 꼈다.
 
@@ -544,19 +544,19 @@ private val phaseToSectionWeights = arrayOf(
 
 마감 작업을 시작했다. 신발 속에 들어가서도 파손되면 안 되며, 적당히 유연해야 했다. 팀원의 아이디어를 차용하여 절연테이프로 센서 패널을 마감하였다.
 
-![preshoes-finishing.jpeg](https://i.imgur.com/IJvXFyh.jpg)
+![preshoes-finishing.jpeg](/assets/images/IJvXFyh.jpg)
 
 > 폭이 아주 넓은 전기테이프가 있었으면 하는 바람이었다.
 
 그렇게 하나의 세트가 완성되었다.
 
-![preshoes-single-set.jpeg](https://i.imgur.com/ezMqfF9.jpg)
+![preshoes-single-set.jpeg](/assets/images/ezMqfF9.jpg)
 
 > 왼쪽부터 배터리, MCU 보드, 블루투스 모듈, 브릿지 보드, 센서 패널.
 
 나머지 한 쪽도 완성한 후 테스트를 진행하였다.
 
-![preshoes-works.gif](https://i.imgur.com/z3Cuzhs.gif)
+![preshoes-works.gif](/assets/images/z3Cuzhs.gif)
 
 **기대한 만큼 잘 작동하였다.**
 
@@ -570,7 +570,7 @@ private val phaseToSectionWeights = arrayOf(
 
 > 6월 8일
 
-![preshoes-look.png](https://i.imgur.com/JqqRgs7.png)
+![preshoes-look.png](/assets/images/JqqRgs7.png)
 
 > 정보대 앞
 
@@ -627,7 +627,7 @@ IdeaBoom에 올라간 작품에 좋아요가 몇 개나 달리는지 구경했�
 
 밖에 나가 보니 공대 앞에 장미가 만개하였다.
 
-![roses-in-campus.jpeg](https://i.imgur.com/WwLFJmc.jpg)
+![roses-in-campus.jpeg](/assets/images/WwLFJmc.jpg)
 
 ## 마치며
 

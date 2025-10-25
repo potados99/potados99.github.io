@@ -56,7 +56,7 @@ categories:
 
 그러니까 GitHub의 `README.md`에서 `<iframe>` 은 못 쓴다는 겁니다. 그렇다면 동적인 컨텐츠를 표시하기 위해 우리가 할 수 있는 일은 무엇일까요.
 
-![팝콘로빈](https://i.imgur.com/Vhm5GyM.jpg)
+![팝콘로빈](/assets/images/Vhm5GyM.jpg)
 
 > 팝콘이나 가져오기?
 

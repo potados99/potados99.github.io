@@ -9,7 +9,7 @@ tags:
     - summer
     - electricity
 ---
-![](https://i.imgur.com/r7i8Y6C.jpg)
+![](/assets/images/r7i8Y6C.jpg)
 > 이미지 출처: [여기](https://www.rd.com/culture/math-lessons-real-life/)
 
 작년만큼은 아니어도 올해도 아주 덥다. 낮 기온이 30도 아래로 내려가는 것을 보기가 어렵다.
@@ -29,11 +29,11 @@ tags:
 
 하지만 여름과 겨울(7~8월과 12월~2월)에는 한단계 더 추가된 4단계 누진 요금이 적용된다.
 
-![전기요금 그래프](https://i.imgur.com/d4rZy29.png)
+![전기요금 그래프](/assets/images/d4rZy29.png)
 
 > 쓰면 쓸수록 팍팍 올라가는 구조다. 마지막 단계에서는 처음과 7배 차이가 난다.
 
-![전기요금 그래프 적분](https://i.imgur.com/unGLleR.png)
+![전기요금 그래프 적분](/assets/images/unGLleR.png)
 > 적분해보면 실제 요금을 알 수 있다. 400kWh 쓰면 56,052월, 800kWh 쓰면 168,131원.
 
 
@@ -65,12 +65,12 @@ tags:
 
 대표적인 예시로 f(x) = abs(x)가 있다.
 
-![절댓값 x](https://i.imgur.com/DSJTqEz.png)
+![절댓값 x](/assets/images/DSJTqEz.png)
 > 너무 뾰족해서 미분이 안된다.
 
 누진요금도 이와 같이 나타낼 수 있다.
 
-![charge](https://i.imgur.com/WgJ4nJW.gif)
+![charge](/assets/images/WgJ4nJW.gif)
 
 사용량에 따른 단위 전기요금을 charge(x)라고 할 때, charge(x)의 정적분을 구해보자.
 
@@ -230,7 +230,7 @@ return 0;
 
 실행해보면 아래와 같다.
 
-![demo](https://i.imgur.com/fR35WG7.png)
+![demo](/assets/images/fR35WG7.png)
 
 > 450kWh 쓰면 69,816원. 실제 요금과는 다를 수 있다.
 

@@ -8,7 +8,7 @@ categories:
 
 ## 들어가며
 
-![github-grass.png](https://i.imgur.com/drobHY7.png)
+![github-grass.png](/assets/images/drobHY7.png)
 
 GitHub 프로필에 들어가면 잔디밭이 보인다. 지난 1년간의 활동을 요약하여 보여 주는 화면인데, 빈 칸이 눈에 띈다.
 
@@ -63,7 +63,7 @@ $ ./commit-n-days-before 1 -m "Add script."
 
 ## 마치며
 
-![github-grass-filled.png](https://i.imgur.com/cNLjXg7.png)
+![github-grass-filled.png](/assets/images/cNLjXg7.png)
 
 마지막 잔디 두 칸이 찼다.
 

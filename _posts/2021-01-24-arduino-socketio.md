@@ -10,7 +10,7 @@ categories:
 
 댓글마다 추천/비추천 버튼이 있는데, 이게 그냥 놔두어도 자동으로 업데이트됩니다. 신기해서 브라우저 콘솔을 열어보니 `Sockets`라고 눈에 띄는 부분이 있어 살펴 보았습니다.
 
-![daum-news-websocket.png](https://i.imgur.com/gcQyWwW.png)
+![daum-news-websocket.png](/assets/images/gcQyWwW.png)
 
 > 댓글 정보가 알아서 업데이트됩니다.
 
@@ -189,11 +189,11 @@ void loop() {
 
 서버 쪽을 보아도 아무 것도 출력되지 않았습니다. 여기서 궁금해지기 시작했습니다. 과연 연결을 시도하긴 한 걸까? 알아내기 위해 WireShark를 켰습니다.
 
-![eio3-bad-request.png](https://i.imgur.com/lPwWEvA.png)
+![eio3-bad-request.png](/assets/images/lPwWEvA.png)
 
 `/socket.io/?EIO=3&nodeName=Watcher&transport=polling`으로 `GET`을 날렸는데 `400 Bad Request`가 왔습니다.
 
-![루피 ???](https://i.imgur.com/ywSiqgj.png)
+![루피 ???](/assets/images/ywSiqgj.png)
 
 > 아니 왜????
 
@@ -203,7 +203,7 @@ void loop() {
 
 머리를 좀 식히고 문서와 GitHub 저장소를 돌아보았습니다. 그러다가 최신 버전인 3.1.0 릴리즈 로그를 보았습니다.
 
-![socketio-3.1.0-release-log.png](https://i.imgur.com/0zBzHvm.png)
+![socketio-3.1.0-release-log.png](/assets/images/0zBzHvm.png)
 
 `allowEIO3`가 기본으로 `false`라고 합니다. 아, 클라이언트가 요청 시에 `Engine.IO`의 버전을 지정할 수 있나 봅니다. 그런데 `EIO3`라.. 뭔가 익숙합니다. 아까 WireShark로 본 HTTP 요청에 `EIO=3`라는 쿼리 파라미터가 있었습니다.
 
@@ -227,7 +227,7 @@ void begin(const char * host, uint16_t port, const char * url = "/socket.io/?EIO
 
 공유기가 문제인가 싶어 인터넷 연결도 테스트 해 보고, 기기들끼리 너무 다닥다닥 붙어있어서 그런가 싶어 떨어뜨려도 보았지만, 연결 끊김을 피할 수 없었습니다.
 
-![disconnection](https://i.imgur.com/R2zWV7y.jpg)
+![disconnection](/assets/images/R2zWV7y.jpg)
 
 > 이토록 연결이 불안정해서야...ㅠ
 
@@ -235,7 +235,7 @@ void begin(const char * host, uint16_t port, const char * url = "/socket.io/?EIO
 
 머리를 굴리기 시작했습니다.
 
-![전자두뇌!](https://i.imgur.com/2ctc4uk.png)
+![전자두뇌!](/assets/images/2ctc4uk.png)
 
 > 두뇌 풀가동!
 
@@ -265,7 +265,7 @@ void SocketIOclient::loop(void) {
 
 연결이 끊어지는 주기와 일치했습니다. `WebSocketsClient::sendTXT(eIOtype_PING)` 호출이 의심되었습니다. 해당 호출 직전에 `Serial.println()` 호출을 두어 연결 끊김과 `PING`의 전송 시각을 관찰하였습니다.
 
-![arduino-socket-keep-disconnecting.png](https://i.imgur.com/FX6mhez.png)
+![arduino-socket-keep-disconnecting.png](/assets/images/FX6mhez.png)
 
 그리고 **`PING` 전송 시도 직후에 연결이 끊어지는 것**을 확인할 수 있었습니다.
 
@@ -275,7 +275,7 @@ void SocketIOclient::loop(void) {
 
 다시 머리를 굴려보았습니다.
 
-![전자두뇌2](https://i.imgur.com/P5ZklmZ.jpg)
+![전자두뇌2](/assets/images/P5ZklmZ.jpg)
 
 > 지금 자면 몇 시에 일어나지...
 
@@ -285,7 +285,7 @@ void SocketIOclient::loop(void) {
 
 arduinoWebSockets 라이브러리가 `Engine.IO` v4에 맞지 않는 동작을 할 수도 있겠다는 의심을 했습니다. 그리고 `Engine.IO` v4 [릴리즈 로그](https://socket.io/blog/engine-io-4-release/)에서 실마리를 찾았습니다.
 
-![eio4-breaking-change.png](https://i.imgur.com/VcM7Dyu.png)
+![eio4-breaking-change.png](/assets/images/VcM7Dyu.png)
 
 > 앞으로는 서버가 ping을 보내면 클라이언트가 pong으로 답한다고 합니다.
 

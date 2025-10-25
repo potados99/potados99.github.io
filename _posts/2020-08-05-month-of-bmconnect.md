@@ -26,17 +26,17 @@ categories:
 
 페이지 상단에 신청 버튼이 있다.
 
-![bmc-assign.png](https://i.imgur.com/lSmVdK9.png)
+![bmc-assign.png](/assets/images/lSmVdK9.png)
 
 누르면 이렇게 생긴 [구글 폼](https://docs.google.com/forms/d/e/1FAIpQLSc0VXNP72hcMiO1AasBo4kpsQmwOeo6ALY4PdBWY1cvePTJmA/viewform)으로 이어진다.
 
 제출하면 곧 이런 문자가 온다.
 
-![bmc-sms.png](https://i.imgur.com/ducBHOu.png)
+![bmc-sms.png](/assets/images/ducBHOu.png)
 
 메일도 한 통 온다.
 
-![bmc-contract.png](https://i.imgur.com/zCoUCs8.png)
+![bmc-contract.png](/assets/images/zCoUCs8.png)
 
 신분증 사본과 프로필 사진, 통장 사본을 올리고 계약서에 서명한다. 내용은 별 거 없다. ~~문제 생기면 커넥터 탓하는 내용이겠지~~
 
@@ -48,11 +48,11 @@ categories:
 
 배달을 하려면 가방과 헬멧이 필요하다.
 
-![bmc-where-to-buy.jpg](https://i.imgur.com/HVVfA14.jpg)
+![bmc-where-to-buy.jpg](/assets/images/HVVfA14.jpg)
 
 플러스친구에게 물어보면 어디에서 사는지 알려준다.
 
-![bmc-equipment.png](https://i.imgur.com/EhzOPp4.png)
+![bmc-equipment.png](/assets/images/EhzOPp4.png)
 
 세트로 샀다.
 
@@ -62,7 +62,7 @@ categories:
 
 처음에는 벨킨에서 나온 고무밴드로 고정하는 거치대를 썼는데, 며칠 쓰니까 부러졌다. 더 튼튼하고 편한걸 알아보다가 아래 제품으로 정착했다.
 
-![magfit.png](https://i.imgur.com/n07QFjp.png)
+![magfit.png](/assets/images/n07QFjp.png)
 
 > [바이커소울](https://www.bikersoul.com)이 만든 맥핏이라는 제품
 
@@ -74,11 +74,11 @@ categories:
 
 내 자전거는 전기자전거라(360Wh) 전기가 좀 남는다. 휴대폰은(6.25Wh) 가볍게 충전할 수 있다.
 
-![magfit-electric.jpeg](https://i.imgur.com/ZODS7Zt.jpg)
+![magfit-electric.jpeg](/assets/images/ZODS7Zt.jpg)
 
 > 배선 작업
 
-![magfit-with-charging.jpeg](https://i.imgur.com/DALCBos.jpg)
+![magfit-with-charging.jpeg](/assets/images/DALCBos.jpg)
 
 > 이제 충전도 된다.
 
@@ -120,7 +120,7 @@ categories:
 
 수요일부터 차주 화요일까지 일한게 금요일에 입금된다.
 
-![bmc-money.jpg](https://i.imgur.com/AZPol41.jpg)
+![bmc-money.jpg](/assets/images/AZPol41.jpg)
 
 > 프로모션 금액은 정산 시에 더해지기 때문에 마지막 주는 금액이 적어보인다. 저기에 약 10만원 정도 추가될 예정.
 

@@ -6,7 +6,7 @@ categories:
    - dev
 ---
 
-![hole-in-a-view.png](https://i.imgur.com/VDBwlUO.png)
+![hole-in-a-view.png](/assets/images/VDBwlUO.png)
 
 > 완성된 모습
 

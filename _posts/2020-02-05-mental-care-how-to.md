@@ -25,13 +25,13 @@ categories:
 
 나는 태어나보니 내향이었다. 여기까지는 괜찮은데, 자라면서 사회성을 학습할 기회를 제공받지도 못했고, 감정적으로 위축되어 지냈다. 타인과 교류할 일이 거의 없었다. 남들은 다 가지고 태어나는 행복의 원천이 나에게는 없었다. 흑
 
-![왜나는!](https://i.imgur.com/i3V6IOM.jpg)
+![왜나는!](/assets/images/i3V6IOM.jpg)
 
 > 왜 나는 햄보칼쑤가 업써!!
 
 ## 무채색 인생
 
-![내향과 외향](https://i.imgur.com/6HPxMoA.png)
+![내향과 외향](/assets/images/6HPxMoA.png)
 [이미지 출처](https://twitter.com/COM_0107/status/645933131803955200)
 
 마음이 도화지라면 최근 겪은 감정들은 물감이 되어 그 위에 칠해진다.

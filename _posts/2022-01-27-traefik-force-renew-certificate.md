@@ -8,7 +8,7 @@ categories:
 
 어제 점심 즈음에 눈을 떠 보니 `Let's Encrypt`에서 이런 메일이 와 있었습니다:
 
-![lets-ecrypt-urgent.png](https://i.imgur.com/qluB3B1.png)
+![lets-ecrypt-urgent.png](/assets/images/qluB3B1.png)
 
 > (생략)
 >
@@ -53,17 +53,17 @@ $ docker volume inspect traefik_traefik-public-certificates
 
 `uri`를 보니까 이 인증서가 맞는 것 같습니다.
 
-![inside-acme-json.png](https://i.imgur.com/xdhJsPB.png)
+![inside-acme-json.png](/assets/images/xdhJsPB.png)
 
 갱신하려면?
 
-![renew-le-cert-traefik.png](https://i.imgur.com/aXpi0Tg.png)
+![renew-le-cert-traefik.png](/assets/images/aXpi0Tg.png)
 
 그냥 저 `acme.json` 파일을 지우면 됩니다.
 
 하라는 대로 지우고 `Traefik`을 재실행했더니 `acme.json`이 다시 생겼습니다.
 
-![inside-acme-json-renewed.png](https://i.imgur.com/Q4o7b8U.png)
+![inside-acme-json-renewed.png](/assets/images/Q4o7b8U.png)
 
 ACME registration ID가 바뀌어 있습니다. 이번에는 `381472840`이네요.
 

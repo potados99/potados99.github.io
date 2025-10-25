@@ -18,7 +18,7 @@ categories:
 
 ## 중첩된 RecyclerView
 
-![slow-scroll.gif](https://i.imgur.com/pqQUfVs.gif)
+![slow-scroll.gif](/assets/images/pqQUfVs.gif)
 
 > 앱을 실행하자 마자 아래로 빠르게 스크롤한 모습. 심하게 거슬리진 않지만 텍스트밖에 없는데 이렇게 버벅이는 것은 말이 안된다.
 
@@ -89,7 +89,7 @@ with(itemView.the_prop_recycler) {
 
 불필요한 `ViewHolder` 생성 및 레이아웃 inflation을 33.3% 억제하였다.
 
-![fast-scroll.gif](https://i.imgur.com/YC1lecP.gif)
+![fast-scroll.gif](/assets/images/YC1lecP.gif)
 
 > 처음 스크롤할 때에 보이던 버벅임이 사라졌다.
 

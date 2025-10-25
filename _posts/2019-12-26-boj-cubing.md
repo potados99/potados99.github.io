@@ -56,7 +56,7 @@ tags:
 
 이때 각 면의 색상 정보를 담을 때에 순서가 참 중요한데, 아래 그림과 같이 번호를 매겼다. 빨간색이 F, 흰색이 U이다.
 
-![cube](https://i.imgur.com/WyDGxxh.png)
+![cube](/assets/images/WyDGxxh.png)
 > [이미지 출처](https://www.wikiwand.com/en/Rubik%27s_Cube)
 
 인덱스가 뒤집어져 있다. 전면(F)에 맞닿아 있는 부분이 인덱스 6, 7, 8이 되도록 하려고 그렇게 만들었다. 왜냐! 전면을 돌릴 때 전면을 통째로 회전하고, 맞닿은 U, D, L, R의 인덱스 6, 7, 8끼리만 바꾸면 되기 때문이다.
@@ -73,7 +73,7 @@ tags:
 
 이때 좌표축은 아래 그림처럼 정한다.
 
-![coordinate](https://i.imgur.com/rTuHFCi.png)
+![coordinate](/assets/images/rTuHFCi.png)
 
 > 너무 대충 그렸나..ㅋㅋㅋ
 
@@ -103,7 +103,7 @@ tags:
 
 > 그렇게 하기 위해서는 우선 축과 평행한 U, D, F, B를 이동해야 한다. 먼저 U와 F를 swap하고, D와 B를 swap한다. 그리고 U와 D를 swap한다. 이렇게 하면 네 면이 적절한 위치에 있게 된다.
 
-![rotate-right](https://i.imgur.com/QKmRnzu.png)
+![rotate-right](/assets/images/QKmRnzu.png)
 
 > 이제 축과 직교하는 L과 R을 회전해 주어야 한다. L은 우회전, R은 좌회전 해준다.
 

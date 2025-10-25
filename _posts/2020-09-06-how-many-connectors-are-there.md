@@ -6,7 +6,7 @@ categories:
    - dev
 ---
 
-![connector-counter.png](https://i.imgur.com/jyYUqJ3.png)
+![connector-counter.png](/assets/images/jyYUqJ3.png)
 
 ## 들어가며
 

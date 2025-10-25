@@ -110,7 +110,7 @@ if __name__ == "__main__":
 
  doctest는 소스코드 내에서 Python 인터프리터 세션처럼 보이는 텍스트를 검색해서 실제로 그렇게 작동하는지 테스트해주는 모듈이다. 다시 말해서 모듈이나 함수 테스트를 주석 몇 줄만으로 간단하게 끝낼 수가 있다는거다.
 
- ![wow](https://i.imgur.com/ee9uHgZ.jpg)
+ ![wow](/assets/images/ee9uHgZ.jpg)
 
 > 이건 써야 한다. 테스트를 이렇게 간편하게 해주다니...
 

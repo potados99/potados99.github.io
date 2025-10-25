@@ -10,13 +10,13 @@ categories:
 
 잠시 2015년으로 돌아가 보겠습니다. 학교 끝나고 집에 와서 새벽까지 폰을 만지다가 눈이 감겨와 잠깐 졸았습니다. 이대로 잠들면 참 좋겠지만 눈을 찌르는 따가운 천장 조명 불빛이 너무 원망스러웠습니다. 불을 끄러 일어나야 하는데 그러면 잠이 깨버리니 이러지도 저러지도 못하는 상황.
 
-![눈부셔..](https://i.imgur.com/XdKbMef.png)
+![눈부셔..](/assets/images/XdKbMef.png)
 
 > 눈부셔요
 
 당시에 어디서 주워들은 건 있어서(한창 IoT가 어쩌구.. 할 때였습니다) 라즈베리파이를 사용해 뭐라도 해보겠다고 마음을 먹었습니다. 결국 원하는 것을 만들어내긴 했지만 상당히 조잡하고 기능상의 제약이 많았습니다.
 
-![내가 짠 코드](https://i.imgur.com/KTU9vcN.png)
+![내가 짠 코드](/assets/images/KTU9vcN.png)
 
 > 간신히 지탱되고 있었죠
 
@@ -36,7 +36,7 @@ categories:
 
 제어 시스템은 하나의 메인 컨트롤러와 여러 노드들로 구성됩니다. 메인 컨트롤러는 라즈베리 파이 위에서 돌아가며, 노드와 사용자를 이어주는 서버 역할을 합니다. 각 노드는 Wi-Fi를 통해 메인 컨트롤러 서버와 연결됩니다.
 
-![light-controller-topology.png](https://i.imgur.com/luoVB9h.png)
+![light-controller-topology.png](/assets/images/luoVB9h.png)
 
 > Home Assistant는 라즈베리파이 위에서, 각 노드의 ESPHome은 ESP 보드 위에서 돌아갑니다.
 
@@ -64,7 +64,7 @@ categories:
 
 어찌어찌 잘 작성해서 업로드해도, 개선점이 생기거나 버그가 발견되어 펌웨어를 업데이트할 일이 생기면 천장에 올라가거나 배전반을 뜯고서 보드를 꺼낸 다음 다시 플래싱을 거쳐야 합니다.
 
-![전구 교체](https://i.imgur.com/ed4Vhmp.jpg)
+![전구 교체](/assets/images/ed4Vhmp.jpg)
 
 > 훅 가는 수도 있습니다.
 
@@ -72,7 +72,7 @@ categories:
 
 다행히 이런 생각을 가진 사람들이 [ESPHome](https://esphome.io)이라는 물건을 만들어 놓았습니다. 무려 yaml 파일에 설정만 써 놓으면 펌웨어 생성부터 플래싱과 업데이트까지 도와줍니다(!).
 
-![](https://i.imgur.com/qhYgbbP.png)
+![](/assets/images/qhYgbbP.png)
 
 > 짜지 마세요. 라이브러리 갖다쓰세요.
 
@@ -104,13 +104,13 @@ categories:
 
 기성 모듈을 구매한 경우, 최초 1회 제품을 뜯어서 펌웨어를 직접 올려주는 작업이 필요합니다. 제가 구매한 [Sonoff BASICR2](https://sonoff.tech/product/diy-smart-switch/basicr2/)는 다행히 UART 단자를 모두 노출하고 있어 어렵지 않게 플래싱할 수 있었습니다.
 
-![sonoff-basicr2-uart-terminals.jpg](https://i.imgur.com/SRBZYgZ.jpg)
+![sonoff-basicr2-uart-terminals.jpg](/assets/images/SRBZYgZ.jpg)
 
 > ESP8266은 아니지만 이와 유사한 ESP8285가 사용되었습니다. 하단에 GND, TX, RX, 3V3 단자가 노출되어 있습니다.
 
 플래싱에 성공하지 못한 경우도 있었는데요, [어느 모듈](https://ko.aliexpress.com/item/1005001670745785.html?spm=a2g0s.9042311.0.0.6a3f4c4d2O5O66)은 뚜껑을 열어 보니 `ESP8266`이 아닌 완전히 다른 MCU를 사용하고 있었습니다. 결국 그 컨트롤러의 납땜을 녹여 제거한 뒤 가지고 있던 `ESP-01` 보드를 이식했습니다.
 
-![12v-led-domming-switch-from-ali-chip-replaced.jpg](https://i.imgur.com/w33zG36.jpg)
+![12v-led-domming-switch-from-ali-chip-replaced.jpg](/assets/images/w33zG36.jpg)
 
 > 기존 보드를 떼어내고 그 자리에 ESP-01을 붙였습니다. 다행히 크기가 거의 같았습니다.
 
@@ -131,7 +131,7 @@ docker run --init -d \
 
 나머지는 [문서](https://www.home-assistant.io/installation/raspberrypi/#install-home-assistant-container)에 나온 대로 주욱 따라가며 진행했습니다. 사실 문서를 볼 필요가 그리 많지 않았습니다. 웹 브라우저로 `http://[라즈베리파이ip주소]:8123`에 접근하면 친절한 UI가 마중나와 줍니다.
 
-![ha-dashboard.png](https://i.imgur.com/zlyGj3W.png)
+![ha-dashboard.png](/assets/images/zlyGj3W.png)
 
 > 로그인하면 나오는 대시보드입니다. 지금은 이것저것 꾸며 놓았습니다.
 
@@ -139,7 +139,7 @@ docker run --init -d \
 
 구성 요소는 아까 설정한 노드일 수도, 애플 HomeKit 확장일 수도, HA 앱을 설치한 기기일 수도 있습니다.
 
-![my-ha-config.png](https://i.imgur.com/8vX6COC.png)
+![my-ha-config.png](/assets/images/8vX6COC.png)
 
 > 사용중인 구성입니다. ESPHome 노드 세 개, Siri 지원을 위한 HomeKit, 그리고 맥과 아이폰에 설치한 HA 앱입니다.
 
@@ -147,7 +147,7 @@ HA가 지원하는 기능 중에 괜찮은 것들이 많습니다. 아래는 그
 
 **시스템 모니터**
 
-![ha-system-monitor.png](https://i.imgur.com/jelAhdm.png)
+![ha-system-monitor.png](/assets/images/jelAhdm.png)
 
 - HA를 구동하는 호스트 시스템을 모니터링할 수 있습니다.
 - 일단은 CPU 로드와 온도, 그리고 램 사용량을 모니터링 중입니다.
@@ -155,14 +155,14 @@ HA가 지원하는 기능 중에 괜찮은 것들이 많습니다. 아래는 그
 
 **로그**
 
-![ha-log.png](https://i.imgur.com/zQmxVtw.png)
+![ha-log.png](/assets/images/zQmxVtw.png)
 
 - 작동이 이상하거나 구성 요소 간의 연동이 원활하지 않을 때(HomeKit이 좀 자주 그렇습니다..) 로그를 보면 뭔가가 써 있습니다.
 - 내부에서 생긴 오류 뿐만 아니라 외부에서 로그인을 시도해올 때에 계정 정보가 틀려도 보안 경고와 함께 로그를 남겨줍니다.
 
 **기록 그래프**
 
-![ha-record-graph.png](https://i.imgur.com/1Lxfqbj.png)
+![ha-record-graph.png](/assets/images/1Lxfqbj.png)
 
 - 노드의 상태 변화를 모두 기록해 줍니다.
 - 여러 형태로 열람할 수 있습니다. 이벤트 로그 형식으로 볼 수도 있고, 위 스크린샷처럼 그래프 형태로도 볼 수 있습니다.
@@ -175,7 +175,7 @@ HA에서 HomeKit 구성 요소를 추가하면 옵션을 몇 개 물어본 후�
 
 이후 아이폰의 설정의 제어 센터에서 홈 제어를 켜 주면 아래처럼 제어 센터에서 노드가 보입니다.
 
-![homekit-control-center.PNG](https://i.imgur.com/0QnIhYu.png)
+![homekit-control-center.PNG](/assets/images/0QnIhYu.png)
 
 물론 Siri와의 연동도 됩니다. `잘 자`라고 하면 불을 모두 끄는 `Dark` scene이 실행되는 식입니다.
 

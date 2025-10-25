@@ -36,7 +36,7 @@ categories:
 
 개발자 센터의 [문서](https://developer.coolsms.co.kr/REST_API)를 참고해 예제를 작성해보려 했습니다. 그런데 문서가 조금 빈약했습니다.
 
-![coolsms-rest-api-2.png](https://i.imgur.com/uEOGf8Z.png)
+![coolsms-rest-api-2.png](/assets/images/uEOGf8Z.png)
 
 `Content-Type`, 저 필드가 헤더에 들어가는지 본문에 들어가는지 여부 등 몇 가지 필수적인 정보가 빠져 있었습니다. 그래서 그냥 Python SDK와 예제를 내려받아 소스를 보기로 했습니다.
 

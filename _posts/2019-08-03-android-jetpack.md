@@ -35,7 +35,7 @@ Navigation은 들어만 보았는데 이게 무엇인지는 방금 알았다.
 
 2018년에 Google I/O에서 발표되었다.
 
-![jetpack-hero](https://i.imgur.com/06IPsNK.png)
+![jetpack-hero](/assets/images/06IPsNK.png)
 
 [Android Jetpack](https://developer.android.com/jetpack?hl=ko)이 뭐냐면,
 
@@ -76,7 +76,7 @@ findViewById<TextView>(R.id.sample_text).apply {
 
 사용법은 조금 복잡하지만 이로 인해 xml과 뷰모델간의 양방향 바인딩이 이루어지면서 참된 MVVM을 구성할 수 있다.
 
-![mvvm](https://i.imgur.com/hGnEKvv.png)
+![mvvm](/assets/images/hGnEKvv.png)
 > 안드로이드에서 true-MVVM이라니...ㅠ
 
 위의 샘플 앱 예제에서 몇 가지 예시를 가져왔다.
@@ -118,11 +118,11 @@ findViewById<TextView>(R.id.sample_text).apply {
 
 iOS에는 스토리보드가 있다.
 
-![storyboard](https://i.imgur.com/uu0j6rg.png)
+![storyboard](/assets/images/uu0j6rg.png)
 
 안드로이드에도 비슷한 것이 있는데, Jetpack의 Navigation이다.
 
-![navigation](https://i.imgur.com/teYViGj.png)
+![navigation](/assets/images/teYViGj.png)
 
 설명이 더 필요하지 않을 것 같다..
 

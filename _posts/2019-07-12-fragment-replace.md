@@ -12,7 +12,7 @@ tags:
 
 안드로이드에서 많이 쓰이는 디자인 중 하나는 tab based, 즉 탭 기반 방식이다.
 
-![탭 기반 앱](https://i.imgur.com/M8YU8jh.jpg)
+![탭 기반 앱](/assets/images/M8YU8jh.jpg)
 
 > 대표적인 탭 기반 애플리케이션인 유튜브. 사진은 4년 전 것이긴 하지만 지금도 탭 기반인 건 변함이 없다.
 카카오톡의 경우도 탭 기반 앱이다.
@@ -22,7 +22,7 @@ tags:
 안드로이드에서 tab을 구현하는 방법 중 하나는 BottomNavigationView를 이용하는 것이다.
 이는 구글이 요즘 밀어주는 [Material](https://material.io/design/)의 컴포넌트 중 하나이다.
 
-![material](https://i.imgur.com/RqcHxcB.png)
+![material](/assets/images/RqcHxcB.png)
 > 이렇게 생겼다. 그냥 탭이다.
 
 ## 탭 전환하기
@@ -63,7 +63,7 @@ supportFragmentManager
 
 하나는 BottomSheet의 상태가 보존되지 않는 것이었고, 다른 하나는 AppBarLayout과 RecyclerView, 그리고 BottomNavigationView를 사용하는 프래그먼트에서 리사이클러뷰가 끝까지 스크롤이 안되는 문제였다.
 
-![스크롤이 안돼..](https://i.imgur.com/POLVrQy.png)
+![스크롤이 안돼..](/assets/images/POLVrQy.png)
 > 더이상 스크롤이 안된다. 아직 끝이 아닌데..
 
 ## 삽질

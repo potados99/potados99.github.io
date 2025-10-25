@@ -40,7 +40,7 @@ tags:
 
 이 Clean Architecture는 2012년에 [Robert C. Martin](https://twitter.com/unclebobmartin)(엉클 밥)이 공개했다.
 
-![clean-architecture](https://i.imgur.com/DLdpPSS.png)
+![clean-architecture](/assets/images/DLdpPSS.png)
 
 이 아키텍처의 목적은 다음을 달성하는 것이다:
 - 프레임워크 독립성: 프레임워크가 라이브러리에 의존하지 않는다.
@@ -60,7 +60,7 @@ tags:
 
 각각 [2014년](https://fernandocejas.com/2014/09/03/architecting-android-the-clean-way/), [2015년](https://fernandocejas.com/2015/07/18/architecting-android-the-evolution/), [2018년](https://fernandocejas.com/2018/05/07/architecting-android-reloaded/)에 작성된 글로, 안드로이드에 Clean Architecture를 최초로 도입한 시점부터 피드백을 받아 개선된 현재까지의 기록을 예제와 함께 남겨놓으셨다.
 
-![cejas-clean-architecture](https://i.imgur.com/mAVAvik.png)
+![cejas-clean-architecture](/assets/images/mAVAvik.png)
 
 > 안드로이드 클린 아키텍처 in Cejas way...
 

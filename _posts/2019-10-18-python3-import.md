@@ -166,7 +166,7 @@ ModuleNotFoundError: No module named 'util'
 
  에러가 뜬다. `util` 모듈이 없단다. 바로 옆에 있는데?
 
- ![bullshit](https://i.imgur.com/T22rSNW.gif)
+ ![bullshit](/assets/images/T22rSNW.gif)
 > 개소리 집어치워
 
  찾아보니 [PEP8]( https://www.python.org/dev/peps/pep-0008/)에 이런게 있더라.
