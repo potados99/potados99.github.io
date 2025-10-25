@@ -2,8 +2,7 @@
 title: "마크다운으로 글 쓸 때에 이미지 쉽게 넣기"
 summary: "블로그 더 편하게 쓰고 싶습니다."
 date: 2020-06-20 00:01:10 +0900
-categories:
-   - dev
+category: dev
 ---
 
 ## 들어가며

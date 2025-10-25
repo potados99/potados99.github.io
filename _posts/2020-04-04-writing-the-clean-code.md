@@ -1,8 +1,7 @@
 ---
 title: "[생각] 코드 예쁘게 짜기"
 date: 2020-04-04 02:41:10 +0900
-categories:
-   - dev
+category: dev
 ---
 
 # 들어가며

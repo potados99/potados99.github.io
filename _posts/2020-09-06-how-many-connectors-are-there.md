@@ -2,8 +2,7 @@
 title: "배민커넥트 얼마나 많이 할까"
 summary: "그냥 표가 그려보고 싶었어요."
 date: 2020-09-06 03:36:23 +0900
-categories:
-   - dev
+category: dev
 ---
 
 ![connector-counter.png](/assets/images/jyYUqJ3.png)

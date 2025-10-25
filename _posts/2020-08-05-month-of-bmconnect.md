@@ -2,8 +2,7 @@
 title: "배민커넥트 한 달 후기"
 summary: "끌어모으자 돈!"
 date: 2020-08-05 15:58:19 +0900
-categories:
-   - work
+category: work
 ---
 
 ## 들어가며

@@ -2,8 +2,7 @@
 title: "ViewPager2 좋다."
 summary: "ViewPager2 간단하게 둘러보았습니다."
 date: 2020-09-14 22:01:51 +0900
-categories:
-   - dev
+category: dev
 ---
 
 > ViewPager2에 대한 설명은 생략하고, 사용하면서 느낀 점만 써 보았습니다.

@@ -2,8 +2,7 @@
 title: "Python은 pass-by-value입니다"
 summary: "함수를 호출할 때, 객체의 레퍼런스를 값으로 넘겨줍니다."
 date: 2022-06-09 23:02:25 +0900
-categories:
-   - dev
+category: dev
 ---
 
 C나 Java의 경우 calling convention이 비교적 쉽게 설명됩니다. C에서는 모든 대입과 전달이 복사를 동반하는 pass-by-value입니다. Java 또한 pass-by-value입니다.

@@ -2,8 +2,7 @@
 title: "아이디어의 탄생과 소멸"
 summary: "생각을 잘 끌어내는 방법에 대해 생각해 보았습니다."
 date: 2020-11-11 06:35:43 +0900
-categories:
-   - writings
+category: writings
 ---
 
 ![leaf.jpeg](/assets/images/knfBK2S.jpg)

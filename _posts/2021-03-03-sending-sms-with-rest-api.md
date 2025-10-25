@@ -2,8 +2,7 @@
 title: "SMS를 보내 봅시다. feat. HMAC"
 summary: "SMS를 보내 주는 REST API를 사용해 보았습니다."
 date: 2021-03-03 01:31:52 +0900
-categories:
-   - dev
+category: dev
 ---
 
 ## 들어가며

@@ -2,8 +2,7 @@
 title: "[BOJ] 백준 5373번 큐빙"
 excerpt: "루빅스큐브 시뮬레이션"
 date: 2019-12-26 23:08:33 +0900
-categories:
-   - ps
+category: ps
 tags:
    - ps
    - boj

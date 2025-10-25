@@ -2,8 +2,7 @@
 title: "[삽질] 수강신청 정리"
 excerpt: "원리부터 꼼수까지"
 date: 2020-02-13 23:03:09 +0900
-categories:
-   - digging
+category: digging
 tags:
    - univ
    - course

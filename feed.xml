@@ -12,9 +12,7 @@ layout: null
         <item>
           <author>{{ site.author_email }} ({{ site.author_name | xml_escape}})</author>
           <title>{{ post.title | xml_escape }}</title>
-          {% for cat in post.categories %}
-            <category>{{ cat | xml_escape }}</category>
-          {% endfor %}
+          <category>{{ post.category | xml_escape }}</category>
           <description>{{ post.content | xml_escape }}</description>
           <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
           <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>

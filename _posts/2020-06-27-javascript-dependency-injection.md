@@ -2,8 +2,7 @@
 title: "의존성 주입 라이브러리(?) 만들어보기"
 summary: "찾는 게 없어서 직접 만들어 보았습니다."
 date: 2020-06-27 21:33:15 +0900
-categories:
-   - dev
+category: dev
 ---
 
 ## 들어가며

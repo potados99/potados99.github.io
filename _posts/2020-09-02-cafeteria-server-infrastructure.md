@@ -2,8 +2,7 @@
 title: "카페테리아 서버 운영 환경 구축하기"
 summary: "서비스라는 것을 처음 알아가는 과정."
 date: 2020-09-02 21:50:24 +0900
-categories:
-   - dev
+category: dev
 ---
 
 ## 들어가며

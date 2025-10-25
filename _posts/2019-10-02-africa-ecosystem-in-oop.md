@@ -2,8 +2,7 @@
 title: "[Java] 객체지향으로 아프리카 사바나 초원의 생태계 모델링하기"
 date: 2019-10-02 15:52:42 +0900
 excerpt: "기본적인 객체지향 예시 Java로 만들어보기"
-categories:
-    - fun
+category: fun
 tags:
     - java
     - object-oriented

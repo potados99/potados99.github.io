@@ -2,8 +2,7 @@
 title: "[Markdown] 마크다운 도움말"
 excerpt: "마크다운 사용법 알아보기"
 date: 2018-04-02 18:42:07 +0900
-categories:
-    - guide
+category: guide
 tags:
     - markdown
 ---

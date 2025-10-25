@@ -2,8 +2,7 @@
 title: "1일 1커밋을 위한 약간의 트릭"
 summary: "트릭이라고 쓰고 사기라고 읽어도 좋습니다(?)"
 date: 2020-06-30 22:48:40 +0900
-categories:
-   - dev
+category: dev
 ---
 
 ## 들어가며

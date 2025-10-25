@@ -2,8 +2,7 @@
 title: "Traefik 인증서 수동으로 갱신하기"
 summary: "Let's Encrypt 인증서에 문제가 생겨서 수동으로 갱신했습니다."
 date: 2022-01-27 00:52:02 +0900
-categories:
-   - dev
+category: dev
 ---
 
 어제 점심 즈음에 눈을 떠 보니 `Let's Encrypt`에서 이런 메일이 와 있었습니다:

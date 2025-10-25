@@ -2,8 +2,7 @@
 title: "[C] 누진 적용된 전기요금 계산하기"
 date: 2019-08-07 03:23:49 +0900
 excerpt: "누진요금 step function 계산하기"
-categories:
-    - life
+category: life
 tags:
     - C
     - summer

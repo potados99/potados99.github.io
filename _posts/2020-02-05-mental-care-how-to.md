@@ -1,8 +1,7 @@
 ---
 title: "[생각] 정신건강관리전략"
 date: 2020-02-05 15:14:25 +0900
-categories:
-   - writings
+category: writings
 ---
 
 ## 들어가며

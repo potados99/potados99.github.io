@@ -2,8 +2,7 @@
 title: "[Python] 파이썬 코드 스타일"
 summary: "효율적이고 읽기 편한 코드 스타일"
 date: 2018-03-23 15:14:40 +0900
-categories:
-    - guide
+category: guide
 tags:
     - Python
     - PEP8

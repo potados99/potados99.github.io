@@ -2,8 +2,7 @@
 title: "TypeORM 마개조했습니다."
 summary: "조상님이 진화했습니다. BaseEntity 업그레이드!"
 date: 2022-02-25 09:03:54 +0900
-categories:
-   - dev
+category: dev
 ---
 
 제목 써놓고 보니 마개조라기에는 조금 부끄럽습니다.

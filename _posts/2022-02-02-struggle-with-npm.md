@@ -2,8 +2,7 @@
 title: "흙 대신 NPM 퍼나르는 삽질"
 summary: "NPM v8로 업데이트했다가 난데없이 날아온 에러와 삽질, 그리고 버그 없는 가장 최신 NPM 버전 구하기."
 date: 2022-02-02 19:05:14 +0900
-categories:
-   - dev
+category: dev
 ---
 
 어제 새벽에 장대한 삽질을 했습니다. 동기는 다름이 아니라 GitHub의 dependabot 알림을 보고 취약 의존성을 업데이트하려 `npm audit fix`를 실행하려던 것이었습니다.

@@ -1,8 +1,7 @@
 ---
 title: "[Jekyll] 최신 글 옆에 N 띄우기"
 date: 2020-04-10 03:22:50 +0900
-categories:
-   - dev
+category: dev
 ---
 
 # 들어가며

@@ -2,8 +2,7 @@
 title: "가내수공업 Cloud Config 만들기"
 summary: "이제 설정 바꿀때마다 재배포는 그만,,,멈춰,,ㅠ"
 date: 2022-10-29 21:39:16 +0900
-categories:
-   - dev
+category: dev
 ---
 
 ## 들어가며

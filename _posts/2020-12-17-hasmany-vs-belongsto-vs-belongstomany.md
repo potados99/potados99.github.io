@@ -2,8 +2,7 @@
 title: "Sequelize의 hasMany vs belongsTo vs belongsToMany 무엇이 다를까"
 summary: "문서는 답을 알고 있다."
 date: 2020-12-17 18:13:04 +0900
-categories:
-   - rdb
+category: rdb
 ---
 
 늘 `belongsTo`만 쓰다가 `hasMany`는 뭘까 궁금해져 알아보았다. [Sequelize 문서](https://sequelize.org/master/class/lib/associations/base.js~Association.html)를 구경해보자.

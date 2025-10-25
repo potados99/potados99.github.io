@@ -2,8 +2,7 @@
 title: "[Shell] 포스트 헤더 자동으로 만들기"
 excerpt: "쉘 스크립트 자동화"
 date: 2019-12-24 15:21:32 +0900
-categories:
-   - dev
+category: dev
 tags:
    - shell
    - script
@@ -24,8 +23,7 @@ tags:
 title: "[shell] 포스트 헤더 자동으로 만들기"
 excerpt: "쉘 스크립트 자동화"
 date: 2019-12-24 15:21:32 +0900
-categories:
-   - dev
+category: dev
 tags:
    - shell
    - script
@@ -34,7 +32,7 @@ tags:
 ---
 ~~~
 
-이 블로그([minimal-mistakes](https://github.com/mmistakes/minimal-mistakes) 테마)에서 포스트 하나를 표시하기 위해서는 `title`, `excerpt`, `date`, `categories`, `tags`를 써 주어야 한다. 그런데 저걸 언제 다 써! 결국 이전 포스트에서 헤더만 복사해서 재활용하게 된다.
+이 블로그([minimal-mistakes](https://github.com/mmistakes/minimal-mistakes) 테마)에서 포스트 하나를 표시하기 위해서는 `title`, `excerpt`, `date`, `category`, `tags`를 써 주어야 한다. 그런데 저걸 언제 다 써! 결국 이전 포스트에서 헤더만 복사해서 재활용하게 된다.
 
 복사와 붙여넣기는 원래 컴퓨터 전문이다. 사람이 할 일이 아닌 것이다. 그러므로 컴퓨터에게 시켜보자.
 
@@ -66,8 +64,7 @@ HellO wOrld.
 title: "__title__"
 excerpt: "__excerpt__"
 date: __date_time__ +0900
-categories:
-__categories__
+category: __category__
 tags:
 __tags__
 ---
@@ -136,8 +133,8 @@ read title
 echo -n "Excerpt: "
 read excerpt
 
-echo -n "Categories (space separated): "
-read categories
+echo -n "Category: "
+read category
 
 echo -n "Tags (space separated): "
 read tags
@@ -146,7 +143,6 @@ read tags
 # And then cut last character ';'.
 # We use ';' to represent newline character.
 # This suck happens because the newline character is a bit tricky to handle.
-categories=$(echo $categories | sed "s/[ ]*\([^ ]*\)[ ]*/   - \1;/g" | sed "s/.$//")
 tags=$(echo $tags | sed "s/[ ]*\([^ ]*\)[ ]*/   - \1;/g" | sed "s/.$//")
 
 infile="_draft/template.md"
@@ -155,7 +151,7 @@ content=$(cat $infile |
 sed "s/__title__/$title/" |
 sed "s/__excerpt__/$excerpt/" |
 sed "s/__date_time__/$date_time/" |
-sed "s/__categories__/$categories/" |
+sed "s/__category__/$category/" |
 sed "s/__tags__/$tags/" |
 tr ';' '\n')
 
@@ -173,7 +169,7 @@ echo "New post created at $outfile."
 
 아주 간단해 보이지만 위 완성본이 나오기까지 무수한 삽질을 겪었다 (내공 부족).
 
-카테고리와 태그를 입력받을 때에 공백 문자로 구분하여 여러 개의 입력을 받고 싶었다. 그래서 "some tags hmm.." 이런 식으로 쓰면 아래처럼 정리되는 식이다.
+태그를 입력받을 때에 공백 문자로 구분하여 여러 개의 입력을 받고 싶었다. 그래서 "some tags hmm.." 이런 식으로 쓰면 아래처럼 정리되는 식이다.
 
 ~~~
 tags:
@@ -195,6 +191,7 @@ tags:
 이를 이용해 `sed`로 대치하면 된다.
 
 ~~~shell
+category=$(echo $category)
 tags=$(echo $tags | sed "s/[ ]*\([^ ]*\)[ ]*/   - \1;/g" | sed "s/.$//")
 ~~~
 

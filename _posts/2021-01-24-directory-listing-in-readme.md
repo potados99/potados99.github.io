@@ -2,8 +2,7 @@
 title: "README.md에 프로젝트 트리 보여주기 feat. tree & gsed"
 summary: "저장소의 프로젝트 트리를 README.md에 표시해 보았습니다."
 date: 2021-01-24 19:33:10 +0900
-categories:
-   - dev
+category: dev
 ---
 
 ![readme-source-tree.png](/assets/images/HU8sxT3.png)

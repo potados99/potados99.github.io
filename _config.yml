@@ -12,7 +12,7 @@ social:
 
 # Site Settings
 url:                https://blog.potados.com # main url
-permalink:          /:categories/:title/ # Post permalink
+permalink:          /:category/:title/ # Post permalink
 timezone:           Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 new_badge_period:   7
 

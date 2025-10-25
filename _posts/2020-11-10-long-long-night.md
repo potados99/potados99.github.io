@@ -2,8 +2,7 @@
 title: "새벽을 쉬이 보내지 못하는 이유"
 summary: "마음이 공허한 나날들"
 date: 2020-11-10 05:38:41 +0900
-categories:
-   - writings
+category: writings
 ---
 
 요즈음은 혼자인 게 익숙하지 않다. 아무도 없는 밤 사이의 공백이 크게 느껴진다.

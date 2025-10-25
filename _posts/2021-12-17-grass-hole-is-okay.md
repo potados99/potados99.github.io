@@ -2,8 +2,7 @@
 title: "GitHub 잔디밭 꾸미기 포기"
 summary: "굳이 매일 커밋을 채워넣을 필요가 없는 것 같습니다..."
 date: 2021-12-17 07:35:17 +0900
-categories:
-   - writings
+category: writings
 ---
 
 작년 여름 즈음에 [1일 1커밋을 위한 약간의 트릭](https://blog.potados.com/dev/gardening-github/)이라는 글을 썼는데요, 1일 1커밋 못 했을 때에 잔디밭에 구멍 나는 것을 막기 위한 일종의 꼼수(?)였습니다.

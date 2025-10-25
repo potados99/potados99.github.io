@@ -2,8 +2,7 @@
 title: "[C] 사용자에게서 문자를 입력받는 방법"
 excerpt: "문자 입력 함수와 버퍼"
 date: 2018-04-03 15:21:23 +0900
-categories:
-    - study
+category: study
 tags:
     - C
     - input

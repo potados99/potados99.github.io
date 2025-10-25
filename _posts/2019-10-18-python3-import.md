@@ -2,8 +2,7 @@
 title: "[Python] Python 3의 상대경로 import 문제 피해가기"
 excerpt: "여러 실행 환경에 대응하기"
 date: 2019-10-18 23:40:08 +0900
-categories:
-    - dev
+category: dev
 tags:
     - python3
     - import

@@ -2,8 +2,7 @@
 title: "[BOJ] 백준 17825번 주사위 윷놀이: 삽질 기록"
 excerpt: "문제 잘못 이해해서 한참 삽질한 후기"
 date: 2020-01-31 17:04:44 +0900
-categories:
-   - ps
+category: ps
 tags:
    - boj
    - ps

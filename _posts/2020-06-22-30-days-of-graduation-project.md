@@ -2,8 +2,7 @@
 title: "졸업작품: 30일의 기록 (스압)"
 summary: "죽음의 졸업작품. 살아서 돌아온 후기입니다."
 date: 2020-06-22 21:08:32 +0900
-categories:
-   - dev
+category: dev
 ---
 
 ## 들어가며

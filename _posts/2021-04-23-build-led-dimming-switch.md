@@ -2,9 +2,7 @@
 title: "12V LED 디밍 스위치 만들기"
 summary: "빵판부터 PCB까지."
 date: 2021-04-23 00:22:31 +0900
-categories:
-   - dev
-   - electronics
+category: dev
 ---
 
 ![led-dimmer-demo.mp4](/assets/images/WanNLgw.mp4)

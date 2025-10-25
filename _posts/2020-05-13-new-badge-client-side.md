@@ -2,8 +2,7 @@
 title: "새 글 배지 다시 구현하기"
 summary: "클라이언트 쪽으로 로직을 전환했습니다."
 date: 2020-05-13 03:37:13 +0900
-categories:
-   - dev
+category: dev
 ---
 
 ## 들어가며

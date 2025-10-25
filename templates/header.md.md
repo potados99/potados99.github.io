@@ -1,7 +1,6 @@
 ---
 date: "{{date}} {{time}}"
-title: 
-summary: 
-categories:
-  - dev
+title:
+summary:
+category: dev
 ---

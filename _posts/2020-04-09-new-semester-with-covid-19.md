@@ -1,8 +1,7 @@
 ---
 title: "[학교] 조용한 새학기"
 date: 2020-04-09 04:05:52 +0900
-categories:
-   - university
+category: university
 ---
 
 # 학교 가고 싶다

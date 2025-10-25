@@ -2,8 +2,7 @@
 title: "[Kotlin Android] Fragment 전환할 때에 replace()를 대체할 방법"
 date: 2019-07-12 04:24:57 +0900
 excerpt: "프래그먼트 매니저를 사용해서 프래그먼트를 교체할 수 있는 간단한 방법이 두 가지 있다. replace()와, show() + hide()이다."
-categories:
-    - dev
+category: dev
 tags:
     - kotlin
     - android

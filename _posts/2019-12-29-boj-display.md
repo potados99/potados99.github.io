@@ -2,8 +2,7 @@
 title: "[BOJ] 백준 16159번 전광판"
 excerpt: "다음 순열 구하기"
 date: 2019-12-29 21:19:51 +0900
-categories:
-   - ps
+category: ps
 tags:
    - ps
    - boj
