@@ -1,9 +1,9 @@
 // CSS Variables for theming
 :root {
-  // Light mode (default)
+  // Light mode (default) - 코드는 배경보다 약간 어둡게
   --bg-primary: #ffffff;
   --bg-secondary: #f6f8fa;
-  --bg-code-inline: #eff1f3;
+  --bg-code-inline: #f3f4f6;
   --bg-code-block: #f6f8fa;
   --text-primary: #24292f;
   --text-secondary: #57606a;
@@ -15,7 +15,7 @@
   --code-text: #24292f;
 }
 
-// Dark mode
+// Dark mode - 코드는 배경보다 약간 밝게
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-primary: #0d1117;
