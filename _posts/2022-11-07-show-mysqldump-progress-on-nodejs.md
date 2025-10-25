@@ -77,7 +77,7 @@ pv.on('info', (info) => {
 child.stdout.pipe(pv);
 ```
 
-`pv`라는 스트림을 만들어 `chile` 프로세스의 `stdout` 다음에 붙여 주면 됩니다. 그리고는 이어서 파일 출력으로도 보낼 수 있습니다.
+`pv`라는 스트림을 만들어 `child` 프로세스의 `stdout` 다음에 붙여 주면 됩니다. 그리고는 이어서 파일 출력으로도 보낼 수 있습니다.
 
 ```typescript
 child.stdout.pipe(pv).pipe(fs.createWriteStream('dump.sql'));
