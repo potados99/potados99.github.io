@@ -24,8 +24,13 @@
   --font-size-h3: 1.15rem;
   --font-size-h4: 1.05rem;
 
-  --font-size-title: 22px;
-  --font-size-title-large: 24px;
+  --font-size-list-title: 18px;
+  --font-size-list-title-large: 20px;
+  --font-size-list-meta: 13px;
+  --font-size-list-meta-large: 14px;
+
+  --font-size-title: 24px;
+  --font-size-title-large: 26px;
   --font-size-meta: 13px;
   --font-size-meta-large: 14px;
 }
@@ -466,72 +471,72 @@ section {
 
 list-item {
   .title {
-    font-size: 22px;
+    font-size: var(--font-size-list-title);
     font-weight: bold;
     line-height: 1.5;
 
     @media (min-width: 700px) {
-      font-size: 24px;
+      font-size: var(--font-size-list-title-large);
     }
   }
 
   .summary {
-    font-size: 13px;
+    font-size: var(--font-size-list-meta);
     color: var(--text-secondary);
 
     @media (min-width: 700px) {
-      font-size: 14px;
+      font-size: var(--font-size-list-meta-large);
     }
   }
 
   .post-date {
-    font-size: 13px;
+    font-size: var(--font-size-list-meta);
     letter-spacing: 0.75px;
     color: var(--text-secondary);
     float: top;
 
     @media (min-width: 700px) {
-      font-size: 14px;
+      font-size: var(--font-size-list-meta-large);
     }
   }
 }
 
 article {
   .title {
-    font-size: 22px;
+    font-size: var(--font-size-title);
     font-weight: bold;
     line-height: 1.5;
 
     @media (min-width: 700px) {
-      font-size: 24px;
+      font-size: var(--font-size-title-large);
     }
   }
 
   .post-date {
-    font-size: 13px;
+    font-size: var(--font-size-meta);
     letter-spacing: 0.75px;
     color: var(--text-secondary);
     float: top;
 
     @media (min-width: 700px) {
-      font-size: 14px;
+      font-size: var(--font-size-meta-large);
     }
   }
 
   .body {
-    font-size: 15px;
+    font-size: var(--font-size-base);
     line-height: 1.7;
 
     @media (min-width: 700px) {
-      font-size: 16px;
+      font-size: var(--font-size-base-large);
     }
   }
 
   time {
-    font-size: 13px;
+    font-size: var(--font-size-meta);
 
     @media (min-width: 700px) {
-      font-size: 14px;
+      font-size: var(--font-size-meta-large);
     }
   }
 }
