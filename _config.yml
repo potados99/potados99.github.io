@@ -8,13 +8,12 @@ logo_url:           https://avatars1.githubusercontent.com/u/35878712?v=4 # Get 
 # Social
 social:
     github:         https://github.com/potados99
-    instagram:      https://www.instagram.com/ix_potados/
+    instagram:      https://www.instagram.com/song.potados/
 
 # Site Settings
 url:                https://blog.potados.com # main url
 permalink:          /:categories/:title/ # Post permalink
 timezone:           Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-mathjax:            true  # enables support for mathjax - set to 'false' to disable
 new_badge_period:   7
 
 # Analytics
@@ -30,7 +29,7 @@ sass:
 
 # Other Params
 include:            [ "robots.txt" ]
-exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "script" ]
+exclude:            [ "LICENSE", "README.md", "CNAME", "Gemfile", "drafts"]
 plugins:
   - jekyll-sitemap
 
