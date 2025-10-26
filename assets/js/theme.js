@@ -1,0 +1,106 @@
+/* 전역에서 사용할 수 있는 테마 관련 유틸리티 함수들 */
+
+function 사용자가_선택한_테마() {
+  return localStorage.getItem("theme-preference");
+}
+
+function 사용자가_선택한_테마_저장(theme) {
+  localStorage.setItem("theme-preference", theme);
+}
+
+function 사용자가_테마_선택한_적이_있나요() {
+  return 사용자가_선택한_테마() !== null;
+}
+
+function 사용자가_테마_선택한_적이_없을_때에만() {
+  return !사용자가_테마_선택한_적이_있나요();
+}
+
+function 현재_테마() {
+  if (사용자가_테마_선택한_적이_있나요()) {
+    return 사용자가_선택한_테마();
+  }
+
+  return 시스템_다크인가요() ? "dark" : "light";
+}
+
+function HTML에_테마_적용(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+}
+
+function 시스템_다크인가요(
+  mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+) {
+  return mediaQuery.matches;
+}
+
+function 시스템_테마(
+  mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+) {
+  return 시스템_다크인가요(mediaQuery) ? "dark" : "light";
+}
+
+function 시스템_테마가_바뀌면(callback) {
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      callback(시스템_테마(e));
+    });
+}
+
+function 토글_클릭하면(callback) {
+  const toggle = document.getElementById("theme-toggle");
+  if (!toggle) {
+    return;
+  }
+
+  toggle.addEventListener("click", callback);
+}
+
+function 토글버튼_업데이트(theme) {
+  const toggle = document.getElementById("theme-toggle");
+  if (!toggle) {
+    return;
+  }
+
+  const isDark = theme === "dark";
+  toggle.classList.toggle("dark-mode", isDark);
+}
+
+function 애니메이션과_함께_실행(callback) {
+  document.body.style.transition =
+    "background-color 0.3s ease, color 0.3s ease";
+  
+  requestAnimationFrame(() => {
+    callback();
+    
+    setTimeout(() => {
+      document.body.style.transition = "";
+    }, 300);
+  });
+}
+
+/* 테마 초기화 */
+HTML에_테마_적용(현재_테마());
+
+/* 테마 토글 및 시스템 테마 감지 */
+document.addEventListener("DOMContentLoaded", () => {
+  토글버튼_업데이트(현재_테마());
+
+  토글_클릭하면(() => {
+    const 다음_테마 = 현재_테마() === "dark" ? "light" : "dark";
+
+    애니메이션과_함께_실행(() => {
+      사용자가_선택한_테마_저장(다음_테마);
+      HTML에_테마_적용(다음_테마);
+      토글버튼_업데이트(다음_테마);
+    });
+  });
+
+  시스템_테마가_바뀌면((새_시스템_테마) => {
+    if (사용자가_테마_선택한_적이_없을_때에만()) {
+      HTML에_테마_적용(새_시스템_테마);
+      토글버튼_업데이트(새_시스템_테마);
+    }
+  });
+});
