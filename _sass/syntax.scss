@@ -117,110 +117,110 @@
   .w {
     color: #24292f;
   }
+}
 
-  // Dark mode - Blue-tinted theme
-  @media (prefers-color-scheme: dark) {
-    // Comments
-    .c, .ch, .cd, .cm, .cpf, .c1, .cs {
-      color: #8b949e;
-      font-style: italic;
-    }
+// Dark mode 코드 블록 스타일
+html[data-theme="dark"] .highlight {
+  // Comments
+  .c, .ch, .cd, .cm, .cpf, .c1, .cs {
+    color: #8b949e;
+    font-style: italic;
+  }
 
-    // Keywords
-    .k, .kn, .kp, .kr, .kv {
-      color: #ff7b72;
-    }
+  // Keywords
+  .k, .kn, .kp, .kr, .kv {
+    color: #ff7b72;
+  }
 
-    .kc, .kt, .kd {
-      color: #ff7b72;
-    }
+  .kc, .kt, .kd {
+    color: #ff7b72;
+  }
 
-    // Strings
-    .s, .sb, .sc, .dl, .sd, .s2, .sh, .sx, .s1 {
-      color: #a5d6ff;
-    }
+  // Strings
+  .s, .sb, .sc, .dl, .sd, .s2, .sh, .sx, .s1 {
+    color: #a5d6ff;
+  }
 
-    .sa {
-      color: #ff7b72;
-    }
+  .sa {
+    color: #ff7b72;
+  }
 
-    .sr {
-      color: #7ee787;
-    }
+  .sr {
+    color: #7ee787;
+  }
 
-    .si, .se {
-      color: #a5d6ff;
-    }
+  .si, .se {
+    color: #a5d6ff;
+  }
 
-    .ss {
-      color: #7ee787;
-    }
+  .ss {
+    color: #7ee787;
+  }
 
-    // Names and functions
-    .nn, .nc, .no {
-      color: #d2a8ff;
-    }
+  // Names and functions
+  .nn, .nc, .no {
+    color: #d2a8ff;
+  }
 
-    .na {
-      color: #79c0ff;
-    }
+  .na {
+    color: #79c0ff;
+  }
 
-    .nt {
-      color: #7ee787;
-    }
+  .nt {
+    color: #7ee787;
+  }
 
-    .nf {
-      color: #d2a8ff;
-    }
+  .nf {
+    color: #d2a8ff;
+  }
 
-    .nx {
-      color: #c9d1d9;
-    }
+  .nx {
+    color: #c9d1d9;
+  }
 
-    // Numbers
-    .m, .mb, .mf, .mh, .mi, .il, .mo, .mx {
-      color: #79c0ff;
-    }
+  // Numbers
+  .m, .mb, .mf, .mh, .mi, .il, .mo, .mx {
+    color: #79c0ff;
+  }
 
-    // Operators and punctuation
-    .o, .ow {
-      color: #ff7b72;
-    }
+  // Operators and punctuation
+  .o, .ow {
+    color: #ff7b72;
+  }
 
-    .p, .pi {
-      color: #c9d1d9;
-    }
+  .p, .pi {
+    color: #c9d1d9;
+  }
 
-    // Generic
-    .gi {
-      color: #7ee787;
-      background-color: rgba(46, 160, 67, 0.15);
-    }
+  // Generic
+  .gi {
+    color: #7ee787;
+    background-color: rgba(46, 160, 67, 0.15);
+  }
 
-    .gd {
-      color: #ffa198;
-      background-color: rgba(248, 81, 73, 0.15);
-    }
+  .gd {
+    color: #ffa198;
+    background-color: rgba(248, 81, 73, 0.15);
+  }
 
-    .gh {
-      color: #79c0ff;
-      font-weight: bold;
-    }
+  .gh {
+    color: #79c0ff;
+    font-weight: bold;
+  }
 
-    // Errors
-    .err {
-      color: #ffa198;
-      background-color: rgba(248, 81, 73, 0.15);
-    }
+  // Errors
+  .err {
+    color: #ffa198;
+    background-color: rgba(248, 81, 73, 0.15);
+  }
 
-    // Preprocessor
-    .cp {
-      color: #8b949e;
-    }
+  // Preprocessor
+  .cp {
+    color: #8b949e;
+  }
 
-    // Whitespace
-    .w {
-      color: #c9d1d9;
-    }
+  // Whitespace
+  .w {
+    color: #c9d1d9;
   }
 }
