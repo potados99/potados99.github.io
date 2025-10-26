@@ -3,6 +3,8 @@ title: "프로젝트는 나의 행복"
 excerpt: "코오딩에 중독돼버린 어느 개발자의 이야기."
 date: 2021-01-05 11:58:49 +0900
 category: writings
+tags:
+  - migrated
 ---
 
 ~~제목을 너무 변태같이 지었나~~
