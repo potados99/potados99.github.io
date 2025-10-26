@@ -1,7 +1,7 @@
 ---
 published: true
 title: 개발자와 영어
-summary: 비 영어권 화자의 비애
+excerpt: 비 영어권 화자의 비애
 date: 2022-08-02T11:58:00.000Z
 category: dev
 ---

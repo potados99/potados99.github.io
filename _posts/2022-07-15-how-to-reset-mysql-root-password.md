@@ -1,7 +1,7 @@
 ---
 published: true
 title: MySQL 루트 비밀번호 초기화
-summary: 또 잊어버리기 전에 정리합니다.
+excerpt: 또 잊어버리기 전에 정리합니다.
 date: '2022-07-15 22:52:00 +0900'
 category: dev
 ---

@@ -1,6 +1,6 @@
 ---
 title: "새벽을 쉬이 보내지 못하는 이유"
-summary: "마음이 공허한 나날들"
+excerpt: "마음이 공허한 나날들"
 date: 2020-11-10 05:38:41 +0900
 category: writings
 ---

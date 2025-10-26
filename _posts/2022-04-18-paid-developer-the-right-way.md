@@ -1,6 +1,6 @@
 ---
 title: "돈 받는 개발자의 마음가짐"
-summary: "내가 돈 받고 일해도 될까?"
+excerpt: "내가 돈 받고 일해도 될까?"
 date: 2022-04-18 20:36:41 +0900
 category: writings
 ---

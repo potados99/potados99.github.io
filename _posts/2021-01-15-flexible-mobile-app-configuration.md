@@ -1,6 +1,6 @@
 ---
 title: "업데이트 없이 앱 조물조물하기"
-summary: "Firebase RemoteConfig를 사용해 보았습니다."
+excerpt: "Firebase RemoteConfig를 사용해 보았습니다."
 date: 2021-01-15 09:39:41 +0900
 category: dev
 ---

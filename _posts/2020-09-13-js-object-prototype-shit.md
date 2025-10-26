@@ -1,6 +1,6 @@
 ---
 title: "Object.prototype을 건드리면 어떻게 되나"
-summary: "잘못 건드려서 크게 삽질한 후기."
+excerpt: "잘못 건드려서 크게 삽질한 후기."
 date: 2020-09-13 04:35:00 +0900
 category: digging
 ---

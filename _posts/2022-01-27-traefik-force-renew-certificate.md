@@ -1,6 +1,6 @@
 ---
 title: "Traefik 인증서 수동으로 갱신하기"
-summary: "Let's Encrypt 인증서에 문제가 생겨서 수동으로 갱신했습니다."
+excerpt: "Let's Encrypt 인증서에 문제가 생겨서 수동으로 갱신했습니다."
 date: 2022-01-27 00:52:02 +0900
 category: dev
 ---

@@ -1,6 +1,6 @@
 ---
 title: "fork() 후에 생기는 일"
-summary: "메모리 공간과 file descriptor 위주로 복습해 보았습니다."
+excerpt: "메모리 공간과 file descriptor 위주로 복습해 보았습니다."
 date: 2021-03-27 16:28:59 +0900
 category: dev
 ---

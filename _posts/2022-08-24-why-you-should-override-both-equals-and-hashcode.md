@@ -1,6 +1,6 @@
 ---
 published: true
-summary: 에 대한 짧은 이야기
+excerpt: 에 대한 짧은 이야기
 date: '2022-08-24 22:51:00 +0900'
 category: dev
 title: equals와 hashCode를 둘 다 신경써야 하는 이유

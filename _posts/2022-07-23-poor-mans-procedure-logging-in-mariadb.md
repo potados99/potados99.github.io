@@ -1,6 +1,6 @@
 ---
 title: "가난한 자의 MariaDB 프로시저 로깅"
-summary: "Stored procedure 디버깅을 위한 눈물겨운 노력"
+excerpt: "Stored procedure 디버깅을 위한 눈물겨운 노력"
 date: 2022-07-23 20:12:28 +0900
 category: dev
 ---

@@ -1,6 +1,6 @@
 ---
 title: "React Native로 전환하고 신세계를 경험중입니다"
-summary: "카페테리아 앱을 React Native로 다시 작성했습니다. 하고 싶은 얘기가 너무 많아요오오오"
+excerpt: "카페테리아 앱을 React Native로 다시 작성했습니다. 하고 싶은 얘기가 너무 많아요오오오"
 date: 2021-05-31 10:22:43 +0900
 category: dev
 ---

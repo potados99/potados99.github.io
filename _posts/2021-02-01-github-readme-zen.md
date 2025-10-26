@@ -1,6 +1,6 @@
 ---
 title: "살아 숨쉬는 README? 마크다운에 생기를 불어넣어봅시다"
-summary: "깃헙 README에서 동적인 컨텐츠를 표시해 보았습니다."
+excerpt: "깃헙 README에서 동적인 컨텐츠를 표시해 보았습니다."
 date: 2021-02-01 04:09:23 +0900
 category: dev
 ---

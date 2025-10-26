@@ -1,6 +1,6 @@
 ---
 title: "회사생활 절망편"
-summary: "퇴사하고 싶은 모멘트..."
+excerpt: "퇴사하고 싶은 모멘트..."
 date: 2021-11-14 11:51:48 +0900
 category: writings
 ---

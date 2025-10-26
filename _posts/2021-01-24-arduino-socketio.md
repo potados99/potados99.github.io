@@ -1,6 +1,6 @@
 ---
 title: "아두이노에서 Socket.IO 사용해보기"
-summary: "아두이노에서 Socket.IO 클라이언트를 돌리기 위해 삽질한 내용을 공유합니다."
+excerpt: "아두이노에서 Socket.IO 클라이언트를 돌리기 위해 삽질한 내용을 공유합니다."
 date: 2021-01-24 03:08:16 +0900
 category: dev
 ---

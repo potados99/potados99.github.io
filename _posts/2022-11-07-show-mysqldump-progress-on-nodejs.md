@@ -1,6 +1,6 @@
 ---
 title: "NodeJS로 mysqldump하고 진행 상황 확인하기"
-summary: "파이프라인과 스트림"
+excerpt: "파이프라인과 스트림"
 date: 2022-11-07 23:16:21 +0900
 category: dev
 ---
