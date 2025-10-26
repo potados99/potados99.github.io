@@ -1,6 +1,6 @@
 ---
 title: "사고 예방의 미학: The K-Military Way"
-excerpt: "조기발견과 효율적 관리를 통한 과학적 사고예방 시스템 KIDA(한국국방연구원)에서 제공하는 신인성검사에 대한 설명이다"
+excerpt: "보이지 않게 하는 것이 예방일까."
 date: 2023-09-30 19:22:38 +0900
 category: writings
 tags:
