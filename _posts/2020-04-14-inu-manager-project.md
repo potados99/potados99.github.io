@@ -1,6 +1,7 @@
 ---
 title: "[구상] inu-manager 프로젝트"
 date: 2020-04-14 03:27:03 +0900
+excerpt: "LMS 관리 프로젝트"
 category: dev
 ---
 

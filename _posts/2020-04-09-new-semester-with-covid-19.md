@@ -1,6 +1,7 @@
 ---
 title: "[학교] 조용한 새학기"
 date: 2020-04-09 04:05:52 +0900
+excerpt: "COVID-19 시대의 새학기."
 category: university
 ---
 

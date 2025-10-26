@@ -1,6 +1,7 @@
 ---
 title: "[Jekyll] 최신 글 옆에 N 띄우기"
 date: 2020-04-10 03:22:50 +0900
+excerpt: "정적 페이지에 자바크스립트 얹기."
 category: dev
 ---
 

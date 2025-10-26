@@ -1,6 +1,7 @@
 ---
 title: "블로그 시작"
 date: 2018-03-18 01:00:00 +0900
+excerpt: "GitHub Pages로 관리하는 블로그입니다."
 category: dev
 ---
 
