@@ -17,7 +17,6 @@ url:                https://blog.potados.com # main url
 permalink:          /:categories/:title/ # Post permalink
 timezone:           Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 new_badge_period:   7
-heart_reaction:     "💙" # 포스트별 이모지별로 카운트를 셉니다. 따라서 이 값을 바꾸면 카운트도 바뀝니다.
 
 # 분석
 google_analytics:   UA-154995965-1
