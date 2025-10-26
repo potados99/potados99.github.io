@@ -53,6 +53,42 @@
   }
 }
 
+// Manual dark mode class (수동 다크모드 설정)
+html[data-theme="dark"] {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-code-inline: #1a1e26;
+  --bg-code-block: #14171c;
+  --text-primary: #c9d1d9;
+  --text-secondary: #8b949e;
+  --text-tertiary: #6e7681;
+  --border-primary: #30363d;
+  --border-secondary: #1f2328;
+  --link-color: #58a6ff;
+  --link-hover: #79c0ff;
+  --code-text: #c9d1d9;
+}
+
+// Manual light mode class (수동 라이트모드 설정)
+html[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f6f8fa;
+  --bg-code-inline: #f3f4f6;
+  --bg-code-block: #f6f8fa;
+  --text-primary: #24292f;
+  --text-secondary: #57606a;
+  --text-tertiary: #656d76;
+  --border-primary: #d0d7de;
+  --border-secondary: #d8dee4;
+  --link-color: #0969da;
+  --link-hover: #0550ae;
+  --code-text: #24292f;
+}
+
+html {
+  transition: background-color 0s ease, color 0s ease;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -147,6 +183,77 @@ blockquote {
   margin-top: 0;
   padding: 0 1em;
 }
+
+// Theme toggle button styles
+.theme-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  margin: 0;
+  border: 1px solid var(--border-primary);
+  background-color: var(--bg-secondary);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--bg-primary);
+    border-color: var(--border-secondary);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-primary);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .sun-icon {
+    position: absolute;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  .moon-icon {
+    position: absolute;
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+
+  &.dark-mode {
+    .sun-icon {
+      opacity: 0;
+      transform: rotate(180deg);
+    }
+
+    .moon-icon {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
 .logo {
   position: relative;
   margin: 0 auto 35px;

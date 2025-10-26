@@ -1,17 +1,121 @@
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 {% if page.title %}
-	<title>{{ page.title }} · {{ site.title }}</title>
+<title>{{ page.title }} · {{ site.title }}</title>
 {% else %}
-	<title>{{ site.title }}</title>
+<title>{{ site.title }}</title>
 {% endif %}
 
-<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+<meta
+  name="description"
+  content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
+/>
 
-<link rel="icon" href="{{ "/assets/images/favicon.png" }}">
-<link rel="apple-touch-icon" href="{{ "/assets/images/touch-icon.png" }}">
-<link rel="stylesheet" href="{{ "/assets/css/style.css" }}">
-<link rel="canonical" href="{{ page.url }}">
-<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" }}" />
+<link rel="icon" href="{{ "/assets/images/favicon.png" }}"> <link
+rel="apple-touch-icon" href="{{ "/assets/images/touch-icon.png" }}"> <link
+rel="stylesheet" href="{{ "/assets/css/style.css" }}">
+<link rel="canonical" href="{{ page.url }}" />
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }}"
+href="{{ "/feed.xml" }}" />
+
+<!-- 전역에서 사용할 수 있는 테마 관련 유틸리티 함수들입니다. -->
+<script>
+  function getThemePreference() {
+    return localStorage.getItem("theme-preference");
+  }
+
+  function userHasSetThemePreference() {
+    return getThemePreference() !== null;
+  }
+
+  function saveThemePreference(theme) {
+    localStorage.setItem("theme-preference", theme);
+  }
+
+  function loadCalculatedTheme() {
+    if (userHasSetThemePreference()) {
+      return getThemePreference();
+    }
+
+    return isSystemDark() ? "dark" : "light";
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+  }
+
+  function isSystemDark(
+    mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+  ) {
+    return mediaQuery.matches;
+  }
+
+  function getSystemTheme(
+    mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+  ) {
+    return isSystemDark(mediaQuery) ? "dark" : "light";
+  }
+
+  function whenSystemThemeChanged(callback) {
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        callback(getSystemTheme(e));
+      });
+  }
+
+  function whenToggleClicked(callback) {
+    const toggle = document.getElementById("theme-toggle");
+    if (!toggle) {
+      return;
+    }
+
+    toggle.addEventListener("click", callback);
+  }
+
+  function updateToggleState(theme) {
+    const toggle = document.getElementById("theme-toggle");
+    if (!toggle) {
+      return;
+    }
+
+    const isDark = theme === "dark";
+    toggle.classList.toggle("dark-mode", isDark);
+  }
+
+  function animated(callback) {
+    document.documentElement.style.transition =
+      "background-color 0.3s ease, color 0.3s ease";
+    callback();
+    setTimeout(() => {
+      document.documentElement.style.transition = "";
+    }, 300);
+  }
+</script>
+
+<script>
+  applyTheme(loadCalculatedTheme());
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateToggleState(loadCalculatedTheme());
+
+    whenToggleClicked(() => {
+      const nextTheme = loadCalculatedTheme() === "dark" ? "light" : "dark";
+
+      animated(() => {
+        saveThemePreference(nextTheme);
+        applyTheme(nextTheme);
+        updateToggleState(nextTheme);
+      });
+    });
+
+    whenSystemThemeChanged((theme) => {
+      if (!userHasSetThemePreference()) {
+        applyTheme(theme);
+        updateToggleState(theme);
+      }
+    });
+  });
+</script>
