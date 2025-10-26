@@ -1,19 +1,5 @@
 // CSS Variables for theming
 :root {
-  // Light mode (default) - 코드는 배경보다 약간 어둡게
-  --bg-primary: #ffffff;
-  --bg-secondary: #f6f8fa;
-  --bg-code-inline: #f3f4f6;
-  --bg-code-block: #f6f8fa;
-  --text-primary: #24292f;
-  --text-secondary: #57606a;
-  --text-tertiary: #656d76;
-  --border-primary: #d0d7de;
-  --border-secondary: #d8dee4;
-  --link-color: #0969da;
-  --link-hover: #0550ae;
-  --code-text: #24292f;
-
   // Typography - Font sizes
   --font-size-base: 15px;
   --font-size-base-large: 16px;
@@ -33,24 +19,6 @@
   --font-size-title-large: 26px;
   --font-size-meta: 13px;
   --font-size-meta-large: 14px;
-}
-
-// Dark mode - 코드는 배경보다 약간 밝게
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-primary: #0d1117;
-    --bg-secondary: #161b22;
-    --bg-code-inline: #1a1e26;
-    --bg-code-block: #14171c;
-    --text-primary: #c9d1d9;
-    --text-secondary: #8b949e;
-    --text-tertiary: #6e7681;
-    --border-primary: #30363d;
-    --border-secondary: #1f2328;
-    --link-color: #58a6ff;
-    --link-hover: #79c0ff;
-    --code-text: #c9d1d9;
-  }
 }
 
 // Manual dark mode class (수동 다크모드 설정)
