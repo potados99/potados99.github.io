@@ -1,0 +1,121 @@
+/* 좋아요 버튼 스타일 */
+
+.like-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 15px 0;
+}
+
+.like-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid var(--border-primary);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-family: inherit;
+  outline: none;
+
+  &:hover:not(.loading) {
+    background-color: var(--border-primary);
+    border-color: var(--link-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.2);
+  }
+
+  &.loading {
+    pointer-events: none;
+  }
+}
+
+.like-button-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+
+  .like-button.loading & {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.heart-icon {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.like-count {
+  display: inline-block;
+  min-width: 24px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.like-button-loader {
+  display: inline-flex;
+  gap: 4px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+
+  .like-button.loading & {
+    opacity: 1;
+  }
+}
+
+.loader-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--link-color);
+  animation: bounceDots 1.4s infinite;
+
+  &:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes bounceDots {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .like-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .heart-icon {
+    font-size: 16px;
+  }
+}
