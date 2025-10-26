@@ -186,9 +186,9 @@ blockquote {
 
 // Theme toggle button styles
 .theme-toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  top: 16px;
+  right: 16px;
   width: 40px;
   height: 40px;
   padding: 8px;
@@ -201,6 +201,7 @@ blockquote {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  z-index: 100;
 
   &:hover {
     background-color: var(--bg-primary);
@@ -246,6 +247,8 @@ blockquote {
     width: 36px;
     height: 36px;
     padding: 6px;
+    top: 12px;
+    right: 12px;
 
     svg {
       width: 18px;
