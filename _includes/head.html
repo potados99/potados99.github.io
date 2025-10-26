@@ -22,51 +22,55 @@ href="{{ "/feed.xml" }}" />
 
 <!-- 전역에서 사용할 수 있는 테마 관련 유틸리티 함수들입니다. -->
 <script>
-  function getThemePreference() {
+  function 사용자가_선택한_테마() {
     return localStorage.getItem("theme-preference");
   }
 
-  function saveThemePreference(theme) {
+  function 사용자가_선택한_테마_저장(theme) {
     localStorage.setItem("theme-preference", theme);
   }
 
-  function userHasSetThemePreference() {
-    return getThemePreference() !== null;
+  function 사용자가_테마_선택한_적이_있나요() {
+    return 사용자가_선택한_테마() !== null;
   }
 
-  function loadCalculatedTheme() {
-    if (userHasSetThemePreference()) {
-      return getThemePreference();
+  function 사용자가_테마_선택한_적이_없을_때에만() {
+	return !사용자가_테마_선택한_적이_있나요();
+  }
+
+  function 현재_테마() {
+    if (사용자가_테마_선택한_적이_있나요()) {
+      return 사용자가_선택한_테마();
     }
 
-    return isSystemDark() ? "dark" : "light";
+    return 시스템_다크인가요() ? "dark" : "light";
   }
 
-  function applyThemeAttribute(theme) {
+  function HTML에_테마_적용(theme) {
     document.documentElement.setAttribute("data-theme", theme);
   }
 
-  function isSystemDark(
+  function 시스템_다크인가요(
     mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
   ) {
     return mediaQuery.matches;
   }
 
-  function getSystemTheme(
+  function 시스템_테마(
     mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
   ) {
-    return isSystemDark(mediaQuery) ? "dark" : "light";
+    return 시스템_다크인가요(mediaQuery) ? "dark" : "light";
   }
 
-  function whenSystemThemeChanged(callback) {
+  function 시스템_테마가_바뀌면(callback) {
     window
       .matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", (e) => {
-        callback(getSystemTheme(e));
+        callback(시스템_테마(e));
       });
   }
 
-  function whenToggleClicked(callback) {
+  function 토글_클릭하면(callback) {
     const toggle = document.getElementById("theme-toggle");
     if (!toggle) {
       return;
@@ -75,7 +79,7 @@ href="{{ "/feed.xml" }}" />
     toggle.addEventListener("click", callback);
   }
 
-  function updateToggleState(theme) {
+  function 토글버튼_업데이트(theme) {
     const toggle = document.getElementById("theme-toggle");
     if (!toggle) {
       return;
@@ -85,7 +89,7 @@ href="{{ "/feed.xml" }}" />
     toggle.classList.toggle("dark-mode", isDark);
   }
 
-  function animated(callback) {
+  function 애니메이션과_함께_실행(callback) {
     document.documentElement.style.transition =
       "background-color 0.3s ease, color 0.3s ease";
     callback();
@@ -97,25 +101,25 @@ href="{{ "/feed.xml" }}" />
 
 <!-- 테마 적용과 토글 관련 동작들입니다. -->
 <script>
-  applyThemeAttribute(loadCalculatedTheme());
+  HTML에_테마_적용(현재_테마());
 
   document.addEventListener("DOMContentLoaded", () => {
-    updateToggleState(loadCalculatedTheme());
+    토글버튼_업데이트(현재_테마());
 
-    whenToggleClicked(() => {
-      const nextTheme = loadCalculatedTheme() === "dark" ? "light" : "dark";
+    토글_클릭하면(() => {
+      const 다음_테마 = 현재_테마() === "dark" ? "light" : "dark";
 
-      animated(() => {
-        saveThemePreference(nextTheme);
-        applyThemeAttribute(nextTheme);
-        updateToggleState(nextTheme);
+      애니메이션과_함께_실행(() => {
+        사용자가_선택한_테마_저장(다음_테마);
+        HTML에_테마_적용(다음_테마);
+        토글버튼_업데이트(다음_테마);
       });
     });
 
-    whenSystemThemeChanged((theme) => {
-      if (!userHasSetThemePreference()) {
-        applyThemeAttribute(theme);
-        updateToggleState(theme);
+    시스템_테마가_바뀌면((새_시스템_테마) => {
+      if (사용자가_테마_선택한_적이_없을_때에만()) {
+        HTML에_테마_적용(새_시스템_테마);
+        토글버튼_업데이트(새_시스템_테마);
       }
     });
   });
