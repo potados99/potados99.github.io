@@ -26,12 +26,12 @@ href="{{ "/feed.xml" }}" />
     return localStorage.getItem("theme-preference");
   }
 
-  function userHasSetThemePreference() {
-    return getThemePreference() !== null;
-  }
-
   function saveThemePreference(theme) {
     localStorage.setItem("theme-preference", theme);
+  }
+
+  function userHasSetThemePreference() {
+    return getThemePreference() !== null;
   }
 
   function loadCalculatedTheme() {
@@ -42,7 +42,7 @@ href="{{ "/feed.xml" }}" />
     return isSystemDark() ? "dark" : "light";
   }
 
-  function applyTheme(theme) {
+  function applyThemeAttribute(theme) {
     document.documentElement.setAttribute("data-theme", theme);
   }
 
@@ -95,8 +95,9 @@ href="{{ "/feed.xml" }}" />
   }
 </script>
 
+<!-- 테마 적용과 토글 관련 동작들입니다. -->
 <script>
-  applyTheme(loadCalculatedTheme());
+  applyThemeAttribute(loadCalculatedTheme());
 
   document.addEventListener("DOMContentLoaded", () => {
     updateToggleState(loadCalculatedTheme());
@@ -106,14 +107,14 @@ href="{{ "/feed.xml" }}" />
 
       animated(() => {
         saveThemePreference(nextTheme);
-        applyTheme(nextTheme);
+        applyThemeAttribute(nextTheme);
         updateToggleState(nextTheme);
       });
     });
 
     whenSystemThemeChanged((theme) => {
       if (!userHasSetThemePreference()) {
-        applyTheme(theme);
+        applyThemeAttribute(theme);
         updateToggleState(theme);
       }
     });

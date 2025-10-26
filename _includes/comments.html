@@ -4,14 +4,14 @@
 
 <div id="comments-wrapper"></div>
 
+<!-- Utterances 로딩 관련 동작들입니다. -->
 <script>
-  const themeMap = {
+  const utterancesThemeMap = {
     dark: "dark-blue",
     light: "github-light",
   };
 
-  function loadUtterances(theme) {
-    console.log(`reloading utterances with theme: ${theme}`);
+  function loadUtterances(utterancesTheme) {
     const wrapper = document.getElementById("comments-wrapper");
     wrapper.innerHTML = "";
 
@@ -20,7 +20,7 @@
     script.setAttribute("repo", "potados99/potados99.github.io");
     script.setAttribute("issue-term", "title");
     script.setAttribute("label", "comment");
-    script.setAttribute("theme", theme);
+    script.setAttribute("theme", utterancesTheme);
     script.setAttribute("crossorigin", "anonymous");
     script.async = true;
 
@@ -28,15 +28,15 @@
   };
 
   document.addEventListener("DOMContentLoaded", () => {
-    loadUtterances(themeMap[loadCalculatedTheme()]);
+    loadUtterances(utterancesThemeMap[loadCalculatedTheme()]);
 
     whenToggleClicked(() => {
-      loadUtterances(themeMap[loadCalculatedTheme()]);
+      loadUtterances(utterancesThemeMap[loadCalculatedTheme()]);
     });
 
     whenSystemThemeChanged((theme) => {
       if (!userHasSetThemePreference()) {
-        loadUtterances(themeMap[theme]);
+        loadUtterances(utterancesThemeMap[theme]);
       }
     });
   });
