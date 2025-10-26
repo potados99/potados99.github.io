@@ -3,24 +3,108 @@ layout: default
 ---
 
 <article>
+  <div class="title">{{ page.title }}</div>
+  <div class="post-date">{{ page.date | date: "%Y년 %-m월 %-d일" }}</div>
 
-	<div class="title">{{ page.title }}</div>
-	<div class="post-date">{{ page.date | date: "%Y년 %-m월 %-d일" }}</div>
+  <div class="divider"></div>
 
-	<div class="divider"></div>
+  <div class="body">{{ content }}</div>
 
-	<div class="body">{{ content }}</div>
-
+  <button id="like-button">...</div>
 </article>
 
-<div class="comments">
-	{% include comments.html %}
-</div>
+<div class="comments">{% include comments.html %}</div>
 
 <div class="page-navigation">
-
-	<div class="page-navigation">
-		<a class="home" href="/" title="목록으로 돌아가기">&larr; 목록으로 돌아가기</a>
-	</div>
-
+  <a class="home" href="/" title="목록으로 돌아가기"
+    >&larr; 목록으로 돌아가기</a
+  >
 </div>
+
+<script>
+  const cache = {}; /* url to {id, body} */
+  const url = window.location.href;
+  const reaction = "💙";
+
+  async function getLikesCount() {
+	if (cache[url]) {
+		return cache[url].counts[reaction] ?? 0;
+	}
+
+    const rawResponse = await (async function () {
+      const response = await fetch(
+        "https://collect.potados.com/likes?response=api"
+      );
+      const json = await response.json();
+      const parsed = json.map((e) => ({ id: e.id, body: JSON.parse(e.body) }));
+      return parsed;
+    })();
+
+    const messageForThisArticle = await (async function () {
+      const messagesWithThisUrl = rawResponse.filter((e) => e.body.url === url);
+      if (messagesWithThisUrl.length === 0) {
+        return undefined;
+      }
+
+      return messagesWithThisUrl[messagesWithThisUrl.length - 1];
+    })();
+
+    if (messageForThisArticle) {
+      cache[url] = {
+        id: messageForThisArticle.id,
+        counts: messageForThisArticle.body.counts,
+      };
+    }
+    
+	return messageForThisArticle?.body?.counts[reaction] ?? 0;
+  }
+
+  async function increaseLikesCount() {
+    const cached = cache[url];
+
+    const payload = {
+      url: url,
+      counts: {
+        ...cached?.counts,
+        [reaction]: (cached?.counts?.[reaction] ?? 0) + 1,
+      },
+    };
+
+	if (cached) {
+		await fetch(`https://collect.potados.com/likes/${cached.id}?response=api`, {
+			method: "PATCH",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(payload),
+		});
+
+		cache[url].counts[reaction] = (cached.counts[reaction] ?? 0) + 1;
+	} else {
+		const response = await fetch(`https://collect.potados.com/likes?response=api`, {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(payload),
+		});
+		const json = await response.json();
+		const id = json.url.split('/').pop();
+
+		cache[url] = {
+			id: id,
+			counts: payload.counts,
+		};
+	}
+  }
+
+  async function updateLikeButton() {
+    const count = await getLikesCount();
+    document.getElementById("like-button").textContent = `💙 ${count}`;
+  }
+  
+  document.addEventListener("DOMContentLoaded", async () => {
+    await updateLikeButton();
+  });
+
+  document.getElementById("like-button").addEventListener("click", async () => {
+    await increaseLikesCount();
+    await updateLikeButton();
+  });
+</script>
