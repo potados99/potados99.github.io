@@ -1,49 +1,58 @@
 ---
 layout: default
-title: "감자도스 블로그"
 ---
 
+<!-- 글 목록 섹션입니다. -->
 <section>
+  <ul>
+    {% for post in site.posts %}
 
-	{% for post in site.posts %}
+    <!-- 목록 속 "글 하나"에 해당합니다. -->
+    <list-item>
+      <a href="{{ post.url }}">
+        <!-- 날짜입니다. -->
+        <div class="post-date">
+          <span
+            class="date-text"
+            data-date="{{ post.date | date_to_xmlschema }}"
+          >
+            {{ post.date | date: "%Y년 %-m월 %-d일" }}
+          </span>
+        </div>
 
-		<ul>
-			<li>
-				<list-item>
+        <!-- 제목입니다. -->
+        <div class="title">{{ post.title }}</div>
 
-					<a href="{{ post.url }}">
+        <!-- 요약입니다. -->
+        <div class="summary">{{ post.summary }}</div>
+      </a>
 
-						<div class="post-date">
-							<span class="date-text" data-date="{{ post.date | date_to_xmlschema }}">
-								{{ post.date | date: "%Y년 %-m월 %-d일" }}
-							</span>
-						</div>
-						<div class="title">{{ post.title }}</div>
-						<div class="summary">{{ post.summary }}</div>
+      <!-- 목록 속 "글 하나"와 "글 하나" 사이를 구분하는 선입니다. -->
+      <div class="item-divider"></div>
+    </list-item>
 
-					</a>
+    {% endfor %}
+  </ul>
 
-					<div class="item-divider"></div>
+  <!-- 새로 작성한 글에 "새 글" 표시를 붙여주는 스크립트입니다. -->
+  <script data-period="{{ site.new_badge_period | default: 7 }}">
+    /**
+     * "새로"의 기준은 _config.yml 파일에 설정된 new_badge_period 값에 따라 결정됩니다.
+     * 그런데 js 코드에다가 liquid 변수를 바로 써버리면 IDE가 싫어합니다. 그래서 <script> 태그의 속성으로 받았어요.
+     */
+    const period = document.currentScript.getAttribute("data-period");
+    const dateTexts = document.getElementsByClassName("date-text");
 
-				</list-item>
-			</li>
-		</ul>
+    for (const dateText of dateTexts) {
+      const createDate = new Date(dateText.getAttribute("data-date"));
+      const currentDate = new Date();
 
-	{% endfor %}
+      const diff =
+        (currentDate.getTime() - createDate.getTime()) / (1000 * 86400);
 
-	<script>
-		const dateTexts = document.getElementsByClassName('date-text');
-
-		for (const dateText of dateTexts) {
-			const createDate = new Date(dateText.getAttribute('data-date'));
-			const currentDate = new Date();
-
-			const diff = (currentDate.getTime() - createDate.getTime()) / (1000 * 86400);
-
-			if (diff < {{ site.new_badge_period | default: 7 }}) {
-				dateText.innerText =  dateText.innerText + ' · 새 글!';
-			}
-		}
-	</script>
-
+      if (diff < parseInt(period)) {
+        dateText.innerText += " · 새 글!";
+      }
+    }
+  </script>
 </section>

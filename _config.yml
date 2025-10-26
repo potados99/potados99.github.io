@@ -1,25 +1,27 @@
-# Site Info
-title:              "감자도스"
-description:        "감자도스의 개발 블로그"
-author_name:        "송병준" # change this to your name
-author_email:       song@potados.com
-logo_url:           https://avatars1.githubusercontent.com/u/35878712?v=4 # Get it from GitHub API: https://api.github.com/users/<username>
+# Jekyll 설정 파일입니다.
 
-# Social
+# 사이트 기본 정보
+title:              "감자도스 블로그"
+description:        "개발 블로그입니다."
+author_name:        "송병준"
+author_email:       song@potados.com
+logo_url:           https://avatars1.githubusercontent.com/u/35878712?v=4
+
+# 소셜 링크
 social:
     github:         https://github.com/potados99
     instagram:      https://www.instagram.com/song.potados/
 
-# Site Settings
+# 사이트 설정
 url:                https://blog.potados.com # main url
 permalink:          /:categories/:title/ # Post permalink
 timezone:           Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 new_badge_period:   7
 
-# Analytics
+# 분석
 google_analytics:   UA-154995965-1
 
-# Site Build
+# 사이트 빌드
 markdown:           kramdown
 highlighter:        rouge
 kramdown:
@@ -27,12 +29,13 @@ kramdown:
 sass:
     style:          :compressed
 
-# Other Params
+# 기타 파라미터
 include:            [ "robots.txt" ]
 exclude:            [ "LICENSE", "README.md", "CNAME", "Gemfile", "drafts"]
 plugins:
   - jekyll-sitemap
 
+# 조건마다 자동으로 적용할 기본 속성들
 defaults:
   - scope:
       path:         ""

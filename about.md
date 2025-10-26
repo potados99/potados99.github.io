@@ -1,6 +1,5 @@
 ---
-layout: page
-title: "감자도스 블로그"
+title: "감자도스"
 ---
 
 ## 소개
@@ -13,7 +12,7 @@ title: "감자도스 블로그"
 
 ## 연락처
 
-- **Email**: <song@potados.com>
-- **GitHub**: [potados99](https://github.com/potados99)
-- **Instagram**: [song.potados](https://www.instagram.com/song.potados/)
+- **Email**: <{{ site.author_email }}>
+- **GitHub**: [{{ site.social.github | split: "/" | last }}]({{ site.social.github }})
+- **Instagram**: [{{ site.social.instagram | split: "/" | last }}]({{ site.social.instagram }})
 - **카카오톡 오픈채팅**: [감자도스](https://open.kakao.com/o/sqE5M3Rc)
