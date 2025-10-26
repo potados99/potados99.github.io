@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2025-10-26-feed-the-online-scratchpad.md",
+                "file": "drafts/2025-00-00-yak-shaving-done-well.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-10-26-feed-the-online-scratchpad"
+              "title": "2025-00-00-yak-shaving-done-well"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2025-10-26-feed-the-online-scratchpad.md",
+                "file": "drafts/2025-00-00-yak-shaving-done-well.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2025-10-26-feed-the-online-scratchpad"
+              "title": "Backlinks for 2025-00-00-yak-shaving-done-well"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2025-10-26-feed-the-online-scratchpad.md",
+                "file": "drafts/2025-00-00-yak-shaving-done-well.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2025-10-26-feed-the-online-scratchpad"
+              "title": "Outgoing links from 2025-00-00-yak-shaving-done-well"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2025-10-26-feed-the-online-scratchpad.md",
+                "file": "drafts/2025-00-00-yak-shaving-done-well.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-10-26-feed-the-online-scratchpad"
+              "title": "Outline of 2025-00-00-yak-shaving-done-well"
             }
           }
         ]
@@ -171,13 +171,14 @@
   },
   "active": "cca40774841e0aee",
   "lastOpenFiles": [
+    "drafts/2023-04-18-edit-github-blog-on-web.md",
+    "_posts/2025-10-26-feed-the-online-scratchpad.md",
+    "drafts/2025-00-00-yak-shaving-done-well.md",
     "assets/images/kTfZ9Lx.png",
     "assets/images/Screenshot 2025-10-26 at 3.17.17 PM.png",
-    "_posts/2025-10-26-feed-the-online-scratchpad.md",
     "_posts/2023-07-24-obsidian-for-github-blog.md",
     "writings/obsidian-for-github-blog.md",
     "writings",
-    "drafts/2023-04-18-edit-github-blog-on-web.md",
     "README.md",
     "drafts/Untitled 1.md",
     "Untitled.md",
