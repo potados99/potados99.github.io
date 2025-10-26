@@ -91,14 +91,14 @@ href="{{ "/feed.xml" }}" />
 
   function 애니메이션과_함께_실행(callback) {
     document.body.style.transition =
-      "background-color 0.4s ease, color 0.6s ease, background-image 0.6s ease";
+      "background-color 0.3s ease, color 0.3s ease, background-image 0.3s ease";
     
     requestAnimationFrame(() => {
       callback();
       
       setTimeout(() => {
         document.body.style.transition = "";
-      }, 600);
+      }, 300);
     });
   }
 </script>
