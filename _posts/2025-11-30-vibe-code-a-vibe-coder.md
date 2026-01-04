@@ -1,7 +1,7 @@
 ---
 date: 2025-11-30 20:52
 title: "바이브 코딩으로 바이브 코더 만들기: Slack + Claude Code"
-excerpt: 구슬이 서 말이라도 꿰어야 보배 아니겠습니까? Claude Code 사용 경험을 그대로 Slack으로 가져왔습니다. 언제 어디서든 Claude에게 일을 시킬 수 있게 되었습니다.
+excerpt: 구슬이 서 말이라도 꿰어야 보배입니다. Claude Code 사용 경험을 그대로 Slack으로 가져왔습니다. 언제 어디서든 Claude에게 일을 시킬 수 있게 되었습니다.
 ---
 ## 들어가며
 
